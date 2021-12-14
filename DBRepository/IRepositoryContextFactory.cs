@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DBRepository
+﻿namespace DBRepository
 {
-    internal interface IRepositoryContextFactory
+    public interface IRepositoryContextFactory
     {
+        public RepositoryContext CreateDbContext(string connectionString);
     }
 }
