@@ -4,8 +4,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "e-shop", "e-shop\e-shop.csproj", "{F50762D9-4550-449C-995A-6549A5330F7B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{33F6D917-C694-4C32-A77E-835BEE89224F} = {33F6D917-C694-4C32-A77E-835BEE89224F}
+		{29D0C280-400B-4DED-A0FE-9FA1246BA14D} = {29D0C280-400B-4DED-A0FE-9FA1246BA14D}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBRepository", "DBRepository\DBRepository.csproj", "{29D0C280-400B-4DED-A0FE-9FA1246BA14D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{33F6D917-C694-4C32-A77E-835BEE89224F} = {33F6D917-C694-4C32-A77E-835BEE89224F}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{33F6D917-C694-4C32-A77E-835BEE89224F}"
 EndProject
