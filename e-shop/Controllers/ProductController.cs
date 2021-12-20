@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using DBRepository;
 using Models;
+using DBRepository.Interfaces;
 
 namespace e_shop.Controllers
 {

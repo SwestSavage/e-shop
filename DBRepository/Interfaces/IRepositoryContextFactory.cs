@@ -1,4 +1,4 @@
-﻿namespace DBRepository
+﻿namespace DBRepository.Interfaces
 {
     public interface IRepositoryContextFactory
     {
