@@ -1,0 +1,192 @@
+warning: LF will be replaced by CRLF in e-shop/wwwroot/assets/bundle.js.
+The file will have its original line endings in your working directory
+[1mdiff --git a/DBRepository/BaseRepository.cs b/DBRepository/BaseRepository.cs[m
+[1mindex 90b904a..010a337 100644[m
+[1m--- a/DBRepository/BaseRepository.cs[m
+[1m+++ b/DBRepository/BaseRepository.cs[m
+[36m@@ -1,4 +1,6 @@[m
+[31m-﻿namespace DBRepository[m
+[32m+[m[32m﻿using DBRepository.Interfaces;[m
+[32m+[m
+[32m+[m[32mnamespace DBRepository[m
+ {[m
+     public class BaseRepository[m
+     {[m
+[1mdiff --git a/DBRepository/IProductRepository.cs b/DBRepository/IProductRepository.cs[m
+[1mdeleted file mode 100644[m
+[1mindex 7e90c36..0000000[m
+[1m--- a/DBRepository/IProductRepository.cs[m
+[1m+++ /dev/null[m
+[36m@@ -1,9 +0,0 @@[m
+[31m-﻿using Models;[m
+[31m-[m
+[31m-namespace DBRepository[m
+[31m-{[m
+[31m-    public interface IProductRepository[m
+[31m-    {[m
+[31m-        public Task<List<Product>> GetProducts();[m
+[31m-    }[m
+[31m-}[m
+[1mdiff --git a/DBRepository/IRepositoryContextFactory.cs b/DBRepository/IRepositoryContextFactory.cs[m
+[1mdeleted file mode 100644[m
+[1mindex 08a2997..0000000[m
+[1m--- a/DBRepository/IRepositoryContextFactory.cs[m
+[1m+++ /dev/null[m
+[36m@@ -1,7 +0,0 @@[m
+[31m-﻿namespace DBRepository[m
+[31m-{[m
+[31m-    public interface IRepositoryContextFactory[m
+[31m-    {[m
+[31m-        public RepositoryContext CreateDbContext(string connectionString);[m
+[31m-    }[m
+[31m-}[m
+[1mdiff --git a/DBRepository/ProductRepository.cs b/DBRepository/ProductRepository.cs[m
+[1mindex 11361d9..e9d9844 100644[m
+[1m--- a/DBRepository/ProductRepository.cs[m
+[1m+++ b/DBRepository/ProductRepository.cs[m
+[36m@@ -1,5 +1,6 @@[m
+ ﻿using Microsoft.EntityFrameworkCore;[m
+ using Models;[m
+[32m+[m[32musing DBRepository.Interfaces;[m
+ [m
+ namespace DBRepository[m
+ {[m
+[1mdiff --git a/DBRepository/RepositoryContextFactory.cs b/DBRepository/RepositoryContextFactory.cs[m
+[1mindex 3129d87..3aff178 100644[m
+[1m--- a/DBRepository/RepositoryContextFactory.cs[m
+[1m+++ b/DBRepository/RepositoryContextFactory.cs[m
+[36m@@ -1,4 +1,5 @@[m
+ ﻿using Microsoft.EntityFrameworkCore;[m
+[32m+[m[32musing DBRepository.Interfaces;[m
+ [m
+ namespace DBRepository[m
+ {[m
+[1mdiff --git a/e-shop/App/container/app.jsx b/e-shop/App/container/app.jsx[m
+[1mindex b152586..10081cb 100644[m
+[1m--- a/e-shop/App/container/app.jsx[m
+[1m+++ b/e-shop/App/container/app.jsx[m
+[36m@@ -9,7 +9,7 @@[m [mexport default class App extends React.Component {[m
+     render() {[m
+         return ([m
+             <Router>[m
+[31m-                <div>[m
+[32m+[m[32m                <div>[m[41m                   [m
+                     <Header />[m
+                     <main>[m
+                         <Switch>[m
+[1mdiff --git a/e-shop/Controllers/ProductController.cs b/e-shop/Controllers/ProductController.cs[m
+[1mindex d12fbfd..064ae23 100644[m
+[1m--- a/e-shop/Controllers/ProductController.cs[m
+[1m+++ b/e-shop/Controllers/ProductController.cs[m
+[36m@@ -1,6 +1,7 @@[m
+ ﻿using Microsoft.AspNetCore.Mvc;[m
+ using DBRepository;[m
+ using Models;[m
+[32m+[m[32musing DBRepository.Interfaces;[m
+ [m
+ namespace e_shop.Controllers[m
+ {[m
+[1mdiff --git a/e-shop/Program.cs b/e-shop/Program.cs[m
+[1mindex 6255ca7..8ebdbb0 100644[m
+[1m--- a/e-shop/Program.cs[m
+[1m+++ b/e-shop/Program.cs[m
+[36m@@ -1,48 +1,43 @@[m
+ using DBRepository;[m
+[32m+[m[32musing DBRepository.Interfaces;[m
+[32m+[m[32musing e_shop;[m
+ using Microsoft.AspNetCore;[m
+[32m+[m[32musing Microsoft.AspNetCore.Builder;[m
+[32m+[m[32musing Microsoft.AspNetCore.Hosting;[m
+ using Microsoft.EntityFrameworkCore;[m
+[32m+[m[32musing Microsoft.Extensions.Configuration;[m
+[32m+[m[32musing Microsoft.Extensions.DependencyInjection;[m
+[32m+[m[32musing System.IO;[m
+[32m+[m[32musing System.Threading.Tasks;[m
+ [m
+[31m-var builder = WebApplication.CreateBuilder(args);[m
+[31m-var config = new ConfigurationBuilder()[m
+[31m-    .SetBasePath(Directory.GetCurrentDirectory())[m
+[31m-    .AddJsonFile("appsettings.json")[m
+[31m-    .Build();[m
+[31m-[m
+[31m-//var host = BuildWebHost(args);[m
+[31m-[m
+[31m-//static IWebHost BuildWebHost(string[] args) =>[m
+[31m-//    WebHost.CreateDefaultBuilder(args).Build();[m
+[31m-[m
+[31m-[m
+[31m-builder.Services.AddMvc(options => options.EnableEndpointRouting = false);[m
+[31m-[m
+[31m-builder.Services.AddScoped<IRepositoryContextFactory, RepositoryContextFactory>();[m
+[31m-builder.Services.AddScoped<IProductRepository>([m
+[31m-    provider => new ProductRepository(builder.Configuration.GetConnectionString("DefaultConnection"), [m
+[31m-    provider.GetService<IRepositoryContextFactory>()));[m
+[31m-[m
+[31m-var app = builder.Build();[m
+[31m-[m
+[31m-if (app.Environment.IsDevelopment())[m
+[32m+[m[32mnamespace PersonalPortal[m
+ {[m
+[31m-    app.UseDeveloperExceptionPage();[m
+[31m-    app.UseWebpackDevMiddleware();[m
+[31m-}[m
+[31m-[m
+[31m-app.UseStaticFiles();[m
+[31m-app.UseMvc(routes =>[m
+[31m-{[m
+[31m-    routes.MapRoute(name: "DefaultApi", template: "api/{controller}/{action}");[m
+[31m-    routes.MapSpaFallbackRoute("spa-fallback", new { controller = "Home", action = "Index" });[m
+[31m-});[m
+[31m-[m
+[31m-using (var scope = app.Services.CreateScope())[m
+[31m-{[m
+[31m-    var services = scope.ServiceProvider;[m
+[31m-[m
+[31m-    var factory = services.GetRequiredService<IRepositoryContextFactory>();[m
+[31m-[m
+[31m-    factory.CreateDbContext(config.GetConnectionString("DefaultConnection")).Database.Migrate();[m
+[31m-}[m
+[31m-[m
+[31m-app.Run();[m
+[32m+[m	[32mpublic class Program[m
+[32m+[m	[32m{[m
+[32m+[m		[32mpublic static async Task Main(string[] args)[m
+[32m+[m		[32m{[m
+[32m+[m			[32mvar host = BuildWebHost(args);[m
+[32m+[m
+[32m+[m			[32mvar builder = new ConfigurationBuilder()[m
+[32m+[m				[32m.SetBasePath(Directory.GetCurrentDirectory())[m
+[32m+[m				[32m.AddJsonFile("appsettings.json");[m
+[32m+[m			[32mvar config = builder.Build();[m
+[32m+[m
+[32m+[m			[32musing (var scope = host.Services.CreateScope())[m
+[32m+[m			[32m{[m
+[32m+[m				[32mvar services = scope.ServiceProvider;[m
+[32m+[m
+[32m+[m				[32mvar factory = services.GetRequiredService<IRepositoryContextFactory>();[m
+[32m+[m
+[32m+[m				[32mfactory.CreateDbContext(config.GetConnectionString("DefaultConnection")).Database.Migrate();[m
+[32m+[m			[32m}[m
+[32m+[m
+[32m+[m			[32mhost.Run();[m
+[32m+[m		[32m}[m
+[32m+[m
+[32m+[m		[32mpublic static IWebHost BuildWebHost(string[] args) =>[m
+[32m+[m			[32mWebHost.CreateDefaultBuilder(args)[m
+[32m+[m				[32m.UseStartup<Startup>()[m
+[32m+[m				[32m.Build();[m
+[32m+[m	[32m}[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/e-shop/e-shop.csproj b/e-shop/e-shop.csproj[m
+[1mindex b6d1050..66e2677 100644[m
+[1m--- a/e-shop/e-shop.csproj[m
+[1m+++ b/e-shop/e-shop.csproj[m
+[36m@@ -5,6 +5,7 @@[m
+     <Nullable>enable</Nullable>[m
+     <ImplicitUsings>enable</ImplicitUsings>[m
+     <RootNamespace>e_shop</RootNamespace>[m
+[32m+[m	[32m  <EnablePreviewFeatures>True</EnablePreviewFeatures>[m
+   </PropertyGroup>[m
+ [m
+   <ItemGroup>[m
