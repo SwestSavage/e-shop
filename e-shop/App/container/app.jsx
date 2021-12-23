@@ -5,6 +5,7 @@ import Header from './header/header.jsx';
 import About from './about/about.jsx';
 import Products from './products/products.jsx';
 import { getProducts } from './products/productsActions.jsx';
+import SignupForm from './registration/registrationFrom.jsx'
 import "isomorphic-fetch";
 
 fetch('https://localhost:7078/api/product/products')
@@ -25,9 +26,12 @@ export default class App extends React.Component {
                             <Route path="/about">
                                 <About />
                             </Route>
+                            <Route path="/signup">
+                                <SignupForm />
+                            </Route>
                             <Route path="/">
                                 <Products className="products-container"/>
-                            </Route>
+                            </Route>                         
                         </Switch>
                     </main>
                 </div>
