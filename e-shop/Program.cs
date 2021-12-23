@@ -1,7 +1,12 @@
 using DBRepository;
 using DBRepository.Interfaces;
+using e_shop.Services.Interfaces;
+using e_shop.Services.Implementations;
 using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 var config = new ConfigurationBuilder()
@@ -9,18 +14,35 @@ var config = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json")
     .Build();
 
-//var host = BuildWebHost(args);
-
-//static IWebHost BuildWebHost(string[] args) =>
-//    WebHost.CreateDefaultBuilder(args).Build();
-
-
 builder.Services.AddMvc(options => options.EnableEndpointRouting = false);
 
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.RequireHttpsMetadata = false;
+        options.SaveToken = true;
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidIssuer = "ValidIssuer",
+            ValidAudience = "ValidAudience",
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("IssuerSigningSecretKey")),
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ClockSkew = TimeSpan.Zero
+        };
+    });
+
 builder.Services.AddScoped<IRepositoryContextFactory, RepositoryContextFactory>();
+
 builder.Services.AddScoped<IProductRepository>(
     provider => new ProductRepository(builder.Configuration.GetConnectionString("DefaultConnection"), 
     provider.GetService<IRepositoryContextFactory>()));
+
+builder.Services.AddScoped<IUserRepository>(
+    provider => new UserRepository(builder.Configuration.GetConnectionString("DefaultConnection"),
+    provider.GetService<IRepositoryContextFactory>()));
+
+builder.Services.AddScoped<IIdentityService, IdentityService>();
 
 var app = builder.Build();
 
@@ -31,6 +53,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseStaticFiles();
+app.UseAuthentication();
+
 app.UseMvc(routes =>
 {
     routes.MapRoute(name: "DefaultApi", template: "api/{controller}/{action}");
