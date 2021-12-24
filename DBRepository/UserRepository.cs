@@ -32,5 +32,22 @@ namespace DBRepository
 
             return user;
         }
+
+        public async Task AddUserAsync(User user)
+        {
+            if (user != null)
+            {
+                using (var context = RepositoryContextFactory.CreateDbContext(ConnectionString))
+                {
+                    await context.Users.AddAsync(user);
+
+                    await context.SaveChangesAsync();
+                }
+            }
+            else
+            {
+                throw new NullReferenceException();
+            }
+        }
     }
 }

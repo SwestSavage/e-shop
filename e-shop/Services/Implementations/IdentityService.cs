@@ -17,5 +17,10 @@ namespace e_shop.Services.Implementations
         {
             return _repository.GetUser(userName);
         }
+
+        public async void AddUserAsync(User user)
+        {
+            await _repository.AddUserAsync(user);
+        }
     }
 }
