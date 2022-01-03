@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "assets/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 95);
+/******/ 	return __webpack_require__(__webpack_require__.s = 96);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -261,9 +261,9 @@ process.umask = function() { return 0; };
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(97);
-} else {
   module.exports = __webpack_require__(98);
+} else {
+  module.exports = __webpack_require__(99);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -285,11 +285,11 @@ if (process.env.NODE_ENV !== 'production') {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(117)(ReactIs.isElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(118)(ReactIs.isElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(118)();
+  module.exports = __webpack_require__(119)();
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -301,7 +301,7 @@ if (process.env.NODE_ENV !== 'production') {
 "use strict";
 
 
-var bind = __webpack_require__(87);
+var bind = __webpack_require__(88);
 
 // utils is a library of generic helper functions non-specific to axios
 
@@ -862,8 +862,8 @@ function getNative(object, key) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(108);
 
 
 
@@ -907,10 +907,10 @@ function baseGetTag(value) {
 /* unused harmony export parsePath */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return createPath; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_resolve_pathname__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_value_equal__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_resolve_pathname__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_value_equal__ = __webpack_require__(134);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_tiny_warning__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_tiny_invariant__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_tiny_invariant__ = __webpack_require__(135);
 
 
 
@@ -2053,9 +2053,9 @@ module.exports = function(originalModule) {
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(115);
-} else {
   module.exports = __webpack_require__(116);
+} else {
+  module.exports = __webpack_require__(117);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -2133,7 +2133,7 @@ ListCache.prototype.set = __WEBPACK_IMPORTED_MODULE_4__listCacheSet_js__["a" /* 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__eq_js__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__eq_js__ = __webpack_require__(72);
 
 
 /**
@@ -2202,8 +2202,8 @@ function getMapData(map, key) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__assignValue_js__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__baseAssignValue_js__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__assignValue_js__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__baseAssignValue_js__ = __webpack_require__(77);
 
 
 
@@ -2255,7 +2255,7 @@ function copyObject(source, props, object, customizer) {
 
 var utils = __webpack_require__(3);
 var normalizeHeaderName = __webpack_require__(241);
-var enhanceError = __webpack_require__(89);
+var enhanceError = __webpack_require__(90);
 
 var DEFAULT_CONTENT_TYPE = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -2271,10 +2271,10 @@ function getDefaultAdapter() {
   var adapter;
   if (typeof XMLHttpRequest !== 'undefined') {
     // For browsers use XHR adapter
-    adapter = __webpack_require__(90);
+    adapter = __webpack_require__(91);
   } else if (typeof process !== 'undefined' && Object.prototype.toString.call(process) === '[object process]') {
     // For node use HTTP adapter
-    adapter = __webpack_require__(90);
+    adapter = __webpack_require__(91);
   }
   return adapter;
 }
@@ -2912,9 +2912,9 @@ var Map = Object(__WEBPACK_IMPORTED_MODULE_0__getNative_js__["a" /* default */])
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__arrayLikeKeys_js__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__arrayLikeKeys_js__ = __webpack_require__(78);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__baseKeys_js__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isArrayLike_js__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isArrayLike_js__ = __webpack_require__(81);
 
 
 
@@ -3044,9 +3044,9 @@ function isPrototype(value) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__arrayLikeKeys_js__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__arrayLikeKeys_js__ = __webpack_require__(78);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__baseKeysIn_js__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isArrayLike_js__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isArrayLike_js__ = __webpack_require__(81);
 
 
 
@@ -3087,7 +3087,7 @@ function keysIn(object) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__arrayFilter_js__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__stubArray_js__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__stubArray_js__ = __webpack_require__(83);
 
 
 
@@ -3131,7 +3131,7 @@ var getSymbols = !nativeGetSymbols ? __WEBPACK_IMPORTED_MODULE_1__stubArray_js__
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Set_js__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__WeakMap_js__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__baseGetTag_js__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__toSource_js__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__toSource_js__ = __webpack_require__(74);
 
 
 
@@ -3293,9 +3293,9 @@ if (process.env.NODE_ENV === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(99);
+  module.exports = __webpack_require__(100);
 } else {
-  module.exports = __webpack_require__(102);
+  module.exports = __webpack_require__(103);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -3308,9 +3308,9 @@ if (process.env.NODE_ENV === 'production') {
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(100);
-} else {
   module.exports = __webpack_require__(101);
+} else {
+  module.exports = __webpack_require__(102);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -3322,9 +3322,9 @@ if (process.env.NODE_ENV === 'production') {
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__combineReducers__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__combineReducers__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__ = __webpack_require__(113);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__compose__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_warning__ = __webpack_require__(51);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createStore", function() { return __WEBPACK_IMPORTED_MODULE_0__createStore__["b"]; });
@@ -3360,7 +3360,7 @@ if (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' 
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ActionTypes; });
 /* harmony export (immutable) */ __webpack_exports__["b"] = createStore;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable__ = __webpack_require__(109);
 
 
 
@@ -3744,9 +3744,9 @@ function compose() {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Provider__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Provider__ = __webpack_require__(114);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__connect_connect__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__connect_connect__ = __webpack_require__(122);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Provider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["b"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createProvider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connectAdvanced", function() { return __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__["a"]; });
@@ -3762,7 +3762,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = _inheritsLoose;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__setPrototypeOf_js__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__setPrototypeOf_js__ = __webpack_require__(115);
 
 function _inheritsLoose(subClass, superClass) {
   subClass.prototype = Object.create(superClass.prototype);
@@ -3799,7 +3799,7 @@ var storeShape = __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.shape({
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = connectAdvanced;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_inheritsLoose__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_assertThisInitialized__ = __webpack_require__(119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_assertThisInitialized__ = __webpack_require__(120);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_extends__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__babel_runtime_helpers_esm_objectWithoutPropertiesLoose__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_hoist_non_react_statics__ = __webpack_require__(57);
@@ -3810,7 +3810,7 @@ var storeShape = __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.shape({
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_is__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_is___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_react_is__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils_Subscription__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils_Subscription__ = __webpack_require__(121);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__utils_PropTypes__ = __webpack_require__(55);
 
 
@@ -4309,7 +4309,7 @@ function wrapMapToPropsFunc(mapToProps, methodName) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = verifyPlainObject;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__isPlainObject__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__isPlainObject__ = __webpack_require__(125);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__warning__ = __webpack_require__(29);
 
 
@@ -4325,33 +4325,33 @@ function verifyPlainObject(value, displayName, methodName) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(132);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserRouter", function() { return __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(136);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "HashRouter", function() { return __WEBPACK_IMPORTED_MODULE_1__HashRouter__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(62);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Link", function() { return __WEBPACK_IMPORTED_MODULE_2__Link__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(137);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MemoryRouter", function() { return __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(139);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "NavLink", function() { return __WEBPACK_IMPORTED_MODULE_4__NavLink__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(141);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Prompt", function() { return __WEBPACK_IMPORTED_MODULE_5__Prompt__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(143);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return __WEBPACK_IMPORTED_MODULE_6__Redirect__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(63);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(31);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return __WEBPACK_IMPORTED_MODULE_8__Router__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(145);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StaticRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__StaticRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(147);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Switch", function() { return __WEBPACK_IMPORTED_MODULE_10__Switch__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__generatePath__ = __webpack_require__(148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__generatePath__ = __webpack_require__(149);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "generatePath", function() { return __WEBPACK_IMPORTED_MODULE_11__generatePath__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__matchPath__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__matchPath__ = __webpack_require__(150);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "matchPath", function() { return __WEBPACK_IMPORTED_MODULE_12__matchPath__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__withRouter__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__withRouter__ = __webpack_require__(151);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return __WEBPACK_IMPORTED_MODULE_13__withRouter__["a"]; });
 
 
@@ -4696,7 +4696,7 @@ Route.childContextTypes = {
 /* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isarray = __webpack_require__(139)
+var isarray = __webpack_require__(140)
 
 /**
  * Expose `pathToRegexp`.
@@ -5239,7 +5239,7 @@ var GET_PRODUCTS_ERROR = exports.GET_PRODUCTS_ERROR = 'GET_PRODUCTS_ERROR';
 // on the global object (window or self)
 //
 // Return that as the export for use in Webpack, Browserify etc.
-__webpack_require__(156);
+__webpack_require__(157);
 module.exports = self.fetch.bind(self);
 
 
@@ -5248,13 +5248,2051 @@ module.exports = self.fetch.bind(self);
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ErrorMessage", function() { return ErrorMessage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FastField", function() { return FastField; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Field", function() { return Field; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FieldArray", function() { return FieldArray; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Form", function() { return Form; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Formik", function() { return Formik; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormikConsumer", function() { return FormikConsumer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormikContext", function() { return FormikContext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormikProvider", function() { return FormikProvider; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "connect", function() { return connect; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getActiveElement", function() { return getActiveElement; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getIn", function() { return getIn; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "insert", function() { return insert; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isEmptyArray", function() { return isEmptyArray; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isEmptyChildren", function() { return isEmptyChildren; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isFunction", function() { return isFunction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isInputEvent", function() { return isInputEvent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isInteger", function() { return isInteger; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isNaN", function() { return isNaN$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isObject", function() { return isObject; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isPromise", function() { return isPromise; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isString", function() { return isString; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "move", function() { return move; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "prepareDataForValidation", function() { return prepareDataForValidation; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "replace", function() { return replace; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setIn", function() { return setIn; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setNestedObjectValues", function() { return setNestedObjectValues; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "swap", function() { return swap; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useField", function() { return useField; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useFormik", function() { return useFormik; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useFormikContext", function() { return useFormikContext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validateYupSchema", function() { return validateYupSchema; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "withFormik", function() { return withFormik; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "yupToFormErrors", function() { return yupToFormErrors; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_fast_compare__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_fast_compare___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_fast_compare__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deepmerge__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash_es_isPlainObject__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_lodash_es_clone__ = __webpack_require__(161);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_lodash_es_toPath__ = __webpack_require__(227);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_tiny_warning__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_hoist_non_react_statics__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_hoist_non_react_statics__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_lodash_es_cloneDeep__ = __webpack_require__(234);
+
+
+
+
+
+
+
+
+
+
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+function _inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+  subClass.__proto__ = superClass;
+}
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
+/** @private is the value an empty array? */
+
+var isEmptyArray = function isEmptyArray(value) {
+  return Array.isArray(value) && value.length === 0;
+};
+/** @private is the given object a Function? */
+
+var isFunction = function isFunction(obj) {
+  return typeof obj === 'function';
+};
+/** @private is the given object an Object? */
+
+var isObject = function isObject(obj) {
+  return obj !== null && typeof obj === 'object';
+};
+/** @private is the given object an integer? */
+
+var isInteger = function isInteger(obj) {
+  return String(Math.floor(Number(obj))) === obj;
+};
+/** @private is the given object a string? */
+
+var isString = function isString(obj) {
+  return Object.prototype.toString.call(obj) === '[object String]';
+};
+/** @private is the given object a NaN? */
+// eslint-disable-next-line no-self-compare
+
+var isNaN$1 = function isNaN(obj) {
+  return obj !== obj;
+};
+/** @private Does a React component have exactly 0 children? */
+
+var isEmptyChildren = function isEmptyChildren(children) {
+  return __WEBPACK_IMPORTED_MODULE_0_react__["Children"].count(children) === 0;
+};
+/** @private is the given object/value a promise? */
+
+var isPromise = function isPromise(value) {
+  return isObject(value) && isFunction(value.then);
+};
+/** @private is the given object/value a type of synthetic event? */
+
+var isInputEvent = function isInputEvent(value) {
+  return value && isObject(value) && isObject(value.target);
+};
+/**
+ * Same as document.activeElement but wraps in a try-catch block. In IE it is
+ * not safe to call document.activeElement if there is nothing focused.
+ *
+ * The activeElement will be null only if the document or document body is not
+ * yet defined.
+ *
+ * @param {?Document} doc Defaults to current document.
+ * @return {Element | null}
+ * @see https://github.com/facebook/fbjs/blob/master/packages/fbjs/src/core/dom/getActiveElement.js
+ */
+
+function getActiveElement(doc) {
+  doc = doc || (typeof document !== 'undefined' ? document : undefined);
+
+  if (typeof doc === 'undefined') {
+    return null;
+  }
+
+  try {
+    return doc.activeElement || doc.body;
+  } catch (e) {
+    return doc.body;
+  }
+}
+/**
+ * Deeply get a value from an object via its path.
+ */
+
+function getIn(obj, key, def, p) {
+  if (p === void 0) {
+    p = 0;
+  }
+
+  var path = Object(__WEBPACK_IMPORTED_MODULE_5_lodash_es_toPath__["a" /* default */])(key);
+
+  while (obj && p < path.length) {
+    obj = obj[path[p++]];
+  }
+
+  return obj === undefined ? def : obj;
+}
+/**
+ * Deeply set a value from in object via it's path. If the value at `path`
+ * has changed, return a shallow copy of obj with `value` set at `path`.
+ * If `value` has not changed, return the original `obj`.
+ *
+ * Existing objects / arrays along `path` are also shallow copied. Sibling
+ * objects along path retain the same internal js reference. Since new
+ * objects / arrays are only created along `path`, we can test if anything
+ * changed in a nested structure by comparing the object's reference in
+ * the old and new object, similar to how russian doll cache invalidation
+ * works.
+ *
+ * In earlier versions of this function, which used cloneDeep, there were
+ * issues whereby settings a nested value would mutate the parent
+ * instead of creating a new object. `clone` avoids that bug making a
+ * shallow copy of the objects along the update path
+ * so no object is mutated in place.
+ *
+ * Before changing this function, please read through the following
+ * discussions.
+ *
+ * @see https://github.com/developit/linkstate
+ * @see https://github.com/jaredpalmer/formik/pull/123
+ */
+
+function setIn(obj, path, value) {
+  var res = Object(__WEBPACK_IMPORTED_MODULE_4_lodash_es_clone__["a" /* default */])(obj); // this keeps inheritance when obj is a class
+
+  var resVal = res;
+  var i = 0;
+  var pathArray = Object(__WEBPACK_IMPORTED_MODULE_5_lodash_es_toPath__["a" /* default */])(path);
+
+  for (; i < pathArray.length - 1; i++) {
+    var currentPath = pathArray[i];
+    var currentObj = getIn(obj, pathArray.slice(0, i + 1));
+
+    if (currentObj && (isObject(currentObj) || Array.isArray(currentObj))) {
+      resVal = resVal[currentPath] = Object(__WEBPACK_IMPORTED_MODULE_4_lodash_es_clone__["a" /* default */])(currentObj);
+    } else {
+      var nextPath = pathArray[i + 1];
+      resVal = resVal[currentPath] = isInteger(nextPath) && Number(nextPath) >= 0 ? [] : {};
+    }
+  } // Return original object if new value is the same as current
+
+
+  if ((i === 0 ? obj : resVal)[pathArray[i]] === value) {
+    return obj;
+  }
+
+  if (value === undefined) {
+    delete resVal[pathArray[i]];
+  } else {
+    resVal[pathArray[i]] = value;
+  } // If the path array has a single element, the loop did not run.
+  // Deleting on `resVal` had no effect in this scenario, so we delete on the result instead.
+
+
+  if (i === 0 && value === undefined) {
+    delete res[pathArray[i]];
+  }
+
+  return res;
+}
+/**
+ * Recursively a set the same value for all keys and arrays nested object, cloning
+ * @param object
+ * @param value
+ * @param visited
+ * @param response
+ */
+
+function setNestedObjectValues(object, value, visited, response) {
+  if (visited === void 0) {
+    visited = new WeakMap();
+  }
+
+  if (response === void 0) {
+    response = {};
+  }
+
+  for (var _i = 0, _Object$keys = Object.keys(object); _i < _Object$keys.length; _i++) {
+    var k = _Object$keys[_i];
+    var val = object[k];
+
+    if (isObject(val)) {
+      if (!visited.get(val)) {
+        visited.set(val, true); // In order to keep array values consistent for both dot path  and
+        // bracket syntax, we need to check if this is an array so that
+        // this will output  { friends: [true] } and not { friends: { "0": true } }
+
+        response[k] = Array.isArray(val) ? [] : {};
+        setNestedObjectValues(val, value, visited, response[k]);
+      }
+    } else {
+      response[k] = value;
+    }
+  }
+
+  return response;
+}
+
+var FormikContext = /*#__PURE__*/Object(__WEBPACK_IMPORTED_MODULE_0_react__["createContext"])(undefined);
+FormikContext.displayName = 'FormikContext';
+var FormikProvider = FormikContext.Provider;
+var FormikConsumer = FormikContext.Consumer;
+function useFormikContext() {
+  var formik = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useContext"])(FormikContext);
+  !!!formik ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, "Formik context is undefined, please verify you are calling useFormikContext() as child of a <Formik> component.") : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0;
+  return formik;
+}
+
+function formikReducer(state, msg) {
+  switch (msg.type) {
+    case 'SET_VALUES':
+      return _extends({}, state, {
+        values: msg.payload
+      });
+
+    case 'SET_TOUCHED':
+      return _extends({}, state, {
+        touched: msg.payload
+      });
+
+    case 'SET_ERRORS':
+      if (__WEBPACK_IMPORTED_MODULE_1_react_fast_compare___default()(state.errors, msg.payload)) {
+        return state;
+      }
+
+      return _extends({}, state, {
+        errors: msg.payload
+      });
+
+    case 'SET_STATUS':
+      return _extends({}, state, {
+        status: msg.payload
+      });
+
+    case 'SET_ISSUBMITTING':
+      return _extends({}, state, {
+        isSubmitting: msg.payload
+      });
+
+    case 'SET_ISVALIDATING':
+      return _extends({}, state, {
+        isValidating: msg.payload
+      });
+
+    case 'SET_FIELD_VALUE':
+      return _extends({}, state, {
+        values: setIn(state.values, msg.payload.field, msg.payload.value)
+      });
+
+    case 'SET_FIELD_TOUCHED':
+      return _extends({}, state, {
+        touched: setIn(state.touched, msg.payload.field, msg.payload.value)
+      });
+
+    case 'SET_FIELD_ERROR':
+      return _extends({}, state, {
+        errors: setIn(state.errors, msg.payload.field, msg.payload.value)
+      });
+
+    case 'RESET_FORM':
+      return _extends({}, state, msg.payload);
+
+    case 'SET_FORMIK_STATE':
+      return msg.payload(state);
+
+    case 'SUBMIT_ATTEMPT':
+      return _extends({}, state, {
+        touched: setNestedObjectValues(state.values, true),
+        isSubmitting: true,
+        submitCount: state.submitCount + 1
+      });
+
+    case 'SUBMIT_FAILURE':
+      return _extends({}, state, {
+        isSubmitting: false
+      });
+
+    case 'SUBMIT_SUCCESS':
+      return _extends({}, state, {
+        isSubmitting: false
+      });
+
+    default:
+      return state;
+  }
+} // Initial empty states // objects
+
+
+var emptyErrors = {};
+var emptyTouched = {};
+function useFormik(_ref) {
+  var _ref$validateOnChange = _ref.validateOnChange,
+      validateOnChange = _ref$validateOnChange === void 0 ? true : _ref$validateOnChange,
+      _ref$validateOnBlur = _ref.validateOnBlur,
+      validateOnBlur = _ref$validateOnBlur === void 0 ? true : _ref$validateOnBlur,
+      _ref$validateOnMount = _ref.validateOnMount,
+      validateOnMount = _ref$validateOnMount === void 0 ? false : _ref$validateOnMount,
+      isInitialValid = _ref.isInitialValid,
+      _ref$enableReinitiali = _ref.enableReinitialize,
+      enableReinitialize = _ref$enableReinitiali === void 0 ? false : _ref$enableReinitiali,
+      onSubmit = _ref.onSubmit,
+      rest = _objectWithoutPropertiesLoose(_ref, ["validateOnChange", "validateOnBlur", "validateOnMount", "isInitialValid", "enableReinitialize", "onSubmit"]);
+
+  var props = _extends({
+    validateOnChange: validateOnChange,
+    validateOnBlur: validateOnBlur,
+    validateOnMount: validateOnMount,
+    onSubmit: onSubmit
+  }, rest);
+
+  var initialValues = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useRef"])(props.initialValues);
+  var initialErrors = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useRef"])(props.initialErrors || emptyErrors);
+  var initialTouched = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useRef"])(props.initialTouched || emptyTouched);
+  var initialStatus = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useRef"])(props.initialStatus);
+  var isMounted = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useRef"])(false);
+  var fieldRegistry = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useRef"])({});
+
+  if (process.env.NODE_ENV !== "production") {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    Object(__WEBPACK_IMPORTED_MODULE_0_react__["useEffect"])(function () {
+      !(typeof isInitialValid === 'undefined') ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, 'isInitialValid has been deprecated and will be removed in future versions of Formik. Please use initialErrors or validateOnMount instead.') : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0; // eslint-disable-next-line
+    }, []);
+  }
+
+  Object(__WEBPACK_IMPORTED_MODULE_0_react__["useEffect"])(function () {
+    isMounted.current = true;
+    return function () {
+      isMounted.current = false;
+    };
+  }, []);
+
+  var _React$useReducer = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useReducer"])(formikReducer, {
+    values: props.initialValues,
+    errors: props.initialErrors || emptyErrors,
+    touched: props.initialTouched || emptyTouched,
+    status: props.initialStatus,
+    isSubmitting: false,
+    isValidating: false,
+    submitCount: 0
+  }),
+      state = _React$useReducer[0],
+      dispatch = _React$useReducer[1];
+
+  var runValidateHandler = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (values, field) {
+    return new Promise(function (resolve, reject) {
+      var maybePromisedErrors = props.validate(values, field);
+
+      if (maybePromisedErrors == null) {
+        // use loose null check here on purpose
+        resolve(emptyErrors);
+      } else if (isPromise(maybePromisedErrors)) {
+        maybePromisedErrors.then(function (errors) {
+          resolve(errors || emptyErrors);
+        }, function (actualException) {
+          if (process.env.NODE_ENV !== 'production') {
+            console.warn("Warning: An unhandled error was caught during validation in <Formik validate />", actualException);
+          }
+
+          reject(actualException);
+        });
+      } else {
+        resolve(maybePromisedErrors);
+      }
+    });
+  }, [props.validate]);
+  /**
+   * Run validation against a Yup schema and optionally run a function if successful
+   */
+
+  var runValidationSchema = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (values, field) {
+    var validationSchema = props.validationSchema;
+    var schema = isFunction(validationSchema) ? validationSchema(field) : validationSchema;
+    var promise = field && schema.validateAt ? schema.validateAt(field, values) : validateYupSchema(values, schema);
+    return new Promise(function (resolve, reject) {
+      promise.then(function () {
+        resolve(emptyErrors);
+      }, function (err) {
+        // Yup will throw a validation error if validation fails. We catch those and
+        // resolve them into Formik errors. We can sniff if something is a Yup error
+        // by checking error.name.
+        // @see https://github.com/jquense/yup#validationerrorerrors-string--arraystring-value-any-path-string
+        if (err.name === 'ValidationError') {
+          resolve(yupToFormErrors(err));
+        } else {
+          // We throw any other errors
+          if (process.env.NODE_ENV !== 'production') {
+            console.warn("Warning: An unhandled error was caught during validation in <Formik validationSchema />", err);
+          }
+
+          reject(err);
+        }
+      });
+    });
+  }, [props.validationSchema]);
+  var runSingleFieldLevelValidation = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (field, value) {
+    return new Promise(function (resolve) {
+      return resolve(fieldRegistry.current[field].validate(value));
+    });
+  }, []);
+  var runFieldLevelValidations = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (values) {
+    var fieldKeysWithValidation = Object.keys(fieldRegistry.current).filter(function (f) {
+      return isFunction(fieldRegistry.current[f].validate);
+    }); // Construct an array with all of the field validation functions
+
+    var fieldValidations = fieldKeysWithValidation.length > 0 ? fieldKeysWithValidation.map(function (f) {
+      return runSingleFieldLevelValidation(f, getIn(values, f));
+    }) : [Promise.resolve('DO_NOT_DELETE_YOU_WILL_BE_FIRED')]; // use special case ;)
+
+    return Promise.all(fieldValidations).then(function (fieldErrorsList) {
+      return fieldErrorsList.reduce(function (prev, curr, index) {
+        if (curr === 'DO_NOT_DELETE_YOU_WILL_BE_FIRED') {
+          return prev;
+        }
+
+        if (curr) {
+          prev = setIn(prev, fieldKeysWithValidation[index], curr);
+        }
+
+        return prev;
+      }, {});
+    });
+  }, [runSingleFieldLevelValidation]); // Run all validations and return the result
+
+  var runAllValidations = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (values) {
+    return Promise.all([runFieldLevelValidations(values), props.validationSchema ? runValidationSchema(values) : {}, props.validate ? runValidateHandler(values) : {}]).then(function (_ref2) {
+      var fieldErrors = _ref2[0],
+          schemaErrors = _ref2[1],
+          validateErrors = _ref2[2];
+      var combinedErrors = __WEBPACK_IMPORTED_MODULE_2_deepmerge__["a" /* default */].all([fieldErrors, schemaErrors, validateErrors], {
+        arrayMerge: arrayMerge
+      });
+      return combinedErrors;
+    });
+  }, [props.validate, props.validationSchema, runFieldLevelValidations, runValidateHandler, runValidationSchema]); // Run all validations methods and update state accordingly
+
+  var validateFormWithHighPriority = useEventCallback(function (values) {
+    if (values === void 0) {
+      values = state.values;
+    }
+
+    dispatch({
+      type: 'SET_ISVALIDATING',
+      payload: true
+    });
+    return runAllValidations(values).then(function (combinedErrors) {
+      if (!!isMounted.current) {
+        dispatch({
+          type: 'SET_ISVALIDATING',
+          payload: false
+        });
+        dispatch({
+          type: 'SET_ERRORS',
+          payload: combinedErrors
+        });
+      }
+
+      return combinedErrors;
+    });
+  });
+  Object(__WEBPACK_IMPORTED_MODULE_0_react__["useEffect"])(function () {
+    if (validateOnMount && isMounted.current === true && __WEBPACK_IMPORTED_MODULE_1_react_fast_compare___default()(initialValues.current, props.initialValues)) {
+      validateFormWithHighPriority(initialValues.current);
+    }
+  }, [validateOnMount, validateFormWithHighPriority]);
+  var resetForm = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (nextState) {
+    var values = nextState && nextState.values ? nextState.values : initialValues.current;
+    var errors = nextState && nextState.errors ? nextState.errors : initialErrors.current ? initialErrors.current : props.initialErrors || {};
+    var touched = nextState && nextState.touched ? nextState.touched : initialTouched.current ? initialTouched.current : props.initialTouched || {};
+    var status = nextState && nextState.status ? nextState.status : initialStatus.current ? initialStatus.current : props.initialStatus;
+    initialValues.current = values;
+    initialErrors.current = errors;
+    initialTouched.current = touched;
+    initialStatus.current = status;
+
+    var dispatchFn = function dispatchFn() {
+      dispatch({
+        type: 'RESET_FORM',
+        payload: {
+          isSubmitting: !!nextState && !!nextState.isSubmitting,
+          errors: errors,
+          touched: touched,
+          status: status,
+          values: values,
+          isValidating: !!nextState && !!nextState.isValidating,
+          submitCount: !!nextState && !!nextState.submitCount && typeof nextState.submitCount === 'number' ? nextState.submitCount : 0
+        }
+      });
+    };
+
+    if (props.onReset) {
+      var maybePromisedOnReset = props.onReset(state.values, imperativeMethods);
+
+      if (isPromise(maybePromisedOnReset)) {
+        maybePromisedOnReset.then(dispatchFn);
+      } else {
+        dispatchFn();
+      }
+    } else {
+      dispatchFn();
+    }
+  }, [props.initialErrors, props.initialStatus, props.initialTouched]);
+  Object(__WEBPACK_IMPORTED_MODULE_0_react__["useEffect"])(function () {
+    if (isMounted.current === true && !__WEBPACK_IMPORTED_MODULE_1_react_fast_compare___default()(initialValues.current, props.initialValues)) {
+      if (enableReinitialize) {
+        initialValues.current = props.initialValues;
+        resetForm();
+      }
+
+      if (validateOnMount) {
+        validateFormWithHighPriority(initialValues.current);
+      }
+    }
+  }, [enableReinitialize, props.initialValues, resetForm, validateOnMount, validateFormWithHighPriority]);
+  Object(__WEBPACK_IMPORTED_MODULE_0_react__["useEffect"])(function () {
+    if (enableReinitialize && isMounted.current === true && !__WEBPACK_IMPORTED_MODULE_1_react_fast_compare___default()(initialErrors.current, props.initialErrors)) {
+      initialErrors.current = props.initialErrors || emptyErrors;
+      dispatch({
+        type: 'SET_ERRORS',
+        payload: props.initialErrors || emptyErrors
+      });
+    }
+  }, [enableReinitialize, props.initialErrors]);
+  Object(__WEBPACK_IMPORTED_MODULE_0_react__["useEffect"])(function () {
+    if (enableReinitialize && isMounted.current === true && !__WEBPACK_IMPORTED_MODULE_1_react_fast_compare___default()(initialTouched.current, props.initialTouched)) {
+      initialTouched.current = props.initialTouched || emptyTouched;
+      dispatch({
+        type: 'SET_TOUCHED',
+        payload: props.initialTouched || emptyTouched
+      });
+    }
+  }, [enableReinitialize, props.initialTouched]);
+  Object(__WEBPACK_IMPORTED_MODULE_0_react__["useEffect"])(function () {
+    if (enableReinitialize && isMounted.current === true && !__WEBPACK_IMPORTED_MODULE_1_react_fast_compare___default()(initialStatus.current, props.initialStatus)) {
+      initialStatus.current = props.initialStatus;
+      dispatch({
+        type: 'SET_STATUS',
+        payload: props.initialStatus
+      });
+    }
+  }, [enableReinitialize, props.initialStatus, props.initialTouched]);
+  var validateField = useEventCallback(function (name) {
+    // This will efficiently validate a single field by avoiding state
+    // changes if the validation function is synchronous. It's different from
+    // what is called when using validateForm.
+    if (fieldRegistry.current[name] && isFunction(fieldRegistry.current[name].validate)) {
+      var value = getIn(state.values, name);
+      var maybePromise = fieldRegistry.current[name].validate(value);
+
+      if (isPromise(maybePromise)) {
+        // Only flip isValidating if the function is async.
+        dispatch({
+          type: 'SET_ISVALIDATING',
+          payload: true
+        });
+        return maybePromise.then(function (x) {
+          return x;
+        }).then(function (error) {
+          dispatch({
+            type: 'SET_FIELD_ERROR',
+            payload: {
+              field: name,
+              value: error
+            }
+          });
+          dispatch({
+            type: 'SET_ISVALIDATING',
+            payload: false
+          });
+        });
+      } else {
+        dispatch({
+          type: 'SET_FIELD_ERROR',
+          payload: {
+            field: name,
+            value: maybePromise
+          }
+        });
+        return Promise.resolve(maybePromise);
+      }
+    } else if (props.validationSchema) {
+      dispatch({
+        type: 'SET_ISVALIDATING',
+        payload: true
+      });
+      return runValidationSchema(state.values, name).then(function (x) {
+        return x;
+      }).then(function (error) {
+        dispatch({
+          type: 'SET_FIELD_ERROR',
+          payload: {
+            field: name,
+            value: error[name]
+          }
+        });
+        dispatch({
+          type: 'SET_ISVALIDATING',
+          payload: false
+        });
+      });
+    }
+
+    return Promise.resolve();
+  });
+  var registerField = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (name, _ref3) {
+    var validate = _ref3.validate;
+    fieldRegistry.current[name] = {
+      validate: validate
+    };
+  }, []);
+  var unregisterField = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (name) {
+    delete fieldRegistry.current[name];
+  }, []);
+  var setTouched = useEventCallback(function (touched, shouldValidate) {
+    dispatch({
+      type: 'SET_TOUCHED',
+      payload: touched
+    });
+    var willValidate = shouldValidate === undefined ? validateOnBlur : shouldValidate;
+    return willValidate ? validateFormWithHighPriority(state.values) : Promise.resolve();
+  });
+  var setErrors = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (errors) {
+    dispatch({
+      type: 'SET_ERRORS',
+      payload: errors
+    });
+  }, []);
+  var setValues = useEventCallback(function (values, shouldValidate) {
+    var resolvedValues = isFunction(values) ? values(state.values) : values;
+    dispatch({
+      type: 'SET_VALUES',
+      payload: resolvedValues
+    });
+    var willValidate = shouldValidate === undefined ? validateOnChange : shouldValidate;
+    return willValidate ? validateFormWithHighPriority(resolvedValues) : Promise.resolve();
+  });
+  var setFieldError = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (field, value) {
+    dispatch({
+      type: 'SET_FIELD_ERROR',
+      payload: {
+        field: field,
+        value: value
+      }
+    });
+  }, []);
+  var setFieldValue = useEventCallback(function (field, value, shouldValidate) {
+    dispatch({
+      type: 'SET_FIELD_VALUE',
+      payload: {
+        field: field,
+        value: value
+      }
+    });
+    var willValidate = shouldValidate === undefined ? validateOnChange : shouldValidate;
+    return willValidate ? validateFormWithHighPriority(setIn(state.values, field, value)) : Promise.resolve();
+  });
+  var executeChange = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (eventOrTextValue, maybePath) {
+    // By default, assume that the first argument is a string. This allows us to use
+    // handleChange with React Native and React Native Web's onChangeText prop which
+    // provides just the value of the input.
+    var field = maybePath;
+    var val = eventOrTextValue;
+    var parsed; // If the first argument is not a string though, it has to be a synthetic React Event (or a fake one),
+    // so we handle like we would a normal HTML change event.
+
+    if (!isString(eventOrTextValue)) {
+      // If we can, persist the event
+      // @see https://reactjs.org/docs/events.html#event-pooling
+      if (eventOrTextValue.persist) {
+        eventOrTextValue.persist();
+      }
+
+      var target = eventOrTextValue.target ? eventOrTextValue.target : eventOrTextValue.currentTarget;
+      var type = target.type,
+          name = target.name,
+          id = target.id,
+          value = target.value,
+          checked = target.checked,
+          outerHTML = target.outerHTML,
+          options = target.options,
+          multiple = target.multiple;
+      field = maybePath ? maybePath : name ? name : id;
+
+      if (!field && process.env.NODE_ENV !== "production") {
+        warnAboutMissingIdentifier({
+          htmlContent: outerHTML,
+          documentationAnchorLink: 'handlechange-e-reactchangeeventany--void',
+          handlerName: 'handleChange'
+        });
+      }
+
+      val = /number|range/.test(type) ? (parsed = parseFloat(value), isNaN(parsed) ? '' : parsed) : /checkbox/.test(type) // checkboxes
+      ? getValueForCheckbox(getIn(state.values, field), checked, value) : options && multiple // <select multiple>
+      ? getSelectedValues(options) : value;
+    }
+
+    if (field) {
+      // Set form fields by name
+      setFieldValue(field, val);
+    }
+  }, [setFieldValue, state.values]);
+  var handleChange = useEventCallback(function (eventOrPath) {
+    if (isString(eventOrPath)) {
+      return function (event) {
+        return executeChange(event, eventOrPath);
+      };
+    } else {
+      executeChange(eventOrPath);
+    }
+  });
+  var setFieldTouched = useEventCallback(function (field, touched, shouldValidate) {
+    if (touched === void 0) {
+      touched = true;
+    }
+
+    dispatch({
+      type: 'SET_FIELD_TOUCHED',
+      payload: {
+        field: field,
+        value: touched
+      }
+    });
+    var willValidate = shouldValidate === undefined ? validateOnBlur : shouldValidate;
+    return willValidate ? validateFormWithHighPriority(state.values) : Promise.resolve();
+  });
+  var executeBlur = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (e, path) {
+    if (e.persist) {
+      e.persist();
+    }
+
+    var _e$target = e.target,
+        name = _e$target.name,
+        id = _e$target.id,
+        outerHTML = _e$target.outerHTML;
+    var field = path ? path : name ? name : id;
+
+    if (!field && process.env.NODE_ENV !== "production") {
+      warnAboutMissingIdentifier({
+        htmlContent: outerHTML,
+        documentationAnchorLink: 'handleblur-e-any--void',
+        handlerName: 'handleBlur'
+      });
+    }
+
+    setFieldTouched(field, true);
+  }, [setFieldTouched]);
+  var handleBlur = useEventCallback(function (eventOrString) {
+    if (isString(eventOrString)) {
+      return function (event) {
+        return executeBlur(event, eventOrString);
+      };
+    } else {
+      executeBlur(eventOrString);
+    }
+  });
+  var setFormikState = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (stateOrCb) {
+    if (isFunction(stateOrCb)) {
+      dispatch({
+        type: 'SET_FORMIK_STATE',
+        payload: stateOrCb
+      });
+    } else {
+      dispatch({
+        type: 'SET_FORMIK_STATE',
+        payload: function payload() {
+          return stateOrCb;
+        }
+      });
+    }
+  }, []);
+  var setStatus = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (status) {
+    dispatch({
+      type: 'SET_STATUS',
+      payload: status
+    });
+  }, []);
+  var setSubmitting = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (isSubmitting) {
+    dispatch({
+      type: 'SET_ISSUBMITTING',
+      payload: isSubmitting
+    });
+  }, []);
+  var submitForm = useEventCallback(function () {
+    dispatch({
+      type: 'SUBMIT_ATTEMPT'
+    });
+    return validateFormWithHighPriority().then(function (combinedErrors) {
+      // In case an error was thrown and passed to the resolved Promise,
+      // `combinedErrors` can be an instance of an Error. We need to check
+      // that and abort the submit.
+      // If we don't do that, calling `Object.keys(new Error())` yields an
+      // empty array, which causes the validation to pass and the form
+      // to be submitted.
+      var isInstanceOfError = combinedErrors instanceof Error;
+      var isActuallyValid = !isInstanceOfError && Object.keys(combinedErrors).length === 0;
+
+      if (isActuallyValid) {
+        // Proceed with submit...
+        //
+        // To respect sync submit fns, we can't simply wrap executeSubmit in a promise and
+        // _always_ dispatch SUBMIT_SUCCESS because isSubmitting would then always be false.
+        // This would be fine in simple cases, but make it impossible to disable submit
+        // buttons where people use callbacks or promises as side effects (which is basically
+        // all of v1 Formik code). Instead, recall that we are inside of a promise chain already,
+        //  so we can try/catch executeSubmit(), if it returns undefined, then just bail.
+        // If there are errors, throw em. Otherwise, wrap executeSubmit in a promise and handle
+        // cleanup of isSubmitting on behalf of the consumer.
+        var promiseOrUndefined;
+
+        try {
+          promiseOrUndefined = executeSubmit(); // Bail if it's sync, consumer is responsible for cleaning up
+          // via setSubmitting(false)
+
+          if (promiseOrUndefined === undefined) {
+            return;
+          }
+        } catch (error) {
+          throw error;
+        }
+
+        return Promise.resolve(promiseOrUndefined).then(function (result) {
+          if (!!isMounted.current) {
+            dispatch({
+              type: 'SUBMIT_SUCCESS'
+            });
+          }
+
+          return result;
+        })["catch"](function (_errors) {
+          if (!!isMounted.current) {
+            dispatch({
+              type: 'SUBMIT_FAILURE'
+            }); // This is a legit error rejected by the onSubmit fn
+            // so we don't want to break the promise chain
+
+            throw _errors;
+          }
+        });
+      } else if (!!isMounted.current) {
+        // ^^^ Make sure Formik is still mounted before updating state
+        dispatch({
+          type: 'SUBMIT_FAILURE'
+        }); // throw combinedErrors;
+
+        if (isInstanceOfError) {
+          throw combinedErrors;
+        }
+      }
+
+      return;
+    });
+  });
+  var handleSubmit = useEventCallback(function (e) {
+    if (e && e.preventDefault && isFunction(e.preventDefault)) {
+      e.preventDefault();
+    }
+
+    if (e && e.stopPropagation && isFunction(e.stopPropagation)) {
+      e.stopPropagation();
+    } // Warn if form submission is triggered by a <button> without a
+    // specified `type` attribute during development. This mitigates
+    // a common gotcha in forms with both reset and submit buttons,
+    // where the dev forgets to add type="button" to the reset button.
+
+
+    if (process.env.NODE_ENV !== "production" && typeof document !== 'undefined') {
+      // Safely get the active element (works with IE)
+      var activeElement = getActiveElement();
+
+      if (activeElement !== null && activeElement instanceof HTMLButtonElement) {
+        !(activeElement.attributes && activeElement.attributes.getNamedItem('type')) ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, 'You submitted a Formik form using a button with an unspecified `type` attribute.  Most browsers default button elements to `type="submit"`. If this is not a submit button, please add `type="button"`.') : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0;
+      }
+    }
+
+    submitForm()["catch"](function (reason) {
+      console.warn("Warning: An unhandled error was caught from submitForm()", reason);
+    });
+  });
+  var imperativeMethods = {
+    resetForm: resetForm,
+    validateForm: validateFormWithHighPriority,
+    validateField: validateField,
+    setErrors: setErrors,
+    setFieldError: setFieldError,
+    setFieldTouched: setFieldTouched,
+    setFieldValue: setFieldValue,
+    setStatus: setStatus,
+    setSubmitting: setSubmitting,
+    setTouched: setTouched,
+    setValues: setValues,
+    setFormikState: setFormikState,
+    submitForm: submitForm
+  };
+  var executeSubmit = useEventCallback(function () {
+    return onSubmit(state.values, imperativeMethods);
+  });
+  var handleReset = useEventCallback(function (e) {
+    if (e && e.preventDefault && isFunction(e.preventDefault)) {
+      e.preventDefault();
+    }
+
+    if (e && e.stopPropagation && isFunction(e.stopPropagation)) {
+      e.stopPropagation();
+    }
+
+    resetForm();
+  });
+  var getFieldMeta = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (name) {
+    return {
+      value: getIn(state.values, name),
+      error: getIn(state.errors, name),
+      touched: !!getIn(state.touched, name),
+      initialValue: getIn(initialValues.current, name),
+      initialTouched: !!getIn(initialTouched.current, name),
+      initialError: getIn(initialErrors.current, name)
+    };
+  }, [state.errors, state.touched, state.values]);
+  var getFieldHelpers = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (name) {
+    return {
+      setValue: function setValue(value, shouldValidate) {
+        return setFieldValue(name, value, shouldValidate);
+      },
+      setTouched: function setTouched(value, shouldValidate) {
+        return setFieldTouched(name, value, shouldValidate);
+      },
+      setError: function setError(value) {
+        return setFieldError(name, value);
+      }
+    };
+  }, [setFieldValue, setFieldTouched, setFieldError]);
+  var getFieldProps = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (nameOrOptions) {
+    var isAnObject = isObject(nameOrOptions);
+    var name = isAnObject ? nameOrOptions.name : nameOrOptions;
+    var valueState = getIn(state.values, name);
+    var field = {
+      name: name,
+      value: valueState,
+      onChange: handleChange,
+      onBlur: handleBlur
+    };
+
+    if (isAnObject) {
+      var type = nameOrOptions.type,
+          valueProp = nameOrOptions.value,
+          is = nameOrOptions.as,
+          multiple = nameOrOptions.multiple;
+
+      if (type === 'checkbox') {
+        if (valueProp === undefined) {
+          field.checked = !!valueState;
+        } else {
+          field.checked = !!(Array.isArray(valueState) && ~valueState.indexOf(valueProp));
+          field.value = valueProp;
+        }
+      } else if (type === 'radio') {
+        field.checked = valueState === valueProp;
+        field.value = valueProp;
+      } else if (is === 'select' && multiple) {
+        field.value = field.value || [];
+        field.multiple = true;
+      }
+    }
+
+    return field;
+  }, [handleBlur, handleChange, state.values]);
+  var dirty = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useMemo"])(function () {
+    return !__WEBPACK_IMPORTED_MODULE_1_react_fast_compare___default()(initialValues.current, state.values);
+  }, [initialValues.current, state.values]);
+  var isValid = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useMemo"])(function () {
+    return typeof isInitialValid !== 'undefined' ? dirty ? state.errors && Object.keys(state.errors).length === 0 : isInitialValid !== false && isFunction(isInitialValid) ? isInitialValid(props) : isInitialValid : state.errors && Object.keys(state.errors).length === 0;
+  }, [isInitialValid, dirty, state.errors, props]);
+
+  var ctx = _extends({}, state, {
+    initialValues: initialValues.current,
+    initialErrors: initialErrors.current,
+    initialTouched: initialTouched.current,
+    initialStatus: initialStatus.current,
+    handleBlur: handleBlur,
+    handleChange: handleChange,
+    handleReset: handleReset,
+    handleSubmit: handleSubmit,
+    resetForm: resetForm,
+    setErrors: setErrors,
+    setFormikState: setFormikState,
+    setFieldTouched: setFieldTouched,
+    setFieldValue: setFieldValue,
+    setFieldError: setFieldError,
+    setStatus: setStatus,
+    setSubmitting: setSubmitting,
+    setTouched: setTouched,
+    setValues: setValues,
+    submitForm: submitForm,
+    validateForm: validateFormWithHighPriority,
+    validateField: validateField,
+    isValid: isValid,
+    dirty: dirty,
+    unregisterField: unregisterField,
+    registerField: registerField,
+    getFieldProps: getFieldProps,
+    getFieldMeta: getFieldMeta,
+    getFieldHelpers: getFieldHelpers,
+    validateOnBlur: validateOnBlur,
+    validateOnChange: validateOnChange,
+    validateOnMount: validateOnMount
+  });
+
+  return ctx;
+}
+function Formik(props) {
+  var formikbag = useFormik(props);
+  var component = props.component,
+      children = props.children,
+      render = props.render,
+      innerRef = props.innerRef; // This allows folks to pass a ref to <Formik />
+
+  Object(__WEBPACK_IMPORTED_MODULE_0_react__["useImperativeHandle"])(innerRef, function () {
+    return formikbag;
+  });
+
+  if (process.env.NODE_ENV !== "production") {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    Object(__WEBPACK_IMPORTED_MODULE_0_react__["useEffect"])(function () {
+      !!props.render ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, "<Formik render> has been deprecated and will be removed in future versions of Formik. Please use a child callback function instead. To get rid of this warning, replace <Formik render={(props) => ...} /> with <Formik>{(props) => ...}</Formik>") : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0; // eslint-disable-next-line
+    }, []);
+  }
+
+  return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(FormikProvider, {
+    value: formikbag
+  }, component ? Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(component, formikbag) : render ? render(formikbag) : children // children come last, always called
+  ? isFunction(children) ? children(formikbag) : !isEmptyChildren(children) ? __WEBPACK_IMPORTED_MODULE_0_react__["Children"].only(children) : null : null);
+}
+
+function warnAboutMissingIdentifier(_ref4) {
+  var htmlContent = _ref4.htmlContent,
+      documentationAnchorLink = _ref4.documentationAnchorLink,
+      handlerName = _ref4.handlerName;
+  console.warn("Warning: Formik called `" + handlerName + "`, but you forgot to pass an `id` or `name` attribute to your input:\n    " + htmlContent + "\n    Formik cannot determine which value to update. For more info see https://formik.org/docs/api/formik#" + documentationAnchorLink + "\n  ");
+}
+/**
+ * Transform Yup ValidationError to a more usable object
+ */
+
+
+function yupToFormErrors(yupError) {
+  var errors = {};
+
+  if (yupError.inner) {
+    if (yupError.inner.length === 0) {
+      return setIn(errors, yupError.path, yupError.message);
+    }
+
+    for (var _iterator = yupError.inner, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
+      var _ref5;
+
+      if (_isArray) {
+        if (_i >= _iterator.length) break;
+        _ref5 = _iterator[_i++];
+      } else {
+        _i = _iterator.next();
+        if (_i.done) break;
+        _ref5 = _i.value;
+      }
+
+      var err = _ref5;
+
+      if (!getIn(errors, err.path)) {
+        errors = setIn(errors, err.path, err.message);
+      }
+    }
+  }
+
+  return errors;
+}
+/**
+ * Validate a yup schema.
+ */
+
+function validateYupSchema(values, schema, sync, context) {
+  if (sync === void 0) {
+    sync = false;
+  }
+
+  if (context === void 0) {
+    context = {};
+  }
+
+  var validateData = prepareDataForValidation(values);
+  return schema[sync ? 'validateSync' : 'validate'](validateData, {
+    abortEarly: false,
+    context: context
+  });
+}
+/**
+ * Recursively prepare values.
+ */
+
+function prepareDataForValidation(values) {
+  var data = Array.isArray(values) ? [] : {};
+
+  for (var k in values) {
+    if (Object.prototype.hasOwnProperty.call(values, k)) {
+      var key = String(k);
+
+      if (Array.isArray(values[key]) === true) {
+        data[key] = values[key].map(function (value) {
+          if (Array.isArray(value) === true || Object(__WEBPACK_IMPORTED_MODULE_3_lodash_es_isPlainObject__["a" /* default */])(value)) {
+            return prepareDataForValidation(value);
+          } else {
+            return value !== '' ? value : undefined;
+          }
+        });
+      } else if (Object(__WEBPACK_IMPORTED_MODULE_3_lodash_es_isPlainObject__["a" /* default */])(values[key])) {
+        data[key] = prepareDataForValidation(values[key]);
+      } else {
+        data[key] = values[key] !== '' ? values[key] : undefined;
+      }
+    }
+  }
+
+  return data;
+}
+/**
+ * deepmerge array merging algorithm
+ * https://github.com/KyleAMathews/deepmerge#combine-array
+ */
+
+function arrayMerge(target, source, options) {
+  var destination = target.slice();
+  source.forEach(function merge(e, i) {
+    if (typeof destination[i] === 'undefined') {
+      var cloneRequested = options.clone !== false;
+      var shouldClone = cloneRequested && options.isMergeableObject(e);
+      destination[i] = shouldClone ? Object(__WEBPACK_IMPORTED_MODULE_2_deepmerge__["a" /* default */])(Array.isArray(e) ? [] : {}, e, options) : e;
+    } else if (options.isMergeableObject(e)) {
+      destination[i] = Object(__WEBPACK_IMPORTED_MODULE_2_deepmerge__["a" /* default */])(target[i], e, options);
+    } else if (target.indexOf(e) === -1) {
+      destination.push(e);
+    }
+  });
+  return destination;
+}
+/** Return multi select values based on an array of options */
+
+
+function getSelectedValues(options) {
+  return Array.from(options).filter(function (el) {
+    return el.selected;
+  }).map(function (el) {
+    return el.value;
+  });
+}
+/** Return the next value for a checkbox */
+
+
+function getValueForCheckbox(currentValue, checked, valueProp) {
+  // If the current value was a boolean, return a boolean
+  if (typeof currentValue === 'boolean') {
+    return Boolean(checked);
+  } // If the currentValue was not a boolean we want to return an array
+
+
+  var currentArrayOfValues = [];
+  var isValueInArray = false;
+  var index = -1;
+
+  if (!Array.isArray(currentValue)) {
+    // eslint-disable-next-line eqeqeq
+    if (!valueProp || valueProp == 'true' || valueProp == 'false') {
+      return Boolean(checked);
+    }
+  } else {
+    // If the current value is already an array, use it
+    currentArrayOfValues = currentValue;
+    index = currentValue.indexOf(valueProp);
+    isValueInArray = index >= 0;
+  } // If the checkbox was checked and the value is not already present in the aray we want to add the new value to the array of values
+
+
+  if (checked && valueProp && !isValueInArray) {
+    return currentArrayOfValues.concat(valueProp);
+  } // If the checkbox was unchecked and the value is not in the array, simply return the already existing array of values
+
+
+  if (!isValueInArray) {
+    return currentArrayOfValues;
+  } // If the checkbox was unchecked and the value is in the array, remove the value and return the array
+
+
+  return currentArrayOfValues.slice(0, index).concat(currentArrayOfValues.slice(index + 1));
+} // React currently throws a warning when using useLayoutEffect on the server.
+// To get around it, we can conditionally useEffect on the server (no-op) and
+// useLayoutEffect in the browser.
+// @see https://gist.github.com/gaearon/e7d97cdf38a2907924ea12e4ebdf3c85
+
+
+var useIsomorphicLayoutEffect = typeof window !== 'undefined' && typeof window.document !== 'undefined' && typeof window.document.createElement !== 'undefined' ? __WEBPACK_IMPORTED_MODULE_0_react__["useLayoutEffect"] : __WEBPACK_IMPORTED_MODULE_0_react__["useEffect"];
+
+function useEventCallback(fn) {
+  var ref = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useRef"])(fn); // we copy a ref to the callback scoped to the current state/props on each render
+
+  useIsomorphicLayoutEffect(function () {
+    ref.current = fn;
+  });
+  return Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function () {
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return ref.current.apply(void 0, args);
+  }, []);
+}
+
+function useField(propsOrFieldName) {
+  var formik = useFormikContext();
+  var getFieldProps = formik.getFieldProps,
+      getFieldMeta = formik.getFieldMeta,
+      getFieldHelpers = formik.getFieldHelpers,
+      registerField = formik.registerField,
+      unregisterField = formik.unregisterField;
+  var isAnObject = isObject(propsOrFieldName); // Normalize propsOrFieldName to FieldHookConfig<Val>
+
+  var props = isAnObject ? propsOrFieldName : {
+    name: propsOrFieldName
+  };
+  var fieldName = props.name,
+      validateFn = props.validate;
+  Object(__WEBPACK_IMPORTED_MODULE_0_react__["useEffect"])(function () {
+    if (fieldName) {
+      registerField(fieldName, {
+        validate: validateFn
+      });
+    }
+
+    return function () {
+      if (fieldName) {
+        unregisterField(fieldName);
+      }
+    };
+  }, [registerField, unregisterField, fieldName, validateFn]);
+
+  if (process.env.NODE_ENV !== "production") {
+    !formik ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, 'useField() / <Field /> must be used underneath a <Formik> component or withFormik() higher order component') : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0;
+  }
+
+  !fieldName ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, 'Invalid field name. Either pass `useField` a string or an object containing a `name` key.') : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0;
+  return [getFieldProps(props), getFieldMeta(fieldName), getFieldHelpers(fieldName)];
+}
+function Field(_ref) {
+  var validate = _ref.validate,
+      name = _ref.name,
+      render = _ref.render,
+      children = _ref.children,
+      is = _ref.as,
+      component = _ref.component,
+      props = _objectWithoutPropertiesLoose(_ref, ["validate", "name", "render", "children", "as", "component"]);
+
+  var _useFormikContext = useFormikContext(),
+      formik = _objectWithoutPropertiesLoose(_useFormikContext, ["validate", "validationSchema"]);
+
+  if (process.env.NODE_ENV !== "production") {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    Object(__WEBPACK_IMPORTED_MODULE_0_react__["useEffect"])(function () {
+      !!render ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, "<Field render> has been deprecated and will be removed in future versions of Formik. Please use a child callback function instead. To get rid of this warning, replace <Field name=\"" + name + "\" render={({field, form}) => ...} /> with <Field name=\"" + name + "\">{({field, form, meta}) => ...}</Field>") : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0;
+      !!(is && children && isFunction(children)) ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, 'You should not use <Field as> and <Field children> as a function in the same <Field> component; <Field as> will be ignored.') : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0;
+      !!(component && children && isFunction(children)) ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, 'You should not use <Field component> and <Field children> as a function in the same <Field> component; <Field component> will be ignored.') : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0;
+      !!(render && children && !isEmptyChildren(children)) ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, 'You should not use <Field render> and <Field children> in the same <Field> component; <Field children> will be ignored') : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0; // eslint-disable-next-line
+    }, []);
+  } // Register field and field-level validation with parent <Formik>
+
+
+  var registerField = formik.registerField,
+      unregisterField = formik.unregisterField;
+  Object(__WEBPACK_IMPORTED_MODULE_0_react__["useEffect"])(function () {
+    registerField(name, {
+      validate: validate
+    });
+    return function () {
+      unregisterField(name);
+    };
+  }, [registerField, unregisterField, name, validate]);
+  var field = formik.getFieldProps(_extends({
+    name: name
+  }, props));
+  var meta = formik.getFieldMeta(name);
+  var legacyBag = {
+    field: field,
+    form: formik
+  };
+
+  if (render) {
+    return render(_extends({}, legacyBag, {
+      meta: meta
+    }));
+  }
+
+  if (isFunction(children)) {
+    return children(_extends({}, legacyBag, {
+      meta: meta
+    }));
+  }
+
+  if (component) {
+    // This behavior is backwards compat with earlier Formik 0.9 to 1.x
+    if (typeof component === 'string') {
+      var innerRef = props.innerRef,
+          rest = _objectWithoutPropertiesLoose(props, ["innerRef"]);
+
+      return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(component, _extends({
+        ref: innerRef
+      }, field, rest), children);
+    } // We don't pass `meta` for backwards compat
+
+
+    return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(component, _extends({
+      field: field,
+      form: formik
+    }, props), children);
+  } // default to input here so we can check for both `as` and `children` above
+
+
+  var asElement = is || 'input';
+
+  if (typeof asElement === 'string') {
+    var _innerRef = props.innerRef,
+        _rest = _objectWithoutPropertiesLoose(props, ["innerRef"]);
+
+    return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(asElement, _extends({
+      ref: _innerRef
+    }, field, _rest), children);
+  }
+
+  return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(asElement, _extends({}, field, props), children);
+}
+
+var Form = /*#__PURE__*/Object(__WEBPACK_IMPORTED_MODULE_0_react__["forwardRef"])(function (props, ref) {
+  // iOS needs an "action" attribute for nice input: https://stackoverflow.com/a/39485162/406725
+  // We default the action to "#" in case the preventDefault fails (just updates the URL hash)
+  var action = props.action,
+      rest = _objectWithoutPropertiesLoose(props, ["action"]);
+
+  var _action = action != null ? action : '#';
+
+  var _useFormikContext = useFormikContext(),
+      handleReset = _useFormikContext.handleReset,
+      handleSubmit = _useFormikContext.handleSubmit;
+
+  return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])("form", Object.assign({
+    onSubmit: handleSubmit,
+    ref: ref,
+    onReset: handleReset,
+    action: _action
+  }, rest));
+});
+Form.displayName = 'Form';
+
+/**
+ * A public higher-order component to access the imperative API
+ */
+
+function withFormik(_ref) {
+  var _ref$mapPropsToValues = _ref.mapPropsToValues,
+      mapPropsToValues = _ref$mapPropsToValues === void 0 ? function (vanillaProps) {
+    var val = {};
+
+    for (var k in vanillaProps) {
+      if (vanillaProps.hasOwnProperty(k) && typeof vanillaProps[k] !== 'function') {
+        // @todo TypeScript fix
+        val[k] = vanillaProps[k];
+      }
+    }
+
+    return val;
+  } : _ref$mapPropsToValues,
+      config = _objectWithoutPropertiesLoose(_ref, ["mapPropsToValues"]);
+
+  return function createFormik(Component$1) {
+    var componentDisplayName = Component$1.displayName || Component$1.name || Component$1.constructor && Component$1.constructor.name || 'Component';
+    /**
+     * We need to use closures here for to provide the wrapped component's props to
+     * the respective withFormik config methods.
+     */
+
+    var C = /*#__PURE__*/function (_React$Component) {
+      _inheritsLoose(C, _React$Component);
+
+      function C() {
+        var _this;
+
+        _this = _React$Component.apply(this, arguments) || this;
+
+        _this.validate = function (values) {
+          return config.validate(values, _this.props);
+        };
+
+        _this.validationSchema = function () {
+          return isFunction(config.validationSchema) ? config.validationSchema(_this.props) : config.validationSchema;
+        };
+
+        _this.handleSubmit = function (values, actions) {
+          return config.handleSubmit(values, _extends({}, actions, {
+            props: _this.props
+          }));
+        };
+        /**
+         * Just avoiding a render callback for perf here
+         */
+
+
+        _this.renderFormComponent = function (formikProps) {
+          return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(Component$1, Object.assign({}, _this.props, formikProps));
+        };
+
+        return _this;
+      }
+
+      var _proto = C.prototype;
+
+      _proto.render = function render() {
+        var _this$props = this.props,
+            props = _objectWithoutPropertiesLoose(_this$props, ["children"]);
+
+        return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(Formik, Object.assign({}, props, config, {
+          validate: config.validate && this.validate,
+          validationSchema: config.validationSchema && this.validationSchema,
+          initialValues: mapPropsToValues(this.props),
+          initialStatus: config.mapPropsToStatus && config.mapPropsToStatus(this.props),
+          initialErrors: config.mapPropsToErrors && config.mapPropsToErrors(this.props),
+          initialTouched: config.mapPropsToTouched && config.mapPropsToTouched(this.props),
+          onSubmit: this.handleSubmit,
+          children: this.renderFormComponent
+        }));
+      };
+
+      return C;
+    }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+    C.displayName = "WithFormik(" + componentDisplayName + ")";
+    return __WEBPACK_IMPORTED_MODULE_7_hoist_non_react_statics___default()(C, Component$1 // cast type to ComponentClass (even if SFC)
+    );
+  };
+}
+
+/**
+ * Connect any component to Formik context, and inject as a prop called `formik`;
+ * @param Comp React Component
+ */
+
+function connect(Comp) {
+  var C = function C(props) {
+    return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(FormikConsumer, null, function (formik) {
+      !!!formik ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, "Formik context is undefined, please verify you are rendering <Form>, <Field>, <FastField>, <FieldArray>, or your custom context-using component as a child of a <Formik> component. Component name: " + Comp.name) : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0;
+      return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(Comp, Object.assign({}, props, {
+        formik: formik
+      }));
+    });
+  };
+
+  var componentDisplayName = Comp.displayName || Comp.name || Comp.constructor && Comp.constructor.name || 'Component'; // Assign Comp to C.WrappedComponent so we can access the inner component in tests
+  // For example, <Field.WrappedComponent /> gets us <FieldInner/>
+
+  C.WrappedComponent = Comp;
+  C.displayName = "FormikConnect(" + componentDisplayName + ")";
+  return __WEBPACK_IMPORTED_MODULE_7_hoist_non_react_statics___default()(C, Comp // cast type to ComponentClass (even if SFC)
+  );
+}
+
+/**
+ * Some array helpers!
+ */
+
+var move = function move(array, from, to) {
+  var copy = copyArrayLike(array);
+  var value = copy[from];
+  copy.splice(from, 1);
+  copy.splice(to, 0, value);
+  return copy;
+};
+var swap = function swap(arrayLike, indexA, indexB) {
+  var copy = copyArrayLike(arrayLike);
+  var a = copy[indexA];
+  copy[indexA] = copy[indexB];
+  copy[indexB] = a;
+  return copy;
+};
+var insert = function insert(arrayLike, index, value) {
+  var copy = copyArrayLike(arrayLike);
+  copy.splice(index, 0, value);
+  return copy;
+};
+var replace = function replace(arrayLike, index, value) {
+  var copy = copyArrayLike(arrayLike);
+  copy[index] = value;
+  return copy;
+};
+
+var copyArrayLike = function copyArrayLike(arrayLike) {
+  if (!arrayLike) {
+    return [];
+  } else if (Array.isArray(arrayLike)) {
+    return [].concat(arrayLike);
+  } else {
+    var maxIndex = Object.keys(arrayLike).map(function (key) {
+      return parseInt(key);
+    }).reduce(function (max, el) {
+      return el > max ? el : max;
+    }, 0);
+    return Array.from(_extends({}, arrayLike, {
+      length: maxIndex + 1
+    }));
+  }
+};
+
+var FieldArrayInner = /*#__PURE__*/function (_React$Component) {
+  _inheritsLoose(FieldArrayInner, _React$Component);
+
+  function FieldArrayInner(props) {
+    var _this;
+
+    _this = _React$Component.call(this, props) || this;
+
+    _this.updateArrayField = function (fn, alterTouched, alterErrors) {
+      var _this$props = _this.props,
+          name = _this$props.name,
+          setFormikState = _this$props.formik.setFormikState;
+      setFormikState(function (prevState) {
+        var updateErrors = typeof alterErrors === 'function' ? alterErrors : fn;
+        var updateTouched = typeof alterTouched === 'function' ? alterTouched : fn; // values fn should be executed before updateErrors and updateTouched,
+        // otherwise it causes an error with unshift.
+
+        var values = setIn(prevState.values, name, fn(getIn(prevState.values, name)));
+        var fieldError = alterErrors ? updateErrors(getIn(prevState.errors, name)) : undefined;
+        var fieldTouched = alterTouched ? updateTouched(getIn(prevState.touched, name)) : undefined;
+
+        if (isEmptyArray(fieldError)) {
+          fieldError = undefined;
+        }
+
+        if (isEmptyArray(fieldTouched)) {
+          fieldTouched = undefined;
+        }
+
+        return _extends({}, prevState, {
+          values: values,
+          errors: alterErrors ? setIn(prevState.errors, name, fieldError) : prevState.errors,
+          touched: alterTouched ? setIn(prevState.touched, name, fieldTouched) : prevState.touched
+        });
+      });
+    };
+
+    _this.push = function (value) {
+      return _this.updateArrayField(function (arrayLike) {
+        return [].concat(copyArrayLike(arrayLike), [Object(__WEBPACK_IMPORTED_MODULE_8_lodash_es_cloneDeep__["a" /* default */])(value)]);
+      }, false, false);
+    };
+
+    _this.handlePush = function (value) {
+      return function () {
+        return _this.push(value);
+      };
+    };
+
+    _this.swap = function (indexA, indexB) {
+      return _this.updateArrayField(function (array) {
+        return swap(array, indexA, indexB);
+      }, true, true);
+    };
+
+    _this.handleSwap = function (indexA, indexB) {
+      return function () {
+        return _this.swap(indexA, indexB);
+      };
+    };
+
+    _this.move = function (from, to) {
+      return _this.updateArrayField(function (array) {
+        return move(array, from, to);
+      }, true, true);
+    };
+
+    _this.handleMove = function (from, to) {
+      return function () {
+        return _this.move(from, to);
+      };
+    };
+
+    _this.insert = function (index, value) {
+      return _this.updateArrayField(function (array) {
+        return insert(array, index, value);
+      }, function (array) {
+        return insert(array, index, null);
+      }, function (array) {
+        return insert(array, index, null);
+      });
+    };
+
+    _this.handleInsert = function (index, value) {
+      return function () {
+        return _this.insert(index, value);
+      };
+    };
+
+    _this.replace = function (index, value) {
+      return _this.updateArrayField(function (array) {
+        return replace(array, index, value);
+      }, false, false);
+    };
+
+    _this.handleReplace = function (index, value) {
+      return function () {
+        return _this.replace(index, value);
+      };
+    };
+
+    _this.unshift = function (value) {
+      var length = -1;
+
+      _this.updateArrayField(function (array) {
+        var arr = array ? [value].concat(array) : [value];
+
+        if (length < 0) {
+          length = arr.length;
+        }
+
+        return arr;
+      }, function (array) {
+        var arr = array ? [null].concat(array) : [null];
+
+        if (length < 0) {
+          length = arr.length;
+        }
+
+        return arr;
+      }, function (array) {
+        var arr = array ? [null].concat(array) : [null];
+
+        if (length < 0) {
+          length = arr.length;
+        }
+
+        return arr;
+      });
+
+      return length;
+    };
+
+    _this.handleUnshift = function (value) {
+      return function () {
+        return _this.unshift(value);
+      };
+    };
+
+    _this.handleRemove = function (index) {
+      return function () {
+        return _this.remove(index);
+      };
+    };
+
+    _this.handlePop = function () {
+      return function () {
+        return _this.pop();
+      };
+    }; // We need TypeScript generics on these, so we'll bind them in the constructor
+    // @todo Fix TS 3.2.1
+
+
+    _this.remove = _this.remove.bind(_assertThisInitialized(_this));
+    _this.pop = _this.pop.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  var _proto = FieldArrayInner.prototype;
+
+  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
+    if (this.props.validateOnChange && this.props.formik.validateOnChange && !__WEBPACK_IMPORTED_MODULE_1_react_fast_compare___default()(getIn(prevProps.formik.values, prevProps.name), getIn(this.props.formik.values, this.props.name))) {
+      this.props.formik.validateForm(this.props.formik.values);
+    }
+  };
+
+  _proto.remove = function remove(index) {
+    // We need to make sure we also remove relevant pieces of `touched` and `errors`
+    var result;
+    this.updateArrayField( // so this gets call 3 times
+    function (array) {
+      var copy = array ? copyArrayLike(array) : [];
+
+      if (!result) {
+        result = copy[index];
+      }
+
+      if (isFunction(copy.splice)) {
+        copy.splice(index, 1);
+      }
+
+      return copy;
+    }, true, true);
+    return result;
+  };
+
+  _proto.pop = function pop() {
+    // Remove relevant pieces of `touched` and `errors` too!
+    var result;
+    this.updateArrayField( // so this gets call 3 times
+    function (array) {
+      var tmp = array;
+
+      if (!result) {
+        result = tmp && tmp.pop && tmp.pop();
+      }
+
+      return tmp;
+    }, true, true);
+    return result;
+  };
+
+  _proto.render = function render() {
+    var arrayHelpers = {
+      push: this.push,
+      pop: this.pop,
+      swap: this.swap,
+      move: this.move,
+      insert: this.insert,
+      replace: this.replace,
+      unshift: this.unshift,
+      remove: this.remove,
+      handlePush: this.handlePush,
+      handlePop: this.handlePop,
+      handleSwap: this.handleSwap,
+      handleMove: this.handleMove,
+      handleInsert: this.handleInsert,
+      handleReplace: this.handleReplace,
+      handleUnshift: this.handleUnshift,
+      handleRemove: this.handleRemove
+    };
+
+    var _this$props2 = this.props,
+        component = _this$props2.component,
+        render = _this$props2.render,
+        children = _this$props2.children,
+        name = _this$props2.name,
+        _this$props2$formik = _this$props2.formik,
+        restOfFormik = _objectWithoutPropertiesLoose(_this$props2$formik, ["validate", "validationSchema"]);
+
+    var props = _extends({}, arrayHelpers, {
+      form: restOfFormik,
+      name: name
+    });
+
+    return component ? Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(component, props) : render ? render(props) : children // children come last, always called
+    ? typeof children === 'function' ? children(props) : !isEmptyChildren(children) ? __WEBPACK_IMPORTED_MODULE_0_react__["Children"].only(children) : null : null;
+  };
+
+  return FieldArrayInner;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+FieldArrayInner.defaultProps = {
+  validateOnChange: true
+};
+var FieldArray = /*#__PURE__*/connect(FieldArrayInner);
+
+var ErrorMessageImpl = /*#__PURE__*/function (_React$Component) {
+  _inheritsLoose(ErrorMessageImpl, _React$Component);
+
+  function ErrorMessageImpl() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = ErrorMessageImpl.prototype;
+
+  _proto.shouldComponentUpdate = function shouldComponentUpdate(props) {
+    if (getIn(this.props.formik.errors, this.props.name) !== getIn(props.formik.errors, this.props.name) || getIn(this.props.formik.touched, this.props.name) !== getIn(props.formik.touched, this.props.name) || Object.keys(this.props).length !== Object.keys(props).length) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        component = _this$props.component,
+        formik = _this$props.formik,
+        render = _this$props.render,
+        children = _this$props.children,
+        name = _this$props.name,
+        rest = _objectWithoutPropertiesLoose(_this$props, ["component", "formik", "render", "children", "name"]);
+
+    var touch = getIn(formik.touched, name);
+    var error = getIn(formik.errors, name);
+    return !!touch && !!error ? render ? isFunction(render) ? render(error) : null : children ? isFunction(children) ? children(error) : null : component ? Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(component, rest, error) : error : null;
+  };
+
+  return ErrorMessageImpl;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+var ErrorMessage = /*#__PURE__*/connect(ErrorMessageImpl);
+
+/**
+ * Custom Field component for quickly hooking into Formik
+ * context and wiring up forms.
+ */
+
+var FastFieldInner = /*#__PURE__*/function (_React$Component) {
+  _inheritsLoose(FastFieldInner, _React$Component);
+
+  function FastFieldInner(props) {
+    var _this;
+
+    _this = _React$Component.call(this, props) || this;
+    var render = props.render,
+        children = props.children,
+        component = props.component,
+        is = props.as,
+        name = props.name;
+    !!render ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, "<FastField render> has been deprecated. Please use a child callback function instead: <FastField name={" + name + "}>{props => ...}</FastField> instead.") : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0;
+    !!(component && render) ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, 'You should not use <FastField component> and <FastField render> in the same <FastField> component; <FastField component> will be ignored') : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0;
+    !!(is && children && isFunction(children)) ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, 'You should not use <FastField as> and <FastField children> as a function in the same <FastField> component; <FastField as> will be ignored.') : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0;
+    !!(component && children && isFunction(children)) ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, 'You should not use <FastField component> and <FastField children> as a function in the same <FastField> component; <FastField component> will be ignored.') : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0;
+    !!(render && children && !isEmptyChildren(children)) ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, 'You should not use <FastField render> and <FastField children> in the same <FastField> component; <FastField children> will be ignored') : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0;
+    return _this;
+  }
+
+  var _proto = FastFieldInner.prototype;
+
+  _proto.shouldComponentUpdate = function shouldComponentUpdate(props) {
+    if (this.props.shouldUpdate) {
+      return this.props.shouldUpdate(props, this.props);
+    } else if (props.name !== this.props.name || getIn(props.formik.values, this.props.name) !== getIn(this.props.formik.values, this.props.name) || getIn(props.formik.errors, this.props.name) !== getIn(this.props.formik.errors, this.props.name) || getIn(props.formik.touched, this.props.name) !== getIn(this.props.formik.touched, this.props.name) || Object.keys(this.props).length !== Object.keys(props).length || props.formik.isSubmitting !== this.props.formik.isSubmitting) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  _proto.componentDidMount = function componentDidMount() {
+    // Register the Field with the parent Formik. Parent will cycle through
+    // registered Field's validate fns right prior to submit
+    this.props.formik.registerField(this.props.name, {
+      validate: this.props.validate
+    });
+  };
+
+  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
+    if (this.props.name !== prevProps.name) {
+      this.props.formik.unregisterField(prevProps.name);
+      this.props.formik.registerField(this.props.name, {
+        validate: this.props.validate
+      });
+    }
+
+    if (this.props.validate !== prevProps.validate) {
+      this.props.formik.registerField(this.props.name, {
+        validate: this.props.validate
+      });
+    }
+  };
+
+  _proto.componentWillUnmount = function componentWillUnmount() {
+    this.props.formik.unregisterField(this.props.name);
+  };
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        name = _this$props.name,
+        render = _this$props.render,
+        is = _this$props.as,
+        children = _this$props.children,
+        component = _this$props.component,
+        formik = _this$props.formik,
+        props = _objectWithoutPropertiesLoose(_this$props, ["validate", "name", "render", "as", "children", "component", "shouldUpdate", "formik"]);
+
+    var restOfFormik = _objectWithoutPropertiesLoose(formik, ["validate", "validationSchema"]);
+
+    var field = formik.getFieldProps(_extends({
+      name: name
+    }, props));
+    var meta = {
+      value: getIn(formik.values, name),
+      error: getIn(formik.errors, name),
+      touched: !!getIn(formik.touched, name),
+      initialValue: getIn(formik.initialValues, name),
+      initialTouched: !!getIn(formik.initialTouched, name),
+      initialError: getIn(formik.initialErrors, name)
+    };
+    var bag = {
+      field: field,
+      meta: meta,
+      form: restOfFormik
+    };
+
+    if (render) {
+      return render(bag);
+    }
+
+    if (isFunction(children)) {
+      return children(bag);
+    }
+
+    if (component) {
+      // This behavior is backwards compat with earlier Formik 0.9 to 1.x
+      if (typeof component === 'string') {
+        var innerRef = props.innerRef,
+            rest = _objectWithoutPropertiesLoose(props, ["innerRef"]);
+
+        return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(component, _extends({
+          ref: innerRef
+        }, field, rest), children);
+      } // We don't pass `meta` for backwards compat
+
+
+      return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(component, _extends({
+        field: field,
+        form: formik
+      }, props), children);
+    } // default to input here so we can check for both `as` and `children` above
+
+
+    var asElement = is || 'input';
+
+    if (typeof asElement === 'string') {
+      var _innerRef = props.innerRef,
+          _rest = _objectWithoutPropertiesLoose(props, ["innerRef"]);
+
+      return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(asElement, _extends({
+        ref: _innerRef
+      }, field, _rest), children);
+    }
+
+    return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(asElement, _extends({}, field, props), children);
+  };
+
+  return FastFieldInner;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+var FastField = /*#__PURE__*/connect(FastFieldInner);
+
+
+//# sourceMappingURL=formik.esm.js.map
+
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
+
+/***/ }),
+/* 71 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Stack_js__ = __webpack_require__(162);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__arrayEach_js__ = __webpack_require__(189);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__assignValue_js__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__assignValue_js__ = __webpack_require__(76);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__baseAssign_js__ = __webpack_require__(191);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__baseAssignIn_js__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cloneBuffer_js__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__copyArray_js__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__copyArray_js__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__copySymbols_js__ = __webpack_require__(205);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__copySymbolsIn_js__ = __webpack_require__(207);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__getAllKeys_js__ = __webpack_require__(208);
@@ -5264,7 +7302,7 @@ module.exports = self.fetch.bind(self);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__initCloneByTag_js__ = __webpack_require__(215);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__initCloneObject_js__ = __webpack_require__(221);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__isArray_js__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__isBuffer_js__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__isBuffer_js__ = __webpack_require__(79);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__isMap_js__ = __webpack_require__(223);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__isObject_js__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__isSet_js__ = __webpack_require__(225);
@@ -5439,7 +7477,7 @@ function baseClone(value, bitmask, customizer, key, object, stack) {
 
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5483,7 +7521,7 @@ function eq(value, other) {
 
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5529,7 +7567,7 @@ function isFunction(value) {
 
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5562,7 +7600,7 @@ function toSource(func) {
 
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5606,12 +7644,12 @@ MapCache.prototype.set = __WEBPACK_IMPORTED_MODULE_4__mapCacheSet_js__["a" /* de
 
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseAssignValue_js__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__eq_js__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseAssignValue_js__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__eq_js__ = __webpack_require__(72);
 
 
 
@@ -5643,7 +7681,7 @@ function assignValue(object, key, value) {
 
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5676,14 +7714,14 @@ function baseAssignValue(object, key, value) {
 
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseTimes_js__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__isArguments_js__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isArray_js__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__isBuffer_js__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__isBuffer_js__ = __webpack_require__(79);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__isIndex_js__ = __webpack_require__(196);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__isTypedArray_js__ = __webpack_require__(197);
 
@@ -5738,7 +7776,7 @@ function arrayLikeKeys(value, inherited) {
 
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5786,7 +7824,7 @@ var isBuffer = nativeIsBuffer || __WEBPACK_IMPORTED_MODULE_1__stubFalse_js__["a"
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(15)(module)))
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5828,12 +7866,12 @@ function isLength(value) {
 
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__isFunction_js__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__isLength_js__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__isFunction_js__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__isLength_js__ = __webpack_require__(80);
 
 
 
@@ -5870,7 +7908,7 @@ function isArrayLike(value) {
 
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5897,7 +7935,7 @@ function copyArray(source, array) {
 
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5927,14 +7965,14 @@ function stubArray() {
 
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__arrayPush_js__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__arrayPush_js__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getPrototype_js__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__getSymbols_js__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__stubArray_js__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__stubArray_js__ = __webpack_require__(83);
 
 
 
@@ -5963,7 +8001,7 @@ var getSymbolsIn = !nativeGetSymbols ? __WEBPACK_IMPORTED_MODULE_3__stubArray_js
 
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5990,11 +8028,11 @@ function arrayPush(array, values) {
 
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__arrayPush_js__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__arrayPush_js__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__isArray_js__ = __webpack_require__(13);
 
 
@@ -6019,7 +8057,7 @@ function baseGetAllKeys(object, keysFunc, symbolsFunc) {
 
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6047,7 +8085,7 @@ function arrayMap(array, iteratee) {
 
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6065,7 +8103,7 @@ module.exports = function bind(fn, thisArg) {
 
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6142,7 +8180,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 
 /***/ }),
-/* 89 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6192,7 +8230,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
 
 
 /***/ }),
-/* 90 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6201,11 +8239,11 @@ module.exports = function enhanceError(error, config, code, request, response) {
 var utils = __webpack_require__(3);
 var settle = __webpack_require__(242);
 var cookies = __webpack_require__(243);
-var buildURL = __webpack_require__(88);
+var buildURL = __webpack_require__(89);
 var buildFullPath = __webpack_require__(244);
 var parseHeaders = __webpack_require__(247);
 var isURLSameOrigin = __webpack_require__(248);
-var createError = __webpack_require__(91);
+var createError = __webpack_require__(92);
 var defaults = __webpack_require__(23);
 var Cancel = __webpack_require__(24);
 
@@ -6411,13 +8449,13 @@ module.exports = function xhrAdapter(config) {
 
 
 /***/ }),
-/* 91 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var enhanceError = __webpack_require__(89);
+var enhanceError = __webpack_require__(90);
 
 /**
  * Create an Error with the specified message, config, error code, request and response.
@@ -6436,7 +8474,7 @@ module.exports = function createError(message, config, code, request, response) 
 
 
 /***/ }),
-/* 92 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6448,7 +8486,7 @@ module.exports = function isCancel(value) {
 
 
 /***/ }),
-/* 93 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6554,7 +8592,7 @@ module.exports = function mergeConfig(config1, config2) {
 
 
 /***/ }),
-/* 94 */
+/* 95 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -6562,14 +8600,14 @@ module.exports = {
 };
 
 /***/ }),
-/* 95 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(96);
+module.exports = __webpack_require__(97);
 
 
 /***/ }),
-/* 96 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6585,15 +8623,15 @@ var _redux = __webpack_require__(46);
 
 var _reactRedux = __webpack_require__(53);
 
-var _reduxThunk = __webpack_require__(129);
+var _reduxThunk = __webpack_require__(130);
 
 var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 
-var _app = __webpack_require__(130);
+var _app = __webpack_require__(131);
 
 var _app2 = _interopRequireDefault(_app);
 
-var _productsReducer = __webpack_require__(253);
+var _productsReducer = __webpack_require__(254);
 
 var _productsReducer2 = _interopRequireDefault(_productsReducer);
 
@@ -6612,7 +8650,7 @@ var store = configureStore();
 ), document.getElementById('content'));
 
 /***/ }),
-/* 97 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6644,7 +8682,7 @@ exports.useLayoutEffect=function(a,b){return Z().useLayoutEffect(a,b)};exports.u
 
 
 /***/ }),
-/* 98 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8564,7 +10602,7 @@ exports.version = ReactVersion;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 99 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8863,7 +10901,7 @@ exports.unstable_renderSubtreeIntoContainer=function(a,b,c,d){if(!gk(c))throw Er
 
 
 /***/ }),
-/* 100 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8891,7 +10929,7 @@ exports.unstable_shouldYield=function(){var a=exports.unstable_now();V(a);var b=
 
 
 /***/ }),
-/* 101 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9757,7 +11795,7 @@ exports.unstable_wrapCallback = unstable_wrapCallback;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 102 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9782,7 +11820,7 @@ var React = __webpack_require__(1);
 var _assign = __webpack_require__(11);
 var Scheduler = __webpack_require__(45);
 var checkPropTypes = __webpack_require__(25);
-var tracing = __webpack_require__(103);
+var tracing = __webpack_require__(104);
 
 var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED; // Prevent newer renderers from RTE when used with older react package versions.
 // Current owner and dispatcher used to share the same ref,
@@ -34777,22 +36815,22 @@ exports.version = ReactVersion;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 103 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(104);
-} else {
   module.exports = __webpack_require__(105);
+} else {
+  module.exports = __webpack_require__(106);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 104 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34809,7 +36847,7 @@ var b=0;exports.__interactionsRef=null;exports.__subscriberRef=null;exports.unst
 
 
 /***/ }),
-/* 105 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35166,7 +37204,7 @@ exports.unstable_wrap = unstable_wrap;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 106 */
+/* 107 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35220,7 +37258,7 @@ function getRawTag(value) {
 
 
 /***/ }),
-/* 107 */
+/* 108 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35249,11 +37287,11 @@ function objectToString(value) {
 
 
 /***/ }),
-/* 108 */
+/* 109 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ponyfill_js__ = __webpack_require__(109);
+/* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ponyfill_js__ = __webpack_require__(110);
 /* global window */
 
 
@@ -35277,7 +37315,7 @@ var result = Object(__WEBPACK_IMPORTED_MODULE_0__ponyfill_js__["a" /* default */
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(49), __webpack_require__(15)(module)))
 
 /***/ }),
-/* 109 */
+/* 110 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35302,7 +37340,7 @@ function symbolObservablePonyfill(root) {
 
 
 /***/ }),
-/* 110 */
+/* 111 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35443,7 +37481,7 @@ function combineReducers(reducers) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 111 */
+/* 112 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35497,7 +37535,7 @@ function bindActionCreators(actionCreators, dispatch) {
 }
 
 /***/ }),
-/* 112 */
+/* 113 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35553,7 +37591,7 @@ function applyMiddleware() {
 }
 
 /***/ }),
-/* 113 */
+/* 114 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35641,7 +37679,7 @@ function createProvider(storeKey) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 114 */
+/* 115 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35656,7 +37694,7 @@ function _setPrototypeOf(o, p) {
 }
 
 /***/ }),
-/* 115 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35678,7 +37716,7 @@ exports.isValidElementType=function(a){return"string"===typeof a||"function"===t
 
 
 /***/ }),
-/* 116 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35867,7 +37905,7 @@ exports.typeOf = typeOf;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 117 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36466,7 +38504,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 118 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36537,7 +38575,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 119 */
+/* 120 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36551,7 +38589,7 @@ function _assertThisInitialized(self) {
 }
 
 /***/ }),
-/* 120 */
+/* 121 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36646,7 +38684,7 @@ function () {
 
 
 /***/ }),
-/* 121 */
+/* 122 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36654,11 +38692,11 @@ function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_objectWithoutPropertiesLoose__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_connectAdvanced__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_shallowEqual__ = __webpack_require__(122);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mapDispatchToProps__ = __webpack_require__(123);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__mapStateToProps__ = __webpack_require__(125);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__mergeProps__ = __webpack_require__(126);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__selectorFactory__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_shallowEqual__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mapDispatchToProps__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__mapStateToProps__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__mergeProps__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__selectorFactory__ = __webpack_require__(128);
 
 
 
@@ -36759,7 +38797,7 @@ function createConnect(_temp) {
 /* harmony default export */ __webpack_exports__["a"] = (createConnect());
 
 /***/ }),
-/* 122 */
+/* 123 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36795,7 +38833,7 @@ function shallowEqual(objA, objB) {
 }
 
 /***/ }),
-/* 123 */
+/* 124 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36824,7 +38862,7 @@ function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
 /* harmony default export */ __webpack_exports__["a"] = ([whenMapDispatchToPropsIsFunction, whenMapDispatchToPropsIsMissing, whenMapDispatchToPropsIsObject]);
 
 /***/ }),
-/* 124 */
+/* 125 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36847,7 +38885,7 @@ function isPlainObject(obj) {
 }
 
 /***/ }),
-/* 125 */
+/* 126 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36866,7 +38904,7 @@ function whenMapStateToPropsIsMissing(mapStateToProps) {
 /* harmony default export */ __webpack_exports__["a"] = ([whenMapStateToPropsIsFunction, whenMapStateToPropsIsMissing]);
 
 /***/ }),
-/* 126 */
+/* 127 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36915,7 +38953,7 @@ function whenMergePropsIsOmitted(mergeProps) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 127 */
+/* 128 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36923,7 +38961,7 @@ function whenMergePropsIsOmitted(mergeProps) {
 /* unused harmony export pureFinalPropsSelectorFactory */
 /* harmony export (immutable) */ __webpack_exports__["a"] = finalPropsSelectorFactory;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_objectWithoutPropertiesLoose__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__verifySubselectors__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__verifySubselectors__ = __webpack_require__(129);
 
 
 function impureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch) {
@@ -37014,7 +39052,7 @@ function finalPropsSelectorFactory(dispatch, _ref2) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 128 */
+/* 129 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -37039,7 +39077,7 @@ function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, dis
 }
 
 /***/ }),
-/* 129 */
+/* 130 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -37078,7 +39116,7 @@ thunk.withExtraArgument = createThunkMiddleware;
 /* harmony default export */ __webpack_exports__["default"] = (thunk);
 
 /***/ }),
-/* 130 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37100,23 +39138,27 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _reactRouterDom = __webpack_require__(60);
 
-var _header = __webpack_require__(153);
+var _header = __webpack_require__(154);
 
 var _header2 = _interopRequireDefault(_header);
 
-var _about = __webpack_require__(154);
+var _about = __webpack_require__(155);
 
 var _about2 = _interopRequireDefault(_about);
 
-var _products = __webpack_require__(155);
+var _products = __webpack_require__(156);
 
 var _products2 = _interopRequireDefault(_products);
 
 var _productsActions = __webpack_require__(67);
 
-var _registrationFrom = __webpack_require__(157);
+var _registrationFrom = __webpack_require__(158);
 
 var _registrationFrom2 = _interopRequireDefault(_registrationFrom);
+
+var _signin = __webpack_require__(253);
+
+var _signin2 = _interopRequireDefault(_signin);
 
 __webpack_require__(69);
 
@@ -37171,6 +39213,11 @@ var App = function (_React$Component) {
                             ),
                             _react2.default.createElement(
                                 _reactRouterDom.Route,
+                                { path: '/signin' },
+                                _react2.default.createElement(_signin2.default, null)
+                            ),
+                            _react2.default.createElement(
+                                _reactRouterDom.Route,
                                 { path: '/' },
                                 _react2.default.createElement(_products2.default, { className: 'products-container' })
                             )
@@ -37188,7 +39235,7 @@ exports.default = App;
 ;
 
 /***/ }),
-/* 131 */
+/* 132 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -37254,7 +39301,7 @@ BrowserRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (BrowserRouter);
 
 /***/ }),
-/* 132 */
+/* 133 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -37336,7 +39383,7 @@ function resolvePathname(to, from) {
 
 
 /***/ }),
-/* 133 */
+/* 134 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -37379,7 +39426,7 @@ function valueEqual(a, b) {
 
 
 /***/ }),
-/* 134 */
+/* 135 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -37403,7 +39450,7 @@ function invariant(condition, message) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 135 */
+/* 136 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -37468,18 +39515,18 @@ HashRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (HashRouter);
 
 /***/ }),
-/* 136 */
+/* 137 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__ = __webpack_require__(138);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__["a" /* default */]);
 
 /***/ }),
-/* 137 */
+/* 138 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -37545,7 +39592,7 @@ MemoryRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (MemoryRouter);
 
 /***/ }),
-/* 138 */
+/* 139 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -37631,7 +39678,7 @@ NavLink.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (NavLink);
 
 /***/ }),
-/* 139 */
+/* 140 */
 /***/ (function(module, exports) {
 
 module.exports = Array.isArray || function (arr) {
@@ -37640,18 +39687,18 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 140 */
+/* 141 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__ = __webpack_require__(142);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__["a" /* default */]);
 
 /***/ }),
-/* 141 */
+/* 142 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -37742,18 +39789,18 @@ Prompt.contextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Prompt);
 
 /***/ }),
-/* 142 */
+/* 143 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__ = __webpack_require__(143);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__ = __webpack_require__(144);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__["a" /* default */]);
 
 /***/ }),
-/* 143 */
+/* 144 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -37882,18 +39929,18 @@ Redirect.contextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Redirect);
 
 /***/ }),
-/* 144 */
+/* 145 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__ = __webpack_require__(146);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__["a" /* default */]);
 
 /***/ }),
-/* 145 */
+/* 146 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -38059,18 +40106,18 @@ StaticRouter.childContextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (StaticRouter);
 
 /***/ }),
-/* 146 */
+/* 147 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__ = __webpack_require__(147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__ = __webpack_require__(148);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__["a" /* default */]);
 
 /***/ }),
-/* 147 */
+/* 148 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -38162,7 +40209,7 @@ Switch.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Switch);
 
 /***/ }),
-/* 148 */
+/* 149 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -38173,7 +40220,7 @@ Switch.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_generatePath__["a" /* default */]);
 
 /***/ }),
-/* 149 */
+/* 150 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -38184,18 +40231,18 @@ Switch.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_matchPath__["a" /* default */]);
 
 /***/ }),
-/* 150 */
+/* 151 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__ = __webpack_require__(152);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__["a" /* default */]);
 
 /***/ }),
-/* 151 */
+/* 152 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -38203,7 +40250,7 @@ Switch.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(152);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(153);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Route__ = __webpack_require__(64);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -38244,7 +40291,7 @@ var withRouter = function withRouter(Component) {
 /* harmony default export */ __webpack_exports__["a"] = (withRouter);
 
 /***/ }),
-/* 152 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38319,7 +40366,7 @@ module.exports = hoistNonReactStatics;
 
 
 /***/ }),
-/* 153 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38392,6 +40439,15 @@ var Header = function (_React$Component) {
                                 { to: '/signup' },
                                 '\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044F'
                             )
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            _react2.default.createElement(
+                                _reactRouterDom.Link,
+                                { to: '/signin' },
+                                '\u0412\u0445\u043E\u0434'
+                            )
                         )
                     )
                 )
@@ -38406,7 +40462,7 @@ exports.default = Header;
 ;
 
 /***/ }),
-/* 154 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38457,7 +40513,7 @@ exports.default = About;
 ;
 
 /***/ }),
-/* 155 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38569,7 +40625,7 @@ var mapDispatch = function mapDispatch(dispatch) {
 exports.default = (0, _reactRedux.connect)(mapProps, mapDispatch)(Products);
 
 /***/ }),
-/* 156 */
+/* 157 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -39187,7 +41243,7 @@ if (!global.fetch) {
 
 
 /***/ }),
-/* 157 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39202,7 +41258,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _formik = __webpack_require__(158);
+var _formik = __webpack_require__(70);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -39292,2108 +41348,78 @@ var SignupForm = exports.SignupForm = function SignupForm() {
     return _react2.default.createElement(
         'form',
         { onSubmit: formik.handleSubmit },
-        _react2.default.createElement(
-            'label',
-            { htmlFor: 'firstName' },
-            '\u0418\u043C\u044F: '
-        ),
-        _react2.default.createElement('input', { type: 'text', id: 'firstName', name: 'firstName', onChange: formik.handleChange, value: formik.values.firstName }),
-        formik.errors.firstName ? _react2.default.createElement(
+        localStorage.getItem('token') ? _react2.default.createElement(
             'div',
             null,
-            formik.errors.firstName
-        ) : null,
-        _react2.default.createElement(
-            'label',
-            { htmlFor: 'lastName' },
-            '\u0424\u0430\u043C\u0438\u043B\u0438\u044F: '
-        ),
-        _react2.default.createElement('input', { type: 'text', id: 'lastName', name: 'lastName', onChange: formik.handleChange, value: formik.values.lastName }),
-        formik.errors.lastName ? _react2.default.createElement(
+            'Allready logged in!'
+        ) : _react2.default.createElement(
             'div',
             null,
-            formik.errors.lastName
-        ) : null,
-        _react2.default.createElement(
-            'label',
-            { htmlFor: 'userName' },
-            '\u041B\u043E\u0433\u0438\u043D: '
-        ),
-        _react2.default.createElement('input', { type: 'text', id: 'userName', name: 'userName', onChange: formik.handleChange, value: formik.values.userName }),
-        formik.errors.userName ? _react2.default.createElement(
-            'div',
-            null,
-            formik.errors.userName
-        ) : null,
-        _react2.default.createElement(
-            'label',
-            { htmlFor: 'password' },
-            '\u041F\u0430\u0440\u043E\u043B\u044C: '
-        ),
-        _react2.default.createElement('input', { type: 'password', id: 'password', name: 'password', onChange: formik.handleChange, value: formik.values.password }),
-        formik.errors.password ? _react2.default.createElement(
-            'div',
-            null,
-            formik.errors.password
-        ) : null,
-        _react2.default.createElement(
-            'label',
-            { htmlFor: 'email' },
-            'Email-\u0430\u0434\u0440\u0435\u0441: '
-        ),
-        _react2.default.createElement('input', { id: 'email', type: 'email', name: 'email', onChange: formik.handleChange, value: formik.values.email }),
-        formik.errors.email ? _react2.default.createElement(
-            'div',
-            null,
-            formik.errors.email
-        ) : null,
-        _react2.default.createElement(
-            'button',
-            { type: 'submit' },
-            'Submit'
+            _react2.default.createElement(
+                'label',
+                { htmlFor: 'firstName' },
+                '\u0418\u043C\u044F: '
+            ),
+            _react2.default.createElement('input', { type: 'text', id: 'firstName', name: 'firstName', onChange: formik.handleChange, value: formik.values.firstName }),
+            formik.errors.firstName ? _react2.default.createElement(
+                'div',
+                null,
+                formik.errors.firstName
+            ) : null,
+            _react2.default.createElement(
+                'label',
+                { htmlFor: 'lastName' },
+                '\u0424\u0430\u043C\u0438\u043B\u0438\u044F: '
+            ),
+            _react2.default.createElement('input', { type: 'text', id: 'lastName', name: 'lastName', onChange: formik.handleChange, value: formik.values.lastName }),
+            formik.errors.lastName ? _react2.default.createElement(
+                'div',
+                null,
+                formik.errors.lastName
+            ) : null,
+            _react2.default.createElement(
+                'label',
+                { htmlFor: 'userName' },
+                '\u041B\u043E\u0433\u0438\u043D: '
+            ),
+            _react2.default.createElement('input', { type: 'text', id: 'userName', name: 'userName', onChange: formik.handleChange, value: formik.values.userName }),
+            formik.errors.userName ? _react2.default.createElement(
+                'div',
+                null,
+                formik.errors.userName
+            ) : null,
+            _react2.default.createElement(
+                'label',
+                { htmlFor: 'password' },
+                '\u041F\u0430\u0440\u043E\u043B\u044C: '
+            ),
+            _react2.default.createElement('input', { type: 'password', id: 'password', name: 'password', onChange: formik.handleChange, value: formik.values.password }),
+            formik.errors.password ? _react2.default.createElement(
+                'div',
+                null,
+                formik.errors.password
+            ) : null,
+            _react2.default.createElement(
+                'label',
+                { htmlFor: 'email' },
+                'Email-\u0430\u0434\u0440\u0435\u0441: '
+            ),
+            _react2.default.createElement('input', { id: 'email', type: 'email', name: 'email', onChange: formik.handleChange, value: formik.values.email }),
+            formik.errors.email ? _react2.default.createElement(
+                'div',
+                null,
+                formik.errors.email
+            ) : null,
+            _react2.default.createElement(
+                'button',
+                { type: 'submit' },
+                'Submit'
+            )
         )
     );
 };
 
 exports.default = SignupForm;
-
-/***/ }),
-/* 158 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ErrorMessage", function() { return ErrorMessage; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FastField", function() { return FastField; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Field", function() { return Field; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FieldArray", function() { return FieldArray; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Form", function() { return Form; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Formik", function() { return Formik; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormikConsumer", function() { return FormikConsumer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormikContext", function() { return FormikContext; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormikProvider", function() { return FormikProvider; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "connect", function() { return connect; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getActiveElement", function() { return getActiveElement; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getIn", function() { return getIn; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "insert", function() { return insert; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isEmptyArray", function() { return isEmptyArray; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isEmptyChildren", function() { return isEmptyChildren; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isFunction", function() { return isFunction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isInputEvent", function() { return isInputEvent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isInteger", function() { return isInteger; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isNaN", function() { return isNaN$1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isObject", function() { return isObject; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isPromise", function() { return isPromise; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isString", function() { return isString; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "move", function() { return move; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "prepareDataForValidation", function() { return prepareDataForValidation; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "replace", function() { return replace; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setIn", function() { return setIn; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setNestedObjectValues", function() { return setNestedObjectValues; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "swap", function() { return swap; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useField", function() { return useField; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useFormik", function() { return useFormik; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useFormikContext", function() { return useFormikContext; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validateYupSchema", function() { return validateYupSchema; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "withFormik", function() { return withFormik; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "yupToFormErrors", function() { return yupToFormErrors; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_fast_compare__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_fast_compare___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_fast_compare__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deepmerge__ = __webpack_require__(160);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash_es_isPlainObject__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_lodash_es_clone__ = __webpack_require__(161);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_lodash_es_toPath__ = __webpack_require__(227);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_tiny_warning__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_hoist_non_react_statics__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_hoist_non_react_statics__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_lodash_es_cloneDeep__ = __webpack_require__(234);
-
-
-
-
-
-
-
-
-
-
-function _extends() {
-  _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
-function _inheritsLoose(subClass, superClass) {
-  subClass.prototype = Object.create(superClass.prototype);
-  subClass.prototype.constructor = subClass;
-  subClass.__proto__ = superClass;
-}
-
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
-
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
-  }
-
-  return target;
-}
-
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-
-/** @private is the value an empty array? */
-
-var isEmptyArray = function isEmptyArray(value) {
-  return Array.isArray(value) && value.length === 0;
-};
-/** @private is the given object a Function? */
-
-var isFunction = function isFunction(obj) {
-  return typeof obj === 'function';
-};
-/** @private is the given object an Object? */
-
-var isObject = function isObject(obj) {
-  return obj !== null && typeof obj === 'object';
-};
-/** @private is the given object an integer? */
-
-var isInteger = function isInteger(obj) {
-  return String(Math.floor(Number(obj))) === obj;
-};
-/** @private is the given object a string? */
-
-var isString = function isString(obj) {
-  return Object.prototype.toString.call(obj) === '[object String]';
-};
-/** @private is the given object a NaN? */
-// eslint-disable-next-line no-self-compare
-
-var isNaN$1 = function isNaN(obj) {
-  return obj !== obj;
-};
-/** @private Does a React component have exactly 0 children? */
-
-var isEmptyChildren = function isEmptyChildren(children) {
-  return __WEBPACK_IMPORTED_MODULE_0_react__["Children"].count(children) === 0;
-};
-/** @private is the given object/value a promise? */
-
-var isPromise = function isPromise(value) {
-  return isObject(value) && isFunction(value.then);
-};
-/** @private is the given object/value a type of synthetic event? */
-
-var isInputEvent = function isInputEvent(value) {
-  return value && isObject(value) && isObject(value.target);
-};
-/**
- * Same as document.activeElement but wraps in a try-catch block. In IE it is
- * not safe to call document.activeElement if there is nothing focused.
- *
- * The activeElement will be null only if the document or document body is not
- * yet defined.
- *
- * @param {?Document} doc Defaults to current document.
- * @return {Element | null}
- * @see https://github.com/facebook/fbjs/blob/master/packages/fbjs/src/core/dom/getActiveElement.js
- */
-
-function getActiveElement(doc) {
-  doc = doc || (typeof document !== 'undefined' ? document : undefined);
-
-  if (typeof doc === 'undefined') {
-    return null;
-  }
-
-  try {
-    return doc.activeElement || doc.body;
-  } catch (e) {
-    return doc.body;
-  }
-}
-/**
- * Deeply get a value from an object via its path.
- */
-
-function getIn(obj, key, def, p) {
-  if (p === void 0) {
-    p = 0;
-  }
-
-  var path = Object(__WEBPACK_IMPORTED_MODULE_5_lodash_es_toPath__["a" /* default */])(key);
-
-  while (obj && p < path.length) {
-    obj = obj[path[p++]];
-  }
-
-  return obj === undefined ? def : obj;
-}
-/**
- * Deeply set a value from in object via it's path. If the value at `path`
- * has changed, return a shallow copy of obj with `value` set at `path`.
- * If `value` has not changed, return the original `obj`.
- *
- * Existing objects / arrays along `path` are also shallow copied. Sibling
- * objects along path retain the same internal js reference. Since new
- * objects / arrays are only created along `path`, we can test if anything
- * changed in a nested structure by comparing the object's reference in
- * the old and new object, similar to how russian doll cache invalidation
- * works.
- *
- * In earlier versions of this function, which used cloneDeep, there were
- * issues whereby settings a nested value would mutate the parent
- * instead of creating a new object. `clone` avoids that bug making a
- * shallow copy of the objects along the update path
- * so no object is mutated in place.
- *
- * Before changing this function, please read through the following
- * discussions.
- *
- * @see https://github.com/developit/linkstate
- * @see https://github.com/jaredpalmer/formik/pull/123
- */
-
-function setIn(obj, path, value) {
-  var res = Object(__WEBPACK_IMPORTED_MODULE_4_lodash_es_clone__["a" /* default */])(obj); // this keeps inheritance when obj is a class
-
-  var resVal = res;
-  var i = 0;
-  var pathArray = Object(__WEBPACK_IMPORTED_MODULE_5_lodash_es_toPath__["a" /* default */])(path);
-
-  for (; i < pathArray.length - 1; i++) {
-    var currentPath = pathArray[i];
-    var currentObj = getIn(obj, pathArray.slice(0, i + 1));
-
-    if (currentObj && (isObject(currentObj) || Array.isArray(currentObj))) {
-      resVal = resVal[currentPath] = Object(__WEBPACK_IMPORTED_MODULE_4_lodash_es_clone__["a" /* default */])(currentObj);
-    } else {
-      var nextPath = pathArray[i + 1];
-      resVal = resVal[currentPath] = isInteger(nextPath) && Number(nextPath) >= 0 ? [] : {};
-    }
-  } // Return original object if new value is the same as current
-
-
-  if ((i === 0 ? obj : resVal)[pathArray[i]] === value) {
-    return obj;
-  }
-
-  if (value === undefined) {
-    delete resVal[pathArray[i]];
-  } else {
-    resVal[pathArray[i]] = value;
-  } // If the path array has a single element, the loop did not run.
-  // Deleting on `resVal` had no effect in this scenario, so we delete on the result instead.
-
-
-  if (i === 0 && value === undefined) {
-    delete res[pathArray[i]];
-  }
-
-  return res;
-}
-/**
- * Recursively a set the same value for all keys and arrays nested object, cloning
- * @param object
- * @param value
- * @param visited
- * @param response
- */
-
-function setNestedObjectValues(object, value, visited, response) {
-  if (visited === void 0) {
-    visited = new WeakMap();
-  }
-
-  if (response === void 0) {
-    response = {};
-  }
-
-  for (var _i = 0, _Object$keys = Object.keys(object); _i < _Object$keys.length; _i++) {
-    var k = _Object$keys[_i];
-    var val = object[k];
-
-    if (isObject(val)) {
-      if (!visited.get(val)) {
-        visited.set(val, true); // In order to keep array values consistent for both dot path  and
-        // bracket syntax, we need to check if this is an array so that
-        // this will output  { friends: [true] } and not { friends: { "0": true } }
-
-        response[k] = Array.isArray(val) ? [] : {};
-        setNestedObjectValues(val, value, visited, response[k]);
-      }
-    } else {
-      response[k] = value;
-    }
-  }
-
-  return response;
-}
-
-var FormikContext = /*#__PURE__*/Object(__WEBPACK_IMPORTED_MODULE_0_react__["createContext"])(undefined);
-FormikContext.displayName = 'FormikContext';
-var FormikProvider = FormikContext.Provider;
-var FormikConsumer = FormikContext.Consumer;
-function useFormikContext() {
-  var formik = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useContext"])(FormikContext);
-  !!!formik ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, "Formik context is undefined, please verify you are calling useFormikContext() as child of a <Formik> component.") : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0;
-  return formik;
-}
-
-function formikReducer(state, msg) {
-  switch (msg.type) {
-    case 'SET_VALUES':
-      return _extends({}, state, {
-        values: msg.payload
-      });
-
-    case 'SET_TOUCHED':
-      return _extends({}, state, {
-        touched: msg.payload
-      });
-
-    case 'SET_ERRORS':
-      if (__WEBPACK_IMPORTED_MODULE_1_react_fast_compare___default()(state.errors, msg.payload)) {
-        return state;
-      }
-
-      return _extends({}, state, {
-        errors: msg.payload
-      });
-
-    case 'SET_STATUS':
-      return _extends({}, state, {
-        status: msg.payload
-      });
-
-    case 'SET_ISSUBMITTING':
-      return _extends({}, state, {
-        isSubmitting: msg.payload
-      });
-
-    case 'SET_ISVALIDATING':
-      return _extends({}, state, {
-        isValidating: msg.payload
-      });
-
-    case 'SET_FIELD_VALUE':
-      return _extends({}, state, {
-        values: setIn(state.values, msg.payload.field, msg.payload.value)
-      });
-
-    case 'SET_FIELD_TOUCHED':
-      return _extends({}, state, {
-        touched: setIn(state.touched, msg.payload.field, msg.payload.value)
-      });
-
-    case 'SET_FIELD_ERROR':
-      return _extends({}, state, {
-        errors: setIn(state.errors, msg.payload.field, msg.payload.value)
-      });
-
-    case 'RESET_FORM':
-      return _extends({}, state, msg.payload);
-
-    case 'SET_FORMIK_STATE':
-      return msg.payload(state);
-
-    case 'SUBMIT_ATTEMPT':
-      return _extends({}, state, {
-        touched: setNestedObjectValues(state.values, true),
-        isSubmitting: true,
-        submitCount: state.submitCount + 1
-      });
-
-    case 'SUBMIT_FAILURE':
-      return _extends({}, state, {
-        isSubmitting: false
-      });
-
-    case 'SUBMIT_SUCCESS':
-      return _extends({}, state, {
-        isSubmitting: false
-      });
-
-    default:
-      return state;
-  }
-} // Initial empty states // objects
-
-
-var emptyErrors = {};
-var emptyTouched = {};
-function useFormik(_ref) {
-  var _ref$validateOnChange = _ref.validateOnChange,
-      validateOnChange = _ref$validateOnChange === void 0 ? true : _ref$validateOnChange,
-      _ref$validateOnBlur = _ref.validateOnBlur,
-      validateOnBlur = _ref$validateOnBlur === void 0 ? true : _ref$validateOnBlur,
-      _ref$validateOnMount = _ref.validateOnMount,
-      validateOnMount = _ref$validateOnMount === void 0 ? false : _ref$validateOnMount,
-      isInitialValid = _ref.isInitialValid,
-      _ref$enableReinitiali = _ref.enableReinitialize,
-      enableReinitialize = _ref$enableReinitiali === void 0 ? false : _ref$enableReinitiali,
-      onSubmit = _ref.onSubmit,
-      rest = _objectWithoutPropertiesLoose(_ref, ["validateOnChange", "validateOnBlur", "validateOnMount", "isInitialValid", "enableReinitialize", "onSubmit"]);
-
-  var props = _extends({
-    validateOnChange: validateOnChange,
-    validateOnBlur: validateOnBlur,
-    validateOnMount: validateOnMount,
-    onSubmit: onSubmit
-  }, rest);
-
-  var initialValues = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useRef"])(props.initialValues);
-  var initialErrors = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useRef"])(props.initialErrors || emptyErrors);
-  var initialTouched = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useRef"])(props.initialTouched || emptyTouched);
-  var initialStatus = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useRef"])(props.initialStatus);
-  var isMounted = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useRef"])(false);
-  var fieldRegistry = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useRef"])({});
-
-  if (process.env.NODE_ENV !== "production") {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    Object(__WEBPACK_IMPORTED_MODULE_0_react__["useEffect"])(function () {
-      !(typeof isInitialValid === 'undefined') ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, 'isInitialValid has been deprecated and will be removed in future versions of Formik. Please use initialErrors or validateOnMount instead.') : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0; // eslint-disable-next-line
-    }, []);
-  }
-
-  Object(__WEBPACK_IMPORTED_MODULE_0_react__["useEffect"])(function () {
-    isMounted.current = true;
-    return function () {
-      isMounted.current = false;
-    };
-  }, []);
-
-  var _React$useReducer = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useReducer"])(formikReducer, {
-    values: props.initialValues,
-    errors: props.initialErrors || emptyErrors,
-    touched: props.initialTouched || emptyTouched,
-    status: props.initialStatus,
-    isSubmitting: false,
-    isValidating: false,
-    submitCount: 0
-  }),
-      state = _React$useReducer[0],
-      dispatch = _React$useReducer[1];
-
-  var runValidateHandler = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (values, field) {
-    return new Promise(function (resolve, reject) {
-      var maybePromisedErrors = props.validate(values, field);
-
-      if (maybePromisedErrors == null) {
-        // use loose null check here on purpose
-        resolve(emptyErrors);
-      } else if (isPromise(maybePromisedErrors)) {
-        maybePromisedErrors.then(function (errors) {
-          resolve(errors || emptyErrors);
-        }, function (actualException) {
-          if (process.env.NODE_ENV !== 'production') {
-            console.warn("Warning: An unhandled error was caught during validation in <Formik validate />", actualException);
-          }
-
-          reject(actualException);
-        });
-      } else {
-        resolve(maybePromisedErrors);
-      }
-    });
-  }, [props.validate]);
-  /**
-   * Run validation against a Yup schema and optionally run a function if successful
-   */
-
-  var runValidationSchema = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (values, field) {
-    var validationSchema = props.validationSchema;
-    var schema = isFunction(validationSchema) ? validationSchema(field) : validationSchema;
-    var promise = field && schema.validateAt ? schema.validateAt(field, values) : validateYupSchema(values, schema);
-    return new Promise(function (resolve, reject) {
-      promise.then(function () {
-        resolve(emptyErrors);
-      }, function (err) {
-        // Yup will throw a validation error if validation fails. We catch those and
-        // resolve them into Formik errors. We can sniff if something is a Yup error
-        // by checking error.name.
-        // @see https://github.com/jquense/yup#validationerrorerrors-string--arraystring-value-any-path-string
-        if (err.name === 'ValidationError') {
-          resolve(yupToFormErrors(err));
-        } else {
-          // We throw any other errors
-          if (process.env.NODE_ENV !== 'production') {
-            console.warn("Warning: An unhandled error was caught during validation in <Formik validationSchema />", err);
-          }
-
-          reject(err);
-        }
-      });
-    });
-  }, [props.validationSchema]);
-  var runSingleFieldLevelValidation = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (field, value) {
-    return new Promise(function (resolve) {
-      return resolve(fieldRegistry.current[field].validate(value));
-    });
-  }, []);
-  var runFieldLevelValidations = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (values) {
-    var fieldKeysWithValidation = Object.keys(fieldRegistry.current).filter(function (f) {
-      return isFunction(fieldRegistry.current[f].validate);
-    }); // Construct an array with all of the field validation functions
-
-    var fieldValidations = fieldKeysWithValidation.length > 0 ? fieldKeysWithValidation.map(function (f) {
-      return runSingleFieldLevelValidation(f, getIn(values, f));
-    }) : [Promise.resolve('DO_NOT_DELETE_YOU_WILL_BE_FIRED')]; // use special case ;)
-
-    return Promise.all(fieldValidations).then(function (fieldErrorsList) {
-      return fieldErrorsList.reduce(function (prev, curr, index) {
-        if (curr === 'DO_NOT_DELETE_YOU_WILL_BE_FIRED') {
-          return prev;
-        }
-
-        if (curr) {
-          prev = setIn(prev, fieldKeysWithValidation[index], curr);
-        }
-
-        return prev;
-      }, {});
-    });
-  }, [runSingleFieldLevelValidation]); // Run all validations and return the result
-
-  var runAllValidations = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (values) {
-    return Promise.all([runFieldLevelValidations(values), props.validationSchema ? runValidationSchema(values) : {}, props.validate ? runValidateHandler(values) : {}]).then(function (_ref2) {
-      var fieldErrors = _ref2[0],
-          schemaErrors = _ref2[1],
-          validateErrors = _ref2[2];
-      var combinedErrors = __WEBPACK_IMPORTED_MODULE_2_deepmerge__["a" /* default */].all([fieldErrors, schemaErrors, validateErrors], {
-        arrayMerge: arrayMerge
-      });
-      return combinedErrors;
-    });
-  }, [props.validate, props.validationSchema, runFieldLevelValidations, runValidateHandler, runValidationSchema]); // Run all validations methods and update state accordingly
-
-  var validateFormWithHighPriority = useEventCallback(function (values) {
-    if (values === void 0) {
-      values = state.values;
-    }
-
-    dispatch({
-      type: 'SET_ISVALIDATING',
-      payload: true
-    });
-    return runAllValidations(values).then(function (combinedErrors) {
-      if (!!isMounted.current) {
-        dispatch({
-          type: 'SET_ISVALIDATING',
-          payload: false
-        });
-        dispatch({
-          type: 'SET_ERRORS',
-          payload: combinedErrors
-        });
-      }
-
-      return combinedErrors;
-    });
-  });
-  Object(__WEBPACK_IMPORTED_MODULE_0_react__["useEffect"])(function () {
-    if (validateOnMount && isMounted.current === true && __WEBPACK_IMPORTED_MODULE_1_react_fast_compare___default()(initialValues.current, props.initialValues)) {
-      validateFormWithHighPriority(initialValues.current);
-    }
-  }, [validateOnMount, validateFormWithHighPriority]);
-  var resetForm = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (nextState) {
-    var values = nextState && nextState.values ? nextState.values : initialValues.current;
-    var errors = nextState && nextState.errors ? nextState.errors : initialErrors.current ? initialErrors.current : props.initialErrors || {};
-    var touched = nextState && nextState.touched ? nextState.touched : initialTouched.current ? initialTouched.current : props.initialTouched || {};
-    var status = nextState && nextState.status ? nextState.status : initialStatus.current ? initialStatus.current : props.initialStatus;
-    initialValues.current = values;
-    initialErrors.current = errors;
-    initialTouched.current = touched;
-    initialStatus.current = status;
-
-    var dispatchFn = function dispatchFn() {
-      dispatch({
-        type: 'RESET_FORM',
-        payload: {
-          isSubmitting: !!nextState && !!nextState.isSubmitting,
-          errors: errors,
-          touched: touched,
-          status: status,
-          values: values,
-          isValidating: !!nextState && !!nextState.isValidating,
-          submitCount: !!nextState && !!nextState.submitCount && typeof nextState.submitCount === 'number' ? nextState.submitCount : 0
-        }
-      });
-    };
-
-    if (props.onReset) {
-      var maybePromisedOnReset = props.onReset(state.values, imperativeMethods);
-
-      if (isPromise(maybePromisedOnReset)) {
-        maybePromisedOnReset.then(dispatchFn);
-      } else {
-        dispatchFn();
-      }
-    } else {
-      dispatchFn();
-    }
-  }, [props.initialErrors, props.initialStatus, props.initialTouched]);
-  Object(__WEBPACK_IMPORTED_MODULE_0_react__["useEffect"])(function () {
-    if (isMounted.current === true && !__WEBPACK_IMPORTED_MODULE_1_react_fast_compare___default()(initialValues.current, props.initialValues)) {
-      if (enableReinitialize) {
-        initialValues.current = props.initialValues;
-        resetForm();
-      }
-
-      if (validateOnMount) {
-        validateFormWithHighPriority(initialValues.current);
-      }
-    }
-  }, [enableReinitialize, props.initialValues, resetForm, validateOnMount, validateFormWithHighPriority]);
-  Object(__WEBPACK_IMPORTED_MODULE_0_react__["useEffect"])(function () {
-    if (enableReinitialize && isMounted.current === true && !__WEBPACK_IMPORTED_MODULE_1_react_fast_compare___default()(initialErrors.current, props.initialErrors)) {
-      initialErrors.current = props.initialErrors || emptyErrors;
-      dispatch({
-        type: 'SET_ERRORS',
-        payload: props.initialErrors || emptyErrors
-      });
-    }
-  }, [enableReinitialize, props.initialErrors]);
-  Object(__WEBPACK_IMPORTED_MODULE_0_react__["useEffect"])(function () {
-    if (enableReinitialize && isMounted.current === true && !__WEBPACK_IMPORTED_MODULE_1_react_fast_compare___default()(initialTouched.current, props.initialTouched)) {
-      initialTouched.current = props.initialTouched || emptyTouched;
-      dispatch({
-        type: 'SET_TOUCHED',
-        payload: props.initialTouched || emptyTouched
-      });
-    }
-  }, [enableReinitialize, props.initialTouched]);
-  Object(__WEBPACK_IMPORTED_MODULE_0_react__["useEffect"])(function () {
-    if (enableReinitialize && isMounted.current === true && !__WEBPACK_IMPORTED_MODULE_1_react_fast_compare___default()(initialStatus.current, props.initialStatus)) {
-      initialStatus.current = props.initialStatus;
-      dispatch({
-        type: 'SET_STATUS',
-        payload: props.initialStatus
-      });
-    }
-  }, [enableReinitialize, props.initialStatus, props.initialTouched]);
-  var validateField = useEventCallback(function (name) {
-    // This will efficiently validate a single field by avoiding state
-    // changes if the validation function is synchronous. It's different from
-    // what is called when using validateForm.
-    if (fieldRegistry.current[name] && isFunction(fieldRegistry.current[name].validate)) {
-      var value = getIn(state.values, name);
-      var maybePromise = fieldRegistry.current[name].validate(value);
-
-      if (isPromise(maybePromise)) {
-        // Only flip isValidating if the function is async.
-        dispatch({
-          type: 'SET_ISVALIDATING',
-          payload: true
-        });
-        return maybePromise.then(function (x) {
-          return x;
-        }).then(function (error) {
-          dispatch({
-            type: 'SET_FIELD_ERROR',
-            payload: {
-              field: name,
-              value: error
-            }
-          });
-          dispatch({
-            type: 'SET_ISVALIDATING',
-            payload: false
-          });
-        });
-      } else {
-        dispatch({
-          type: 'SET_FIELD_ERROR',
-          payload: {
-            field: name,
-            value: maybePromise
-          }
-        });
-        return Promise.resolve(maybePromise);
-      }
-    } else if (props.validationSchema) {
-      dispatch({
-        type: 'SET_ISVALIDATING',
-        payload: true
-      });
-      return runValidationSchema(state.values, name).then(function (x) {
-        return x;
-      }).then(function (error) {
-        dispatch({
-          type: 'SET_FIELD_ERROR',
-          payload: {
-            field: name,
-            value: error[name]
-          }
-        });
-        dispatch({
-          type: 'SET_ISVALIDATING',
-          payload: false
-        });
-      });
-    }
-
-    return Promise.resolve();
-  });
-  var registerField = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (name, _ref3) {
-    var validate = _ref3.validate;
-    fieldRegistry.current[name] = {
-      validate: validate
-    };
-  }, []);
-  var unregisterField = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (name) {
-    delete fieldRegistry.current[name];
-  }, []);
-  var setTouched = useEventCallback(function (touched, shouldValidate) {
-    dispatch({
-      type: 'SET_TOUCHED',
-      payload: touched
-    });
-    var willValidate = shouldValidate === undefined ? validateOnBlur : shouldValidate;
-    return willValidate ? validateFormWithHighPriority(state.values) : Promise.resolve();
-  });
-  var setErrors = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (errors) {
-    dispatch({
-      type: 'SET_ERRORS',
-      payload: errors
-    });
-  }, []);
-  var setValues = useEventCallback(function (values, shouldValidate) {
-    var resolvedValues = isFunction(values) ? values(state.values) : values;
-    dispatch({
-      type: 'SET_VALUES',
-      payload: resolvedValues
-    });
-    var willValidate = shouldValidate === undefined ? validateOnChange : shouldValidate;
-    return willValidate ? validateFormWithHighPriority(resolvedValues) : Promise.resolve();
-  });
-  var setFieldError = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (field, value) {
-    dispatch({
-      type: 'SET_FIELD_ERROR',
-      payload: {
-        field: field,
-        value: value
-      }
-    });
-  }, []);
-  var setFieldValue = useEventCallback(function (field, value, shouldValidate) {
-    dispatch({
-      type: 'SET_FIELD_VALUE',
-      payload: {
-        field: field,
-        value: value
-      }
-    });
-    var willValidate = shouldValidate === undefined ? validateOnChange : shouldValidate;
-    return willValidate ? validateFormWithHighPriority(setIn(state.values, field, value)) : Promise.resolve();
-  });
-  var executeChange = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (eventOrTextValue, maybePath) {
-    // By default, assume that the first argument is a string. This allows us to use
-    // handleChange with React Native and React Native Web's onChangeText prop which
-    // provides just the value of the input.
-    var field = maybePath;
-    var val = eventOrTextValue;
-    var parsed; // If the first argument is not a string though, it has to be a synthetic React Event (or a fake one),
-    // so we handle like we would a normal HTML change event.
-
-    if (!isString(eventOrTextValue)) {
-      // If we can, persist the event
-      // @see https://reactjs.org/docs/events.html#event-pooling
-      if (eventOrTextValue.persist) {
-        eventOrTextValue.persist();
-      }
-
-      var target = eventOrTextValue.target ? eventOrTextValue.target : eventOrTextValue.currentTarget;
-      var type = target.type,
-          name = target.name,
-          id = target.id,
-          value = target.value,
-          checked = target.checked,
-          outerHTML = target.outerHTML,
-          options = target.options,
-          multiple = target.multiple;
-      field = maybePath ? maybePath : name ? name : id;
-
-      if (!field && process.env.NODE_ENV !== "production") {
-        warnAboutMissingIdentifier({
-          htmlContent: outerHTML,
-          documentationAnchorLink: 'handlechange-e-reactchangeeventany--void',
-          handlerName: 'handleChange'
-        });
-      }
-
-      val = /number|range/.test(type) ? (parsed = parseFloat(value), isNaN(parsed) ? '' : parsed) : /checkbox/.test(type) // checkboxes
-      ? getValueForCheckbox(getIn(state.values, field), checked, value) : options && multiple // <select multiple>
-      ? getSelectedValues(options) : value;
-    }
-
-    if (field) {
-      // Set form fields by name
-      setFieldValue(field, val);
-    }
-  }, [setFieldValue, state.values]);
-  var handleChange = useEventCallback(function (eventOrPath) {
-    if (isString(eventOrPath)) {
-      return function (event) {
-        return executeChange(event, eventOrPath);
-      };
-    } else {
-      executeChange(eventOrPath);
-    }
-  });
-  var setFieldTouched = useEventCallback(function (field, touched, shouldValidate) {
-    if (touched === void 0) {
-      touched = true;
-    }
-
-    dispatch({
-      type: 'SET_FIELD_TOUCHED',
-      payload: {
-        field: field,
-        value: touched
-      }
-    });
-    var willValidate = shouldValidate === undefined ? validateOnBlur : shouldValidate;
-    return willValidate ? validateFormWithHighPriority(state.values) : Promise.resolve();
-  });
-  var executeBlur = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (e, path) {
-    if (e.persist) {
-      e.persist();
-    }
-
-    var _e$target = e.target,
-        name = _e$target.name,
-        id = _e$target.id,
-        outerHTML = _e$target.outerHTML;
-    var field = path ? path : name ? name : id;
-
-    if (!field && process.env.NODE_ENV !== "production") {
-      warnAboutMissingIdentifier({
-        htmlContent: outerHTML,
-        documentationAnchorLink: 'handleblur-e-any--void',
-        handlerName: 'handleBlur'
-      });
-    }
-
-    setFieldTouched(field, true);
-  }, [setFieldTouched]);
-  var handleBlur = useEventCallback(function (eventOrString) {
-    if (isString(eventOrString)) {
-      return function (event) {
-        return executeBlur(event, eventOrString);
-      };
-    } else {
-      executeBlur(eventOrString);
-    }
-  });
-  var setFormikState = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (stateOrCb) {
-    if (isFunction(stateOrCb)) {
-      dispatch({
-        type: 'SET_FORMIK_STATE',
-        payload: stateOrCb
-      });
-    } else {
-      dispatch({
-        type: 'SET_FORMIK_STATE',
-        payload: function payload() {
-          return stateOrCb;
-        }
-      });
-    }
-  }, []);
-  var setStatus = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (status) {
-    dispatch({
-      type: 'SET_STATUS',
-      payload: status
-    });
-  }, []);
-  var setSubmitting = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (isSubmitting) {
-    dispatch({
-      type: 'SET_ISSUBMITTING',
-      payload: isSubmitting
-    });
-  }, []);
-  var submitForm = useEventCallback(function () {
-    dispatch({
-      type: 'SUBMIT_ATTEMPT'
-    });
-    return validateFormWithHighPriority().then(function (combinedErrors) {
-      // In case an error was thrown and passed to the resolved Promise,
-      // `combinedErrors` can be an instance of an Error. We need to check
-      // that and abort the submit.
-      // If we don't do that, calling `Object.keys(new Error())` yields an
-      // empty array, which causes the validation to pass and the form
-      // to be submitted.
-      var isInstanceOfError = combinedErrors instanceof Error;
-      var isActuallyValid = !isInstanceOfError && Object.keys(combinedErrors).length === 0;
-
-      if (isActuallyValid) {
-        // Proceed with submit...
-        //
-        // To respect sync submit fns, we can't simply wrap executeSubmit in a promise and
-        // _always_ dispatch SUBMIT_SUCCESS because isSubmitting would then always be false.
-        // This would be fine in simple cases, but make it impossible to disable submit
-        // buttons where people use callbacks or promises as side effects (which is basically
-        // all of v1 Formik code). Instead, recall that we are inside of a promise chain already,
-        //  so we can try/catch executeSubmit(), if it returns undefined, then just bail.
-        // If there are errors, throw em. Otherwise, wrap executeSubmit in a promise and handle
-        // cleanup of isSubmitting on behalf of the consumer.
-        var promiseOrUndefined;
-
-        try {
-          promiseOrUndefined = executeSubmit(); // Bail if it's sync, consumer is responsible for cleaning up
-          // via setSubmitting(false)
-
-          if (promiseOrUndefined === undefined) {
-            return;
-          }
-        } catch (error) {
-          throw error;
-        }
-
-        return Promise.resolve(promiseOrUndefined).then(function (result) {
-          if (!!isMounted.current) {
-            dispatch({
-              type: 'SUBMIT_SUCCESS'
-            });
-          }
-
-          return result;
-        })["catch"](function (_errors) {
-          if (!!isMounted.current) {
-            dispatch({
-              type: 'SUBMIT_FAILURE'
-            }); // This is a legit error rejected by the onSubmit fn
-            // so we don't want to break the promise chain
-
-            throw _errors;
-          }
-        });
-      } else if (!!isMounted.current) {
-        // ^^^ Make sure Formik is still mounted before updating state
-        dispatch({
-          type: 'SUBMIT_FAILURE'
-        }); // throw combinedErrors;
-
-        if (isInstanceOfError) {
-          throw combinedErrors;
-        }
-      }
-
-      return;
-    });
-  });
-  var handleSubmit = useEventCallback(function (e) {
-    if (e && e.preventDefault && isFunction(e.preventDefault)) {
-      e.preventDefault();
-    }
-
-    if (e && e.stopPropagation && isFunction(e.stopPropagation)) {
-      e.stopPropagation();
-    } // Warn if form submission is triggered by a <button> without a
-    // specified `type` attribute during development. This mitigates
-    // a common gotcha in forms with both reset and submit buttons,
-    // where the dev forgets to add type="button" to the reset button.
-
-
-    if (process.env.NODE_ENV !== "production" && typeof document !== 'undefined') {
-      // Safely get the active element (works with IE)
-      var activeElement = getActiveElement();
-
-      if (activeElement !== null && activeElement instanceof HTMLButtonElement) {
-        !(activeElement.attributes && activeElement.attributes.getNamedItem('type')) ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, 'You submitted a Formik form using a button with an unspecified `type` attribute.  Most browsers default button elements to `type="submit"`. If this is not a submit button, please add `type="button"`.') : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0;
-      }
-    }
-
-    submitForm()["catch"](function (reason) {
-      console.warn("Warning: An unhandled error was caught from submitForm()", reason);
-    });
-  });
-  var imperativeMethods = {
-    resetForm: resetForm,
-    validateForm: validateFormWithHighPriority,
-    validateField: validateField,
-    setErrors: setErrors,
-    setFieldError: setFieldError,
-    setFieldTouched: setFieldTouched,
-    setFieldValue: setFieldValue,
-    setStatus: setStatus,
-    setSubmitting: setSubmitting,
-    setTouched: setTouched,
-    setValues: setValues,
-    setFormikState: setFormikState,
-    submitForm: submitForm
-  };
-  var executeSubmit = useEventCallback(function () {
-    return onSubmit(state.values, imperativeMethods);
-  });
-  var handleReset = useEventCallback(function (e) {
-    if (e && e.preventDefault && isFunction(e.preventDefault)) {
-      e.preventDefault();
-    }
-
-    if (e && e.stopPropagation && isFunction(e.stopPropagation)) {
-      e.stopPropagation();
-    }
-
-    resetForm();
-  });
-  var getFieldMeta = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (name) {
-    return {
-      value: getIn(state.values, name),
-      error: getIn(state.errors, name),
-      touched: !!getIn(state.touched, name),
-      initialValue: getIn(initialValues.current, name),
-      initialTouched: !!getIn(initialTouched.current, name),
-      initialError: getIn(initialErrors.current, name)
-    };
-  }, [state.errors, state.touched, state.values]);
-  var getFieldHelpers = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (name) {
-    return {
-      setValue: function setValue(value, shouldValidate) {
-        return setFieldValue(name, value, shouldValidate);
-      },
-      setTouched: function setTouched(value, shouldValidate) {
-        return setFieldTouched(name, value, shouldValidate);
-      },
-      setError: function setError(value) {
-        return setFieldError(name, value);
-      }
-    };
-  }, [setFieldValue, setFieldTouched, setFieldError]);
-  var getFieldProps = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function (nameOrOptions) {
-    var isAnObject = isObject(nameOrOptions);
-    var name = isAnObject ? nameOrOptions.name : nameOrOptions;
-    var valueState = getIn(state.values, name);
-    var field = {
-      name: name,
-      value: valueState,
-      onChange: handleChange,
-      onBlur: handleBlur
-    };
-
-    if (isAnObject) {
-      var type = nameOrOptions.type,
-          valueProp = nameOrOptions.value,
-          is = nameOrOptions.as,
-          multiple = nameOrOptions.multiple;
-
-      if (type === 'checkbox') {
-        if (valueProp === undefined) {
-          field.checked = !!valueState;
-        } else {
-          field.checked = !!(Array.isArray(valueState) && ~valueState.indexOf(valueProp));
-          field.value = valueProp;
-        }
-      } else if (type === 'radio') {
-        field.checked = valueState === valueProp;
-        field.value = valueProp;
-      } else if (is === 'select' && multiple) {
-        field.value = field.value || [];
-        field.multiple = true;
-      }
-    }
-
-    return field;
-  }, [handleBlur, handleChange, state.values]);
-  var dirty = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useMemo"])(function () {
-    return !__WEBPACK_IMPORTED_MODULE_1_react_fast_compare___default()(initialValues.current, state.values);
-  }, [initialValues.current, state.values]);
-  var isValid = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useMemo"])(function () {
-    return typeof isInitialValid !== 'undefined' ? dirty ? state.errors && Object.keys(state.errors).length === 0 : isInitialValid !== false && isFunction(isInitialValid) ? isInitialValid(props) : isInitialValid : state.errors && Object.keys(state.errors).length === 0;
-  }, [isInitialValid, dirty, state.errors, props]);
-
-  var ctx = _extends({}, state, {
-    initialValues: initialValues.current,
-    initialErrors: initialErrors.current,
-    initialTouched: initialTouched.current,
-    initialStatus: initialStatus.current,
-    handleBlur: handleBlur,
-    handleChange: handleChange,
-    handleReset: handleReset,
-    handleSubmit: handleSubmit,
-    resetForm: resetForm,
-    setErrors: setErrors,
-    setFormikState: setFormikState,
-    setFieldTouched: setFieldTouched,
-    setFieldValue: setFieldValue,
-    setFieldError: setFieldError,
-    setStatus: setStatus,
-    setSubmitting: setSubmitting,
-    setTouched: setTouched,
-    setValues: setValues,
-    submitForm: submitForm,
-    validateForm: validateFormWithHighPriority,
-    validateField: validateField,
-    isValid: isValid,
-    dirty: dirty,
-    unregisterField: unregisterField,
-    registerField: registerField,
-    getFieldProps: getFieldProps,
-    getFieldMeta: getFieldMeta,
-    getFieldHelpers: getFieldHelpers,
-    validateOnBlur: validateOnBlur,
-    validateOnChange: validateOnChange,
-    validateOnMount: validateOnMount
-  });
-
-  return ctx;
-}
-function Formik(props) {
-  var formikbag = useFormik(props);
-  var component = props.component,
-      children = props.children,
-      render = props.render,
-      innerRef = props.innerRef; // This allows folks to pass a ref to <Formik />
-
-  Object(__WEBPACK_IMPORTED_MODULE_0_react__["useImperativeHandle"])(innerRef, function () {
-    return formikbag;
-  });
-
-  if (process.env.NODE_ENV !== "production") {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    Object(__WEBPACK_IMPORTED_MODULE_0_react__["useEffect"])(function () {
-      !!props.render ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, "<Formik render> has been deprecated and will be removed in future versions of Formik. Please use a child callback function instead. To get rid of this warning, replace <Formik render={(props) => ...} /> with <Formik>{(props) => ...}</Formik>") : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0; // eslint-disable-next-line
-    }, []);
-  }
-
-  return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(FormikProvider, {
-    value: formikbag
-  }, component ? Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(component, formikbag) : render ? render(formikbag) : children // children come last, always called
-  ? isFunction(children) ? children(formikbag) : !isEmptyChildren(children) ? __WEBPACK_IMPORTED_MODULE_0_react__["Children"].only(children) : null : null);
-}
-
-function warnAboutMissingIdentifier(_ref4) {
-  var htmlContent = _ref4.htmlContent,
-      documentationAnchorLink = _ref4.documentationAnchorLink,
-      handlerName = _ref4.handlerName;
-  console.warn("Warning: Formik called `" + handlerName + "`, but you forgot to pass an `id` or `name` attribute to your input:\n    " + htmlContent + "\n    Formik cannot determine which value to update. For more info see https://formik.org/docs/api/formik#" + documentationAnchorLink + "\n  ");
-}
-/**
- * Transform Yup ValidationError to a more usable object
- */
-
-
-function yupToFormErrors(yupError) {
-  var errors = {};
-
-  if (yupError.inner) {
-    if (yupError.inner.length === 0) {
-      return setIn(errors, yupError.path, yupError.message);
-    }
-
-    for (var _iterator = yupError.inner, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
-      var _ref5;
-
-      if (_isArray) {
-        if (_i >= _iterator.length) break;
-        _ref5 = _iterator[_i++];
-      } else {
-        _i = _iterator.next();
-        if (_i.done) break;
-        _ref5 = _i.value;
-      }
-
-      var err = _ref5;
-
-      if (!getIn(errors, err.path)) {
-        errors = setIn(errors, err.path, err.message);
-      }
-    }
-  }
-
-  return errors;
-}
-/**
- * Validate a yup schema.
- */
-
-function validateYupSchema(values, schema, sync, context) {
-  if (sync === void 0) {
-    sync = false;
-  }
-
-  if (context === void 0) {
-    context = {};
-  }
-
-  var validateData = prepareDataForValidation(values);
-  return schema[sync ? 'validateSync' : 'validate'](validateData, {
-    abortEarly: false,
-    context: context
-  });
-}
-/**
- * Recursively prepare values.
- */
-
-function prepareDataForValidation(values) {
-  var data = Array.isArray(values) ? [] : {};
-
-  for (var k in values) {
-    if (Object.prototype.hasOwnProperty.call(values, k)) {
-      var key = String(k);
-
-      if (Array.isArray(values[key]) === true) {
-        data[key] = values[key].map(function (value) {
-          if (Array.isArray(value) === true || Object(__WEBPACK_IMPORTED_MODULE_3_lodash_es_isPlainObject__["a" /* default */])(value)) {
-            return prepareDataForValidation(value);
-          } else {
-            return value !== '' ? value : undefined;
-          }
-        });
-      } else if (Object(__WEBPACK_IMPORTED_MODULE_3_lodash_es_isPlainObject__["a" /* default */])(values[key])) {
-        data[key] = prepareDataForValidation(values[key]);
-      } else {
-        data[key] = values[key] !== '' ? values[key] : undefined;
-      }
-    }
-  }
-
-  return data;
-}
-/**
- * deepmerge array merging algorithm
- * https://github.com/KyleAMathews/deepmerge#combine-array
- */
-
-function arrayMerge(target, source, options) {
-  var destination = target.slice();
-  source.forEach(function merge(e, i) {
-    if (typeof destination[i] === 'undefined') {
-      var cloneRequested = options.clone !== false;
-      var shouldClone = cloneRequested && options.isMergeableObject(e);
-      destination[i] = shouldClone ? Object(__WEBPACK_IMPORTED_MODULE_2_deepmerge__["a" /* default */])(Array.isArray(e) ? [] : {}, e, options) : e;
-    } else if (options.isMergeableObject(e)) {
-      destination[i] = Object(__WEBPACK_IMPORTED_MODULE_2_deepmerge__["a" /* default */])(target[i], e, options);
-    } else if (target.indexOf(e) === -1) {
-      destination.push(e);
-    }
-  });
-  return destination;
-}
-/** Return multi select values based on an array of options */
-
-
-function getSelectedValues(options) {
-  return Array.from(options).filter(function (el) {
-    return el.selected;
-  }).map(function (el) {
-    return el.value;
-  });
-}
-/** Return the next value for a checkbox */
-
-
-function getValueForCheckbox(currentValue, checked, valueProp) {
-  // If the current value was a boolean, return a boolean
-  if (typeof currentValue === 'boolean') {
-    return Boolean(checked);
-  } // If the currentValue was not a boolean we want to return an array
-
-
-  var currentArrayOfValues = [];
-  var isValueInArray = false;
-  var index = -1;
-
-  if (!Array.isArray(currentValue)) {
-    // eslint-disable-next-line eqeqeq
-    if (!valueProp || valueProp == 'true' || valueProp == 'false') {
-      return Boolean(checked);
-    }
-  } else {
-    // If the current value is already an array, use it
-    currentArrayOfValues = currentValue;
-    index = currentValue.indexOf(valueProp);
-    isValueInArray = index >= 0;
-  } // If the checkbox was checked and the value is not already present in the aray we want to add the new value to the array of values
-
-
-  if (checked && valueProp && !isValueInArray) {
-    return currentArrayOfValues.concat(valueProp);
-  } // If the checkbox was unchecked and the value is not in the array, simply return the already existing array of values
-
-
-  if (!isValueInArray) {
-    return currentArrayOfValues;
-  } // If the checkbox was unchecked and the value is in the array, remove the value and return the array
-
-
-  return currentArrayOfValues.slice(0, index).concat(currentArrayOfValues.slice(index + 1));
-} // React currently throws a warning when using useLayoutEffect on the server.
-// To get around it, we can conditionally useEffect on the server (no-op) and
-// useLayoutEffect in the browser.
-// @see https://gist.github.com/gaearon/e7d97cdf38a2907924ea12e4ebdf3c85
-
-
-var useIsomorphicLayoutEffect = typeof window !== 'undefined' && typeof window.document !== 'undefined' && typeof window.document.createElement !== 'undefined' ? __WEBPACK_IMPORTED_MODULE_0_react__["useLayoutEffect"] : __WEBPACK_IMPORTED_MODULE_0_react__["useEffect"];
-
-function useEventCallback(fn) {
-  var ref = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useRef"])(fn); // we copy a ref to the callback scoped to the current state/props on each render
-
-  useIsomorphicLayoutEffect(function () {
-    ref.current = fn;
-  });
-  return Object(__WEBPACK_IMPORTED_MODULE_0_react__["useCallback"])(function () {
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return ref.current.apply(void 0, args);
-  }, []);
-}
-
-function useField(propsOrFieldName) {
-  var formik = useFormikContext();
-  var getFieldProps = formik.getFieldProps,
-      getFieldMeta = formik.getFieldMeta,
-      getFieldHelpers = formik.getFieldHelpers,
-      registerField = formik.registerField,
-      unregisterField = formik.unregisterField;
-  var isAnObject = isObject(propsOrFieldName); // Normalize propsOrFieldName to FieldHookConfig<Val>
-
-  var props = isAnObject ? propsOrFieldName : {
-    name: propsOrFieldName
-  };
-  var fieldName = props.name,
-      validateFn = props.validate;
-  Object(__WEBPACK_IMPORTED_MODULE_0_react__["useEffect"])(function () {
-    if (fieldName) {
-      registerField(fieldName, {
-        validate: validateFn
-      });
-    }
-
-    return function () {
-      if (fieldName) {
-        unregisterField(fieldName);
-      }
-    };
-  }, [registerField, unregisterField, fieldName, validateFn]);
-
-  if (process.env.NODE_ENV !== "production") {
-    !formik ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, 'useField() / <Field /> must be used underneath a <Formik> component or withFormik() higher order component') : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0;
-  }
-
-  !fieldName ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, 'Invalid field name. Either pass `useField` a string or an object containing a `name` key.') : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0;
-  return [getFieldProps(props), getFieldMeta(fieldName), getFieldHelpers(fieldName)];
-}
-function Field(_ref) {
-  var validate = _ref.validate,
-      name = _ref.name,
-      render = _ref.render,
-      children = _ref.children,
-      is = _ref.as,
-      component = _ref.component,
-      props = _objectWithoutPropertiesLoose(_ref, ["validate", "name", "render", "children", "as", "component"]);
-
-  var _useFormikContext = useFormikContext(),
-      formik = _objectWithoutPropertiesLoose(_useFormikContext, ["validate", "validationSchema"]);
-
-  if (process.env.NODE_ENV !== "production") {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    Object(__WEBPACK_IMPORTED_MODULE_0_react__["useEffect"])(function () {
-      !!render ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, "<Field render> has been deprecated and will be removed in future versions of Formik. Please use a child callback function instead. To get rid of this warning, replace <Field name=\"" + name + "\" render={({field, form}) => ...} /> with <Field name=\"" + name + "\">{({field, form, meta}) => ...}</Field>") : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0;
-      !!(is && children && isFunction(children)) ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, 'You should not use <Field as> and <Field children> as a function in the same <Field> component; <Field as> will be ignored.') : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0;
-      !!(component && children && isFunction(children)) ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, 'You should not use <Field component> and <Field children> as a function in the same <Field> component; <Field component> will be ignored.') : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0;
-      !!(render && children && !isEmptyChildren(children)) ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, 'You should not use <Field render> and <Field children> in the same <Field> component; <Field children> will be ignored') : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0; // eslint-disable-next-line
-    }, []);
-  } // Register field and field-level validation with parent <Formik>
-
-
-  var registerField = formik.registerField,
-      unregisterField = formik.unregisterField;
-  Object(__WEBPACK_IMPORTED_MODULE_0_react__["useEffect"])(function () {
-    registerField(name, {
-      validate: validate
-    });
-    return function () {
-      unregisterField(name);
-    };
-  }, [registerField, unregisterField, name, validate]);
-  var field = formik.getFieldProps(_extends({
-    name: name
-  }, props));
-  var meta = formik.getFieldMeta(name);
-  var legacyBag = {
-    field: field,
-    form: formik
-  };
-
-  if (render) {
-    return render(_extends({}, legacyBag, {
-      meta: meta
-    }));
-  }
-
-  if (isFunction(children)) {
-    return children(_extends({}, legacyBag, {
-      meta: meta
-    }));
-  }
-
-  if (component) {
-    // This behavior is backwards compat with earlier Formik 0.9 to 1.x
-    if (typeof component === 'string') {
-      var innerRef = props.innerRef,
-          rest = _objectWithoutPropertiesLoose(props, ["innerRef"]);
-
-      return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(component, _extends({
-        ref: innerRef
-      }, field, rest), children);
-    } // We don't pass `meta` for backwards compat
-
-
-    return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(component, _extends({
-      field: field,
-      form: formik
-    }, props), children);
-  } // default to input here so we can check for both `as` and `children` above
-
-
-  var asElement = is || 'input';
-
-  if (typeof asElement === 'string') {
-    var _innerRef = props.innerRef,
-        _rest = _objectWithoutPropertiesLoose(props, ["innerRef"]);
-
-    return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(asElement, _extends({
-      ref: _innerRef
-    }, field, _rest), children);
-  }
-
-  return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(asElement, _extends({}, field, props), children);
-}
-
-var Form = /*#__PURE__*/Object(__WEBPACK_IMPORTED_MODULE_0_react__["forwardRef"])(function (props, ref) {
-  // iOS needs an "action" attribute for nice input: https://stackoverflow.com/a/39485162/406725
-  // We default the action to "#" in case the preventDefault fails (just updates the URL hash)
-  var action = props.action,
-      rest = _objectWithoutPropertiesLoose(props, ["action"]);
-
-  var _action = action != null ? action : '#';
-
-  var _useFormikContext = useFormikContext(),
-      handleReset = _useFormikContext.handleReset,
-      handleSubmit = _useFormikContext.handleSubmit;
-
-  return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])("form", Object.assign({
-    onSubmit: handleSubmit,
-    ref: ref,
-    onReset: handleReset,
-    action: _action
-  }, rest));
-});
-Form.displayName = 'Form';
-
-/**
- * A public higher-order component to access the imperative API
- */
-
-function withFormik(_ref) {
-  var _ref$mapPropsToValues = _ref.mapPropsToValues,
-      mapPropsToValues = _ref$mapPropsToValues === void 0 ? function (vanillaProps) {
-    var val = {};
-
-    for (var k in vanillaProps) {
-      if (vanillaProps.hasOwnProperty(k) && typeof vanillaProps[k] !== 'function') {
-        // @todo TypeScript fix
-        val[k] = vanillaProps[k];
-      }
-    }
-
-    return val;
-  } : _ref$mapPropsToValues,
-      config = _objectWithoutPropertiesLoose(_ref, ["mapPropsToValues"]);
-
-  return function createFormik(Component$1) {
-    var componentDisplayName = Component$1.displayName || Component$1.name || Component$1.constructor && Component$1.constructor.name || 'Component';
-    /**
-     * We need to use closures here for to provide the wrapped component's props to
-     * the respective withFormik config methods.
-     */
-
-    var C = /*#__PURE__*/function (_React$Component) {
-      _inheritsLoose(C, _React$Component);
-
-      function C() {
-        var _this;
-
-        _this = _React$Component.apply(this, arguments) || this;
-
-        _this.validate = function (values) {
-          return config.validate(values, _this.props);
-        };
-
-        _this.validationSchema = function () {
-          return isFunction(config.validationSchema) ? config.validationSchema(_this.props) : config.validationSchema;
-        };
-
-        _this.handleSubmit = function (values, actions) {
-          return config.handleSubmit(values, _extends({}, actions, {
-            props: _this.props
-          }));
-        };
-        /**
-         * Just avoiding a render callback for perf here
-         */
-
-
-        _this.renderFormComponent = function (formikProps) {
-          return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(Component$1, Object.assign({}, _this.props, formikProps));
-        };
-
-        return _this;
-      }
-
-      var _proto = C.prototype;
-
-      _proto.render = function render() {
-        var _this$props = this.props,
-            props = _objectWithoutPropertiesLoose(_this$props, ["children"]);
-
-        return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(Formik, Object.assign({}, props, config, {
-          validate: config.validate && this.validate,
-          validationSchema: config.validationSchema && this.validationSchema,
-          initialValues: mapPropsToValues(this.props),
-          initialStatus: config.mapPropsToStatus && config.mapPropsToStatus(this.props),
-          initialErrors: config.mapPropsToErrors && config.mapPropsToErrors(this.props),
-          initialTouched: config.mapPropsToTouched && config.mapPropsToTouched(this.props),
-          onSubmit: this.handleSubmit,
-          children: this.renderFormComponent
-        }));
-      };
-
-      return C;
-    }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
-
-    C.displayName = "WithFormik(" + componentDisplayName + ")";
-    return __WEBPACK_IMPORTED_MODULE_7_hoist_non_react_statics___default()(C, Component$1 // cast type to ComponentClass (even if SFC)
-    );
-  };
-}
-
-/**
- * Connect any component to Formik context, and inject as a prop called `formik`;
- * @param Comp React Component
- */
-
-function connect(Comp) {
-  var C = function C(props) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(FormikConsumer, null, function (formik) {
-      !!!formik ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, "Formik context is undefined, please verify you are rendering <Form>, <Field>, <FastField>, <FieldArray>, or your custom context-using component as a child of a <Formik> component. Component name: " + Comp.name) : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0;
-      return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(Comp, Object.assign({}, props, {
-        formik: formik
-      }));
-    });
-  };
-
-  var componentDisplayName = Comp.displayName || Comp.name || Comp.constructor && Comp.constructor.name || 'Component'; // Assign Comp to C.WrappedComponent so we can access the inner component in tests
-  // For example, <Field.WrappedComponent /> gets us <FieldInner/>
-
-  C.WrappedComponent = Comp;
-  C.displayName = "FormikConnect(" + componentDisplayName + ")";
-  return __WEBPACK_IMPORTED_MODULE_7_hoist_non_react_statics___default()(C, Comp // cast type to ComponentClass (even if SFC)
-  );
-}
-
-/**
- * Some array helpers!
- */
-
-var move = function move(array, from, to) {
-  var copy = copyArrayLike(array);
-  var value = copy[from];
-  copy.splice(from, 1);
-  copy.splice(to, 0, value);
-  return copy;
-};
-var swap = function swap(arrayLike, indexA, indexB) {
-  var copy = copyArrayLike(arrayLike);
-  var a = copy[indexA];
-  copy[indexA] = copy[indexB];
-  copy[indexB] = a;
-  return copy;
-};
-var insert = function insert(arrayLike, index, value) {
-  var copy = copyArrayLike(arrayLike);
-  copy.splice(index, 0, value);
-  return copy;
-};
-var replace = function replace(arrayLike, index, value) {
-  var copy = copyArrayLike(arrayLike);
-  copy[index] = value;
-  return copy;
-};
-
-var copyArrayLike = function copyArrayLike(arrayLike) {
-  if (!arrayLike) {
-    return [];
-  } else if (Array.isArray(arrayLike)) {
-    return [].concat(arrayLike);
-  } else {
-    var maxIndex = Object.keys(arrayLike).map(function (key) {
-      return parseInt(key);
-    }).reduce(function (max, el) {
-      return el > max ? el : max;
-    }, 0);
-    return Array.from(_extends({}, arrayLike, {
-      length: maxIndex + 1
-    }));
-  }
-};
-
-var FieldArrayInner = /*#__PURE__*/function (_React$Component) {
-  _inheritsLoose(FieldArrayInner, _React$Component);
-
-  function FieldArrayInner(props) {
-    var _this;
-
-    _this = _React$Component.call(this, props) || this;
-
-    _this.updateArrayField = function (fn, alterTouched, alterErrors) {
-      var _this$props = _this.props,
-          name = _this$props.name,
-          setFormikState = _this$props.formik.setFormikState;
-      setFormikState(function (prevState) {
-        var updateErrors = typeof alterErrors === 'function' ? alterErrors : fn;
-        var updateTouched = typeof alterTouched === 'function' ? alterTouched : fn; // values fn should be executed before updateErrors and updateTouched,
-        // otherwise it causes an error with unshift.
-
-        var values = setIn(prevState.values, name, fn(getIn(prevState.values, name)));
-        var fieldError = alterErrors ? updateErrors(getIn(prevState.errors, name)) : undefined;
-        var fieldTouched = alterTouched ? updateTouched(getIn(prevState.touched, name)) : undefined;
-
-        if (isEmptyArray(fieldError)) {
-          fieldError = undefined;
-        }
-
-        if (isEmptyArray(fieldTouched)) {
-          fieldTouched = undefined;
-        }
-
-        return _extends({}, prevState, {
-          values: values,
-          errors: alterErrors ? setIn(prevState.errors, name, fieldError) : prevState.errors,
-          touched: alterTouched ? setIn(prevState.touched, name, fieldTouched) : prevState.touched
-        });
-      });
-    };
-
-    _this.push = function (value) {
-      return _this.updateArrayField(function (arrayLike) {
-        return [].concat(copyArrayLike(arrayLike), [Object(__WEBPACK_IMPORTED_MODULE_8_lodash_es_cloneDeep__["a" /* default */])(value)]);
-      }, false, false);
-    };
-
-    _this.handlePush = function (value) {
-      return function () {
-        return _this.push(value);
-      };
-    };
-
-    _this.swap = function (indexA, indexB) {
-      return _this.updateArrayField(function (array) {
-        return swap(array, indexA, indexB);
-      }, true, true);
-    };
-
-    _this.handleSwap = function (indexA, indexB) {
-      return function () {
-        return _this.swap(indexA, indexB);
-      };
-    };
-
-    _this.move = function (from, to) {
-      return _this.updateArrayField(function (array) {
-        return move(array, from, to);
-      }, true, true);
-    };
-
-    _this.handleMove = function (from, to) {
-      return function () {
-        return _this.move(from, to);
-      };
-    };
-
-    _this.insert = function (index, value) {
-      return _this.updateArrayField(function (array) {
-        return insert(array, index, value);
-      }, function (array) {
-        return insert(array, index, null);
-      }, function (array) {
-        return insert(array, index, null);
-      });
-    };
-
-    _this.handleInsert = function (index, value) {
-      return function () {
-        return _this.insert(index, value);
-      };
-    };
-
-    _this.replace = function (index, value) {
-      return _this.updateArrayField(function (array) {
-        return replace(array, index, value);
-      }, false, false);
-    };
-
-    _this.handleReplace = function (index, value) {
-      return function () {
-        return _this.replace(index, value);
-      };
-    };
-
-    _this.unshift = function (value) {
-      var length = -1;
-
-      _this.updateArrayField(function (array) {
-        var arr = array ? [value].concat(array) : [value];
-
-        if (length < 0) {
-          length = arr.length;
-        }
-
-        return arr;
-      }, function (array) {
-        var arr = array ? [null].concat(array) : [null];
-
-        if (length < 0) {
-          length = arr.length;
-        }
-
-        return arr;
-      }, function (array) {
-        var arr = array ? [null].concat(array) : [null];
-
-        if (length < 0) {
-          length = arr.length;
-        }
-
-        return arr;
-      });
-
-      return length;
-    };
-
-    _this.handleUnshift = function (value) {
-      return function () {
-        return _this.unshift(value);
-      };
-    };
-
-    _this.handleRemove = function (index) {
-      return function () {
-        return _this.remove(index);
-      };
-    };
-
-    _this.handlePop = function () {
-      return function () {
-        return _this.pop();
-      };
-    }; // We need TypeScript generics on these, so we'll bind them in the constructor
-    // @todo Fix TS 3.2.1
-
-
-    _this.remove = _this.remove.bind(_assertThisInitialized(_this));
-    _this.pop = _this.pop.bind(_assertThisInitialized(_this));
-    return _this;
-  }
-
-  var _proto = FieldArrayInner.prototype;
-
-  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
-    if (this.props.validateOnChange && this.props.formik.validateOnChange && !__WEBPACK_IMPORTED_MODULE_1_react_fast_compare___default()(getIn(prevProps.formik.values, prevProps.name), getIn(this.props.formik.values, this.props.name))) {
-      this.props.formik.validateForm(this.props.formik.values);
-    }
-  };
-
-  _proto.remove = function remove(index) {
-    // We need to make sure we also remove relevant pieces of `touched` and `errors`
-    var result;
-    this.updateArrayField( // so this gets call 3 times
-    function (array) {
-      var copy = array ? copyArrayLike(array) : [];
-
-      if (!result) {
-        result = copy[index];
-      }
-
-      if (isFunction(copy.splice)) {
-        copy.splice(index, 1);
-      }
-
-      return copy;
-    }, true, true);
-    return result;
-  };
-
-  _proto.pop = function pop() {
-    // Remove relevant pieces of `touched` and `errors` too!
-    var result;
-    this.updateArrayField( // so this gets call 3 times
-    function (array) {
-      var tmp = array;
-
-      if (!result) {
-        result = tmp && tmp.pop && tmp.pop();
-      }
-
-      return tmp;
-    }, true, true);
-    return result;
-  };
-
-  _proto.render = function render() {
-    var arrayHelpers = {
-      push: this.push,
-      pop: this.pop,
-      swap: this.swap,
-      move: this.move,
-      insert: this.insert,
-      replace: this.replace,
-      unshift: this.unshift,
-      remove: this.remove,
-      handlePush: this.handlePush,
-      handlePop: this.handlePop,
-      handleSwap: this.handleSwap,
-      handleMove: this.handleMove,
-      handleInsert: this.handleInsert,
-      handleReplace: this.handleReplace,
-      handleUnshift: this.handleUnshift,
-      handleRemove: this.handleRemove
-    };
-
-    var _this$props2 = this.props,
-        component = _this$props2.component,
-        render = _this$props2.render,
-        children = _this$props2.children,
-        name = _this$props2.name,
-        _this$props2$formik = _this$props2.formik,
-        restOfFormik = _objectWithoutPropertiesLoose(_this$props2$formik, ["validate", "validationSchema"]);
-
-    var props = _extends({}, arrayHelpers, {
-      form: restOfFormik,
-      name: name
-    });
-
-    return component ? Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(component, props) : render ? render(props) : children // children come last, always called
-    ? typeof children === 'function' ? children(props) : !isEmptyChildren(children) ? __WEBPACK_IMPORTED_MODULE_0_react__["Children"].only(children) : null : null;
-  };
-
-  return FieldArrayInner;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
-
-FieldArrayInner.defaultProps = {
-  validateOnChange: true
-};
-var FieldArray = /*#__PURE__*/connect(FieldArrayInner);
-
-var ErrorMessageImpl = /*#__PURE__*/function (_React$Component) {
-  _inheritsLoose(ErrorMessageImpl, _React$Component);
-
-  function ErrorMessageImpl() {
-    return _React$Component.apply(this, arguments) || this;
-  }
-
-  var _proto = ErrorMessageImpl.prototype;
-
-  _proto.shouldComponentUpdate = function shouldComponentUpdate(props) {
-    if (getIn(this.props.formik.errors, this.props.name) !== getIn(props.formik.errors, this.props.name) || getIn(this.props.formik.touched, this.props.name) !== getIn(props.formik.touched, this.props.name) || Object.keys(this.props).length !== Object.keys(props).length) {
-      return true;
-    } else {
-      return false;
-    }
-  };
-
-  _proto.render = function render() {
-    var _this$props = this.props,
-        component = _this$props.component,
-        formik = _this$props.formik,
-        render = _this$props.render,
-        children = _this$props.children,
-        name = _this$props.name,
-        rest = _objectWithoutPropertiesLoose(_this$props, ["component", "formik", "render", "children", "name"]);
-
-    var touch = getIn(formik.touched, name);
-    var error = getIn(formik.errors, name);
-    return !!touch && !!error ? render ? isFunction(render) ? render(error) : null : children ? isFunction(children) ? children(error) : null : component ? Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(component, rest, error) : error : null;
-  };
-
-  return ErrorMessageImpl;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
-
-var ErrorMessage = /*#__PURE__*/connect(ErrorMessageImpl);
-
-/**
- * Custom Field component for quickly hooking into Formik
- * context and wiring up forms.
- */
-
-var FastFieldInner = /*#__PURE__*/function (_React$Component) {
-  _inheritsLoose(FastFieldInner, _React$Component);
-
-  function FastFieldInner(props) {
-    var _this;
-
-    _this = _React$Component.call(this, props) || this;
-    var render = props.render,
-        children = props.children,
-        component = props.component,
-        is = props.as,
-        name = props.name;
-    !!render ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, "<FastField render> has been deprecated. Please use a child callback function instead: <FastField name={" + name + "}>{props => ...}</FastField> instead.") : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0;
-    !!(component && render) ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, 'You should not use <FastField component> and <FastField render> in the same <FastField> component; <FastField component> will be ignored') : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0;
-    !!(is && children && isFunction(children)) ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, 'You should not use <FastField as> and <FastField children> as a function in the same <FastField> component; <FastField as> will be ignored.') : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0;
-    !!(component && children && isFunction(children)) ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, 'You should not use <FastField component> and <FastField children> as a function in the same <FastField> component; <FastField component> will be ignored.') : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0;
-    !!(render && children && !isEmptyChildren(children)) ? process.env.NODE_ENV !== "production" ? Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false, 'You should not use <FastField render> and <FastField children> in the same <FastField> component; <FastField children> will be ignored') : Object(__WEBPACK_IMPORTED_MODULE_6_tiny_warning__["a" /* default */])(false) : void 0;
-    return _this;
-  }
-
-  var _proto = FastFieldInner.prototype;
-
-  _proto.shouldComponentUpdate = function shouldComponentUpdate(props) {
-    if (this.props.shouldUpdate) {
-      return this.props.shouldUpdate(props, this.props);
-    } else if (props.name !== this.props.name || getIn(props.formik.values, this.props.name) !== getIn(this.props.formik.values, this.props.name) || getIn(props.formik.errors, this.props.name) !== getIn(this.props.formik.errors, this.props.name) || getIn(props.formik.touched, this.props.name) !== getIn(this.props.formik.touched, this.props.name) || Object.keys(this.props).length !== Object.keys(props).length || props.formik.isSubmitting !== this.props.formik.isSubmitting) {
-      return true;
-    } else {
-      return false;
-    }
-  };
-
-  _proto.componentDidMount = function componentDidMount() {
-    // Register the Field with the parent Formik. Parent will cycle through
-    // registered Field's validate fns right prior to submit
-    this.props.formik.registerField(this.props.name, {
-      validate: this.props.validate
-    });
-  };
-
-  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
-    if (this.props.name !== prevProps.name) {
-      this.props.formik.unregisterField(prevProps.name);
-      this.props.formik.registerField(this.props.name, {
-        validate: this.props.validate
-      });
-    }
-
-    if (this.props.validate !== prevProps.validate) {
-      this.props.formik.registerField(this.props.name, {
-        validate: this.props.validate
-      });
-    }
-  };
-
-  _proto.componentWillUnmount = function componentWillUnmount() {
-    this.props.formik.unregisterField(this.props.name);
-  };
-
-  _proto.render = function render() {
-    var _this$props = this.props,
-        name = _this$props.name,
-        render = _this$props.render,
-        is = _this$props.as,
-        children = _this$props.children,
-        component = _this$props.component,
-        formik = _this$props.formik,
-        props = _objectWithoutPropertiesLoose(_this$props, ["validate", "name", "render", "as", "children", "component", "shouldUpdate", "formik"]);
-
-    var restOfFormik = _objectWithoutPropertiesLoose(formik, ["validate", "validationSchema"]);
-
-    var field = formik.getFieldProps(_extends({
-      name: name
-    }, props));
-    var meta = {
-      value: getIn(formik.values, name),
-      error: getIn(formik.errors, name),
-      touched: !!getIn(formik.touched, name),
-      initialValue: getIn(formik.initialValues, name),
-      initialTouched: !!getIn(formik.initialTouched, name),
-      initialError: getIn(formik.initialErrors, name)
-    };
-    var bag = {
-      field: field,
-      meta: meta,
-      form: restOfFormik
-    };
-
-    if (render) {
-      return render(bag);
-    }
-
-    if (isFunction(children)) {
-      return children(bag);
-    }
-
-    if (component) {
-      // This behavior is backwards compat with earlier Formik 0.9 to 1.x
-      if (typeof component === 'string') {
-        var innerRef = props.innerRef,
-            rest = _objectWithoutPropertiesLoose(props, ["innerRef"]);
-
-        return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(component, _extends({
-          ref: innerRef
-        }, field, rest), children);
-      } // We don't pass `meta` for backwards compat
-
-
-      return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(component, _extends({
-        field: field,
-        form: formik
-      }, props), children);
-    } // default to input here so we can check for both `as` and `children` above
-
-
-    var asElement = is || 'input';
-
-    if (typeof asElement === 'string') {
-      var _innerRef = props.innerRef,
-          _rest = _objectWithoutPropertiesLoose(props, ["innerRef"]);
-
-      return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(asElement, _extends({
-        ref: _innerRef
-      }, field, _rest), children);
-    }
-
-    return Object(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"])(asElement, _extends({}, field, props), children);
-  };
-
-  return FastFieldInner;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
-
-var FastField = /*#__PURE__*/connect(FastFieldInner);
-
-
-//# sourceMappingURL=formik.esm.js.map
-
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
 /* 159 */
@@ -41597,7 +41623,7 @@ var deepmerge_1 = deepmerge;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseClone_js__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseClone_js__ = __webpack_require__(71);
 
 
 /** Used to compose bitmasks for cloning. */
@@ -41921,7 +41947,7 @@ function stackHas(key) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ListCache_js__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Map_js__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__MapCache_js__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__MapCache_js__ = __webpack_require__(75);
 
 
 
@@ -41963,10 +41989,10 @@ function stackSet(key, value) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__isFunction_js__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__isFunction_js__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__isMasked_js__ = __webpack_require__(174);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isObject_js__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__toSource_js__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__toSource_js__ = __webpack_require__(74);
 
 
 
@@ -42699,7 +42725,7 @@ var isTypedArray = nodeIsTypedArray ? Object(__WEBPACK_IMPORTED_MODULE_1__baseUn
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetTag_js__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__isLength_js__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__isLength_js__ = __webpack_require__(80);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isObjectLike_js__ = __webpack_require__(7);
 
 
@@ -43019,7 +43045,7 @@ function arrayFilter(array, predicate) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__copyObject_js__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getSymbolsIn_js__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getSymbolsIn_js__ = __webpack_require__(84);
 
 
 
@@ -43043,7 +43069,7 @@ function copySymbolsIn(source, object) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetAllKeys_js__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetAllKeys_js__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getSymbols_js__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__keys_js__ = __webpack_require__(35);
 
@@ -43069,8 +43095,8 @@ function getAllKeys(object) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetAllKeys_js__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getSymbolsIn_js__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetAllKeys_js__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getSymbolsIn_js__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__keysIn_js__ = __webpack_require__(39);
 
 
@@ -43588,8 +43614,8 @@ function baseIsSet(value) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__arrayMap_js__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__copyArray_js__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__arrayMap_js__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__copyArray_js__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isArray_js__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__isSymbol_js__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__stringToPath_js__ = __webpack_require__(228);
@@ -43704,7 +43730,7 @@ function memoizeCapped(func) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__MapCache_js__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__MapCache_js__ = __webpack_require__(75);
 
 
 /** Error message constants. */
@@ -43851,7 +43877,7 @@ function toString(value) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__arrayMap_js__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__arrayMap_js__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isArray_js__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__isSymbol_js__ = __webpack_require__(43);
 
@@ -43898,7 +43924,7 @@ function baseToString(value) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseClone_js__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseClone_js__ = __webpack_require__(71);
 
 
 /** Used to compose bitmasks for cloning. */
@@ -43944,9 +43970,9 @@ module.exports = __webpack_require__(236);
 
 
 var utils = __webpack_require__(3);
-var bind = __webpack_require__(87);
+var bind = __webpack_require__(88);
 var Axios = __webpack_require__(237);
-var mergeConfig = __webpack_require__(93);
+var mergeConfig = __webpack_require__(94);
 var defaults = __webpack_require__(23);
 
 /**
@@ -43982,8 +44008,8 @@ axios.Axios = Axios;
 // Expose Cancel & CancelToken
 axios.Cancel = __webpack_require__(24);
 axios.CancelToken = __webpack_require__(250);
-axios.isCancel = __webpack_require__(92);
-axios.VERSION = __webpack_require__(94).version;
+axios.isCancel = __webpack_require__(93);
+axios.VERSION = __webpack_require__(95).version;
 
 // Expose all/spread
 axios.all = function all(promises) {
@@ -44008,10 +44034,10 @@ module.exports.default = axios;
 
 
 var utils = __webpack_require__(3);
-var buildURL = __webpack_require__(88);
+var buildURL = __webpack_require__(89);
 var InterceptorManager = __webpack_require__(238);
 var dispatchRequest = __webpack_require__(239);
-var mergeConfig = __webpack_require__(93);
+var mergeConfig = __webpack_require__(94);
 var validator = __webpack_require__(249);
 
 var validators = validator.validators;
@@ -44225,7 +44251,7 @@ module.exports = InterceptorManager;
 
 var utils = __webpack_require__(3);
 var transformData = __webpack_require__(240);
-var isCancel = __webpack_require__(92);
+var isCancel = __webpack_require__(93);
 var defaults = __webpack_require__(23);
 var Cancel = __webpack_require__(24);
 
@@ -44365,7 +44391,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 "use strict";
 
 
-var createError = __webpack_require__(91);
+var createError = __webpack_require__(92);
 
 /**
  * Resolve or reject a Promise based on response status.
@@ -44661,7 +44687,7 @@ module.exports = (
 "use strict";
 
 
-var VERSION = __webpack_require__(94).version;
+var VERSION = __webpack_require__(95).version;
 
 var validators = {};
 
@@ -44923,6 +44949,131 @@ module.exports = function isAxiosError(payload) {
 
 /***/ }),
 /* 253 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.SignInForm = undefined;
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _formik = __webpack_require__(70);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var validate = function validate(values) {
+    var errors = {};
+
+    if (!values.userName) {
+        errors.userName = 'Required';
+    } else if (values.userName.length < 4) {
+        ;
+        errors.userName = 'Mast be 4 characters or more';
+    }
+
+    if (!values.password) {
+        errors.password = 'Required';
+    } else if (values.password.length < 6) {
+        errors.password = 'Must be 6 characters or more';
+    }
+
+    return errors;
+};
+
+var url = 'https://localhost:7078/';
+
+var SignInForm = exports.SignInForm = function SignInForm() {
+    var formik = (0, _formik.useFormik)({
+        initialValues: {
+            userName: '',
+            password: ''
+        },
+        validate: validate,
+        onSubmit: function onSubmit(values) {
+            var queryTrailer = 'token?username=' + values.userName;
+            queryTrailer += '&password=' + values.password;
+
+            fetch(url + queryTrailer, {
+                method: 'POST',
+                mode: 'cors',
+                cache: 'no-cache',
+                credentials: 'same-origin',
+                headers: {
+                    'Content-type': 'application/x-www-form-urlencoded'
+                },
+                redirect: 'follow',
+                referrerPolicy: 'no-referrer', // no-referrer, *client
+                body: JSON.stringify(values)
+            }).then(function (response) {
+                if (response.status == '200') {
+                    alert('Status 200');
+                    response.text().then(function (token) {
+                        localStorage.setItem('token', token);
+                        alert('Token has been set: ' + token);
+                    });
+                }
+            });
+        },
+
+        onLogOut: function onLogOut(e) {
+            alert(localStorage.getItem('token'));
+        }
+
+    });
+    return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+            'form',
+            { onSubmit: formik.handleSubmit },
+            _react2.default.createElement(
+                'label',
+                { htmlFor: 'userName' },
+                '\u041B\u043E\u0433\u0438\u043D: '
+            ),
+            _react2.default.createElement('input', { type: 'text', id: 'userName', name: 'userName', onChange: formik.handleChange, value: formik.values.userName }),
+            formik.errors.userName ? _react2.default.createElement(
+                'div',
+                null,
+                formik.errors.userName
+            ) : null,
+            _react2.default.createElement(
+                'label',
+                { htmlFor: 'password' },
+                '\u041F\u0430\u0440\u043E\u043B\u044C: '
+            ),
+            _react2.default.createElement('input', { type: 'password', id: 'password', name: 'password', onChange: formik.handleChange, value: formik.values.password }),
+            formik.errors.password ? _react2.default.createElement(
+                'div',
+                null,
+                formik.errors.password
+            ) : null,
+            _react2.default.createElement(
+                'button',
+                { type: 'submit' },
+                'Submit'
+            )
+        ),
+        localStorage.getItem('token') ? _react2.default.createElement(
+            'button',
+            { type: 'button', onClick: function onClick(e) {
+                    return localStorage.removeItem('token');
+                } },
+            'Log Out'
+        ) : null
+    );
+};
+
+exports.default = SignInForm;
+
+/***/ }),
+/* 254 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

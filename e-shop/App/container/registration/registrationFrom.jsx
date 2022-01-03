@@ -85,28 +85,32 @@ export const SignupForm = () => {
         ,
     });
     return (
-        <form onSubmit={formik.handleSubmit}>
-            <label htmlFor="firstName">Имя: </label>
-            <input type="text" id="firstName" name="firstName" onChange={formik.handleChange} value={formik.values.firstName} />
-            {formik.errors.firstName ? <div>{formik.errors.firstName}</div> : null}
+<form onSubmit={formik.handleSubmit}>
+            {localStorage.getItem('token') ? <div>Allready logged in!</div> : <div>
+                <label htmlFor="firstName">Имя: </label>
+                <input type="text" id="firstName" name="firstName" onChange={formik.handleChange} value={formik.values.firstName} />
+                {formik.errors.firstName ? <div>{formik.errors.firstName}</div> : null}
 
-            <label htmlFor="lastName">Фамилия: </label>
-            <input type="text" id="lastName" name="lastName" onChange={formik.handleChange} value={formik.values.lastName} />
-            {formik.errors.lastName ? <div>{formik.errors.lastName}</div> : null}
+                <label htmlFor="lastName">Фамилия: </label>
+                <input type="text" id="lastName" name="lastName" onChange={formik.handleChange} value={formik.values.lastName} />
+                {formik.errors.lastName ? <div>{formik.errors.lastName}</div> : null}
 
-            <label htmlFor="userName">Логин: </label>
-            <input type="text" id="userName" name="userName" onChange={formik.handleChange} value={formik.values.userName} />
-            {formik.errors.userName ? <div>{formik.errors.userName}</div> : null}
+                <label htmlFor="userName">Логин: </label>
+                <input type="text" id="userName" name="userName" onChange={formik.handleChange} value={formik.values.userName} />
+                {formik.errors.userName ? <div>{formik.errors.userName}</div> : null}
 
-            <label htmlFor="password">Пароль: </label>
-            <input type="password" id="password" name="password" onChange={formik.handleChange} value={formik.values.password} />
-            {formik.errors.password ? <div>{formik.errors.password}</div> : null}
+                <label htmlFor="password">Пароль: </label>
+                <input type="password" id="password" name="password" onChange={formik.handleChange} value={formik.values.password} />
+                {formik.errors.password ? <div>{formik.errors.password}</div> : null}
 
-            <label htmlFor="email">Email-адрес: </label>
-            <input id="email" type="email" name="email" onChange={formik.handleChange} value={formik.values.email} />
-            {formik.errors.email ? <div>{formik.errors.email}</div> : null}
+                <label htmlFor="email">Email-адрес: </label>
+                <input id="email" type="email" name="email" onChange={formik.handleChange} value={formik.values.email} />
+                {formik.errors.email ? <div>{formik.errors.email}</div> : null}
 
-            <button type="submit">Submit</button>
+                <button type="submit">Submit</button>
+            </div>}
+
+            
         </form>
         )
 }

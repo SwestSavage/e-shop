@@ -16,6 +16,9 @@ export default class Header extends React.Component {
                         <li>
                             <Link to="/signup">Регистрация</Link>
                         </li>
+                        <li>
+                            <Link to="/signin">Вход</Link>
+                        </li>
                     </ul>
                 </menu>
             </header>

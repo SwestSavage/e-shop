@@ -29,9 +29,9 @@ namespace e_shop.Controllers
 
         [Route("token")]
         [HttpPost]
-        public async Task<IActionResult> Token([FromBody]IdentityViewModel model)
+        public async Task<IActionResult> Token(string userName, string password)
         {
-            var identity = await GetIdentity(model.Username, model.Password);
+            var identity = await GetIdentity(userName, password);
             if (identity == null)
             {
                 return Unauthorized();

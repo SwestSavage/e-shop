@@ -5,7 +5,8 @@ import Header from './header/header.jsx';
 import About from './about/about.jsx';
 import Products from './products/products.jsx';
 import { getProducts } from './products/productsActions.jsx';
-import SignupForm from './registration/registrationFrom.jsx'
+import SignupForm from './registration/registrationFrom.jsx';
+import SignInForm from './signin/signin.jsx';
 import "isomorphic-fetch";
 
 fetch('https://localhost:7078/api/product/products')
@@ -28,6 +29,9 @@ export default class App extends React.Component {
                             </Route>
                             <Route path="/signup">
                                 <SignupForm />
+                            </Route>
+                            <Route path="/signin">
+                                <SignInForm />
                             </Route>
                             <Route path="/">
                                 <Products className="products-container"/>
