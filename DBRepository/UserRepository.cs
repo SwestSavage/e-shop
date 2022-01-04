@@ -16,7 +16,7 @@ namespace DBRepository
 
         }
 
-        public async Task<User> GetUser(string username)
+        public User GetUser(string username)
         {
             User user = null;
 

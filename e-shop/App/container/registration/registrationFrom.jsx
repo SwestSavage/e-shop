@@ -1,8 +1,6 @@
 ﻿import React from 'react';
 import { useFormik } from 'formik';
 
-const axios = require("axios");
-
 const validate = values => {
     const errors = {};
 

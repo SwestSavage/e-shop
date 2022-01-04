@@ -1,5 +1,7 @@
 ﻿import React from 'react';
 import { useFormik } from 'formik';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const validate = values => {
     const errors = {};
@@ -46,10 +48,11 @@ export const SignInForm = () => {
                 body: JSON.stringify(values)
             }).then(response => {
                 if (response.status == '200') {
-                    alert('Status 200');
+                   // alert('Status 200');
                     response.text().then(token => {
                         localStorage.setItem('token', token);
-                        alert('Token has been set: ' + token);
+                        localStorage.setItem('userName', values.userName);
+                        alert('You have been successfully logged in! User: ' + values.userName);
                     })
                     
                 }
@@ -75,9 +78,9 @@ export const SignInForm = () => {
                 {formik.errors.password ? <div>{formik.errors.password}</div> : null}
 
                 <button type="submit">Submit</button>
+                <Link to="/" onClick={formik.handleSubmit}>Войти</Link>
 
             </form>
-            {localStorage.getItem('token') ? <button type="button" onClick={e => localStorage.removeItem('token')}>Log Out</button> : null}
         </div>
         
     )

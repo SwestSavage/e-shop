@@ -9,7 +9,7 @@ namespace DBRepository.Interfaces
 {
     public interface IUserRepository
     {
-        Task<User> GetUser(string username);
+        User GetUser(string username);
         Task AddUserAsync(User user);
     }
 }

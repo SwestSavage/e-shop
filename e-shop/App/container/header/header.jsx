@@ -13,13 +13,26 @@ export default class Header extends React.Component {
                         <li>
                             <Link to="/about">Обо мне</Link>
                         </li>
-                        <li>
-                            <Link to="/signup">Регистрация</Link>
-                        </li>
-                        <li>
-                            <Link to="/signin">Вход</Link>
-                        </li>
+                        
                     </ul>
+                    {localStorage.getItem('token') ?
+                        <ul>
+                            <li>
+                                <Link to="/cart">Корзина</Link>
+                            </li>
+                            <li>
+                                <Link to="/" onClick={() => localStorage.removeItem('token')}>Выйти</Link>
+                            </li>
+                        </ul>
+                        :
+                        <ul>
+                            <li>
+                                <Link to="/signup">Регистрация</Link>
+                            </li>
+                            <li>
+                                <Link to="/signin">Вход</Link>
+                            </li>
+                        </ul> }
                 </menu>
             </header>
         );

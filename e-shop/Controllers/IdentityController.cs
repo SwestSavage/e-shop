@@ -54,7 +54,7 @@ namespace e_shop.Controllers
         {
             List<Claim> claims = null;
 
-            var user = await _service.GetUser(userName);
+            var user = _service.GetUser(userName);
 
             if (user != null)
             {

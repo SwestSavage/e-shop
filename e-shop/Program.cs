@@ -42,6 +42,10 @@ builder.Services.AddScoped<IUserRepository>(
     provider => new UserRepository(builder.Configuration.GetConnectionString("DefaultConnection"),
     provider.GetService<IRepositoryContextFactory>()));
 
+builder.Services.AddScoped<IOrderRepository>(
+    provider => new OrderRepository(builder.Configuration.GetConnectionString("DefaultConnection"),
+    provider.GetService<IRepositoryContextFactory>()));
+
 builder.Services.AddScoped<IIdentityService, IdentityService>();
 
 var app = builder.Build();

@@ -4,6 +4,6 @@ namespace DBRepository.Interfaces
 {
     public interface IProductRepository
     {
-        public Task<List<Product>> GetProducts();
+        Task<List<Product>> GetProducts();
     }
 }

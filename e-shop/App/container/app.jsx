@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './header/header.jsx';
 import About from './about/about.jsx';
 import Products from './products/products.jsx';
+import Cart from './cart/cart.jsx';
 import { getProducts } from './products/productsActions.jsx';
 import SignupForm from './registration/registrationFrom.jsx';
 import SignInForm from './signin/signin.jsx';
@@ -35,7 +36,10 @@ export default class App extends React.Component {
                             </Route>
                             <Route path="/">
                                 <Products className="products-container"/>
-                            </Route>                         
+                            </Route>
+                            <Route path="/cart">
+                                <Cart />
+                            </Route>
                         </Switch>
                     </main>
                 </div>

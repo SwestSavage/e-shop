@@ -13,7 +13,7 @@ namespace e_shop.Services.Implementations
             _repository = repository;
         }
 
-        public Task<User> GetUser(string userName)
+        public User GetUser(string userName)
         {
             return _repository.GetUser(userName);
         }
