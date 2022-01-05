@@ -11,6 +11,19 @@ namespace DBRepository
         {
 
         }
+
+        public Product GetProductById(int id)
+        {
+            Product result = null;
+
+            using (var context = RepositoryContextFactory.CreateDbContext(ConnectionString))
+            {
+                result = context.Products.Where(i => i.Id == id).Single();
+            }
+
+            return result;
+        }
+
         public async Task<List<Product>> GetProducts()
         {
             var result = new List<Product>();

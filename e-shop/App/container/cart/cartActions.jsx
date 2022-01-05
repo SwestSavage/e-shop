@@ -1,23 +1,23 @@
-﻿import { GET_PRODUCTS_SUCCESS, GET_PRODUCTS_ERROR, constants, ADD_TO_CART_SUCCESS} from './productsConstants.jsx';
+﻿import { GET_ORDERS_SUCCESS, GET_ORDERS_ERROR, constants } from './cartConstants.jsx';
 import "isomorphic-fetch";
 
-export function receiveProducts(data) {
+export function receiveOrders(data) {
     return {
-        type: GET_PRODUCTS_SUCCESS,
-        products: data
+        type: GET_ORDERS_SUCCESS,
+        orders: data
     }
 }
 
 export function errorReceive(err) {
     return {
-        type: GET_PRODUCTS_ERROR,
+        type: GET_ORDERS_ERROR,
         error: err
     }
 }
 
-export function getProducts() {
+export function getOrders() {
     return (dispatch) => {
-        fetch(constants.getProducts)
+        fetch(constants.getOrders + '?userName=' + localStorage.getItem('userName'))
             .then((response) => {
                 return response.json();
             })

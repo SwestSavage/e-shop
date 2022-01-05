@@ -34,12 +34,12 @@ export default class App extends React.Component {
                             <Route path="/signin">
                                 <SignInForm />
                             </Route>
-                            <Route path="/">
-                                <Products className="products-container"/>
-                            </Route>
                             <Route path="/cart">
                                 <Cart />
                             </Route>
+                            <Route path="/">
+                                <Products className="products-container"/>
+                            </Route>                           
                         </Switch>
                     </main>
                 </div>

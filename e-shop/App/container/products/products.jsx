@@ -1,8 +1,30 @@
 ﻿import React from 'react';
 import { connect } from 'react-redux'
 import { getProducts } from './productsActions.jsx';
+import { constants } from './productsConstants.jsx';
 
 class Products extends React.Component {
+
+    addToCart(id) {
+        let queryTrailer = '?userName=' + localStorage.getItem('userName');
+        queryTrailer += '&productId=' + id;
+
+        fetch(constants.addToCart + queryTrailer, {
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            credentials: 'same-origin',
+            headers: {
+                'Content-type': 'application/x-www-form-urlencoded',
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
+            },
+            redirect: 'follow',
+            referrerPolicy: 'no-referrer', // no-referrer, *client
+            body: JSON.stringify({ userName: localStorage.getItem('userName'), id })
+        }).then(response => {
+            alert(response.json());
+        });
+    }
 
     componentDidMount() {
         this.props.getProducts();
@@ -20,7 +42,7 @@ class Products extends React.Component {
                     <div className='image'>{item.image}</div>
                     <div className='description'>{item.description}</div>
                     <div className='price'>{item.price}</div>
-                    <button>Buy</button>
+                    <button onClick={e => alert(localStorage.getItem('token'))}>Buy</button>
                 </div>
                 )
         })

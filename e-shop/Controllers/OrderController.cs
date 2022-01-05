@@ -10,27 +10,31 @@ namespace e_shop.Controllers
     {
         private IOrderRepository _orderRepository;
         private IUserRepository _userRepository;
+        private IProductRepository _productRepository;
 
-        public OrderController(IOrderRepository orderRepository, IUserRepository userRepository)
+        public OrderController(IOrderRepository orderRepository, IUserRepository userRepository, 
+            IProductRepository productRepository)
         {
             _orderRepository = orderRepository;
             _userRepository = userRepository;
+            _productRepository = productRepository;
         }
 
-        [Authorize]
+        //[Authorize]
         [Route("add")]
         [HttpPost]
-        public async Task<IActionResult> AddToCart(Product product, string userName)
+        public async Task<IActionResult> AddToCart(string userName, int productId)
         {
             var user = _userRepository.GetUser(userName);
+            var product = _productRepository.GetProductById(productId);
 
             try
             {
                 await _orderRepository.AddOrderAsync(user, product);
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                return BadRequest();
+                return BadRequest(e.Message);                
             }
 
             return Ok();
