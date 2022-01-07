@@ -19,6 +19,7 @@ export function getOrders() {
     return (dispatch) => {
         fetch(constants.getOrders + '?userName=' + localStorage.getItem('userName'))
             .then((response) => {
+                response.json().then(e => alert(e.id));
                 return response.json();
             })
             .then((data) => {

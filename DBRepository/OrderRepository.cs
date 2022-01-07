@@ -16,14 +16,16 @@ namespace DBRepository
         {
         }
 
-        public async Task AddOrderAsync(User user, Product product)
+        public async Task AddOrderAsync(int userId, int productId)
         {
             using (var context = RepositoryContextFactory.CreateDbContext(ConnectionString))
             {
+                var user = context.Users.Where(u => u.UserId == userId).Single();
+                var product = context.Products.Where(p => p.ProductId == productId).Single();
                 await context.Orders.AddAsync(new Order
                 {
                     User = user,
-                    Product = product,
+                    Product = product,//product,
                     Date = DateTime.Now
                 });
 
@@ -52,7 +54,9 @@ namespace DBRepository
             {
                 if (context.Orders.Any())
                 {
-                    result = await context.Orders.AsQueryable().ToListAsync();
+                    var tmp = await context.Orders.AsQueryable().ToListAsync();
+
+                    result = tmp;
                 }
             }
 

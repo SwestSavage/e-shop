@@ -12,8 +12,8 @@ class Cart extends React.Component {
         let orders = this.props.orders.map(item => {
             return (
                 <tr key={item.id}>
-                    <td>{item.product.title}</td>
-                    <td>{item.product.price}</td>
+                    <td>{item.productId}</td>
+                    <td>{item.userId}</td>
                     <td>{item.date}</td>
                 </tr>
                 )

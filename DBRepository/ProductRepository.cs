@@ -18,7 +18,7 @@ namespace DBRepository
 
             using (var context = RepositoryContextFactory.CreateDbContext(ConnectionString))
             {
-                result = context.Products.Where(i => i.Id == id).Single();
+                result = context.Products.Where(i => i.ProductId == id).Single();
             }
 
             return result;

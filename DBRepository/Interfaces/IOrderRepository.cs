@@ -11,6 +11,6 @@ namespace DBRepository.Interfaces
     {
         Task<List<Order>> GetOrdersOfUserAsync(User user);
         Task DeleteOrderByIdAsync(int orderId);
-        Task AddOrderAsync(User user, Product product);
+        Task AddOrderAsync(int userId, int productId);
     }
 }

@@ -25,12 +25,11 @@ namespace e_shop.Controllers
         [HttpPost]
         public async Task<IActionResult> AddToCart(string userName, int productId)
         {
-            var user = _userRepository.GetUser(userName);
-            var product = _productRepository.GetProductById(productId);
-
+            int userId = _userRepository.GetUser(userName).UserId;
+            
             try
             {
-                await _orderRepository.AddOrderAsync(user, product);
+                await _orderRepository.AddOrderAsync(userId, productId);
             }
             catch (Exception e)
             {

@@ -40321,12 +40321,12 @@ var Cart = function (_React$Component) {
                     _react2.default.createElement(
                         'td',
                         null,
-                        item.product.title
+                        item.productId
                     ),
                     _react2.default.createElement(
                         'td',
                         null,
-                        item.product.price
+                        item.userId
                     ),
                     _react2.default.createElement(
                         'td',
@@ -40439,6 +40439,9 @@ function errorReceive(err) {
 function getOrders() {
     return function (dispatch) {
         fetch(_cartConstants.constants.getOrders + '?userName=' + localStorage.getItem('userName')).then(function (response) {
+            response.json().then(function (e) {
+                return alert(e.id);
+            });
             return response.json();
         }).then(function (data) {
             console.log('fetch: ' + receiveProducts(data).products[0].title);
