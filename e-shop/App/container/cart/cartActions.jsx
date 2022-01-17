@@ -19,12 +19,11 @@ export function getOrders() {
     return (dispatch) => {
         fetch(constants.getOrders + '?userName=' + localStorage.getItem('userName'))
             .then((response) => {
-                response.json().then(e => alert(e.id));
                 return response.json();
             })
             .then((data) => {
-                console.log('fetch: ' + receiveProducts(data).products[0].title)
-                dispatch(receiveProducts(data));
+                console.log('fetch ' + data.user.login + ' ' + data.products[0].title);
+                dispatch(receiveOrders(data));
             })
             .catch((error) => {
                 dispatch(errorReceive(error));

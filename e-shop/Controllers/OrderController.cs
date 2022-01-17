@@ -1,7 +1,9 @@
 ﻿using DBRepository.Interfaces;
+using e_shop.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Models;
+using System.Linq;
 
 namespace e_shop.Controllers
 {
@@ -41,11 +43,27 @@ namespace e_shop.Controllers
 
         [Route("get")]
         [HttpGet]
-        public async Task<List<Order>> GetOrders(string userName)
+        public async Task<OrdersViewModel> GetOrders(string userName)
         {
             var user = _userRepository.GetUser(userName);
+            var orders = await _orderRepository.GetOrdersOfUserAsync(user);
+            var test = orders.Where(o => o.Date.Day == DateTime.Today.Day).ToList();
 
-            return await _orderRepository.GetOrdersOfUserAsync(user);
+            List<Product> products = new List<Product>();
+
+            foreach (var o in test)
+            {
+                products.Add(_productRepository.GetProductById(o.ProductId));
+            }
+
+            OrdersViewModel newOrder = new()
+            {
+                User = user,
+                Products = products,
+                Date = test[0].Date
+            };
+
+            return newOrder;
         }
     }
 }

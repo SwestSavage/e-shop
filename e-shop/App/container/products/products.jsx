@@ -22,7 +22,7 @@ class Products extends React.Component {
             referrerPolicy: 'no-referrer', // no-referrer, *client
             body: JSON.stringify({ userName: localStorage.getItem('userName'), id })
         }).then(response => {
-            alert(response.json());
+            alert(response);
         });
     }
 
@@ -37,12 +37,12 @@ class Products extends React.Component {
         }
         let products = this.props.products.map(item => {
             return (
-                <div key={item.id} className='product'>
+                <div key={item.productId} className='product'>
                     <div className='title'>{item.title}</div>
                     <div className='image'>{item.image}</div>
                     <div className='description'>{item.description}</div>
                     <div className='price'>{item.price}</div>
-                    <button onClick={e => alert(localStorage.getItem('token'))}>Buy</button>
+                    <button onClick={e => this.addToCart(item.productId)}>Buy</button>
                 </div>
                 )
         })
