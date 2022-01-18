@@ -18,6 +18,8 @@ export default class Cart extends React.Component {
     constructor(props) {
         super(props);
         this.state = { data: [], isLoading: true };
+
+        this.deleteOrder = this.deleteOrder.bind(this);
     }
 
     componentDidMount() {
@@ -30,15 +32,29 @@ export default class Cart extends React.Component {
         //this.props.getOrders();
     }
 
+    deleteOrder(data = {}) {
+        let url = constants.deleteOrder;
+        fetch(url, {
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            mode: 'cors', // no-cors, *cors, same-origin
+            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+            credentials: 'same-origin', // include, *same-origin, omit
+            headers: {
+                'Content-Type': 'application/json'
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            redirect: 'follow', // manual, *follow, error
+            referrerPolicy: 'no-referrer', // no-referrer, *client
+            body: JSON.stringify(data) // body data type must match "Content-Type" header
+        }).then(response => response.json());// 
+    }
+
     render() {
         console.log('Cart Props: ' + this.state.data);
         for (let i in this.state.data) {
             console.log(i);
         }
         console.log(this.state.data.products);
-
-        let order = this.state.data;
-        console.log(order);
 
         //let orders = this.props.orders.map(item => {
         //    console.log('test: ' + item.products[0].title);
@@ -50,20 +66,23 @@ export default class Cart extends React.Component {
         //        </tr>
         //        )
         //});
-
-        
-
+       
         if (this.state.isLoading) {
             return (
                 <div>Loading...</div>
                 )
         }
 
-        let products = order.products.map(item => {
+        let order = this.state.data;
+        
+
+        let products = order.productsWithOrderId.map(item => {
             return (
-                <tr key={item.id}>
-                    <td>{item.title}</td>
-                    <td>{item.price}</td>
+                <tr key={item.orderId}>
+                    <td>{item.product.title}</td>
+                    <td>{item.product.price}</td>
+                    <td>{item.orderId}</td>
+                    <td><button onClick={e => this.deleteOrder(item.orderId)}>Delete</button></td>
                 </tr>
             )
         });

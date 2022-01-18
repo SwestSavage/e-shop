@@ -62,5 +62,20 @@ namespace DBRepository
 
             return result;
         }
+
+        public async Task DeleteOrderWithProductId(int productId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async void DeleteOrderById(int orderId)
+        {
+            using(var context = RepositoryContextFactory.CreateDbContext(ConnectionString))
+            {
+                context.Orders.Remove(context.Orders.Where(o => o.OrderId == orderId).Single());
+
+                await context.SaveChangesAsync();
+            }
+        }
     }
 }

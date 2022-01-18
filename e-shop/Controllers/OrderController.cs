@@ -22,6 +22,8 @@ namespace e_shop.Controllers
             _productRepository = productRepository;
         }
 
+        public string UserName { get; private set; }
+
         //[Authorize]
         [Route("add")]
         [HttpPost]
@@ -45,21 +47,43 @@ namespace e_shop.Controllers
         [HttpGet]
         public async Task<OrdersViewModel> GetOrders(string userName)
         {
+            UserName = userName;
+            return await GetOrdersOfUser(userName);
+        }
+
+        [Route("delete")]
+        [HttpPost]
+        public async Task<IActionResult> DeleteOrder([FromBody] int orderId)
+        {
+            int test = orderId;
+
+            _orderRepository.DeleteOrderById(orderId);
+
+            return Ok();
+        }
+
+        private async Task<OrdersViewModel> GetOrdersOfUser(string userName)
+        {
             var user = _userRepository.GetUser(userName);
             var orders = await _orderRepository.GetOrdersOfUserAsync(user);
             var test = orders.Where(o => o.Date.Day == DateTime.Today.Day).ToList();
 
-            List<Product> products = new List<Product>();
+            List<ProductOrderId> products = new();
 
             foreach (var o in test)
             {
-                products.Add(_productRepository.GetProductById(o.ProductId));
+
+                products.Add(new ProductOrderId()
+                {
+                    OrderId = o.OrderId,
+                    Product = _productRepository.GetProductById(o.ProductId)
+                });
             }
 
             OrdersViewModel newOrder = new()
             {
                 User = user,
-                Products = products,
+                ProductsWithOrderId = products,
                 Date = test[0].Date
             };
 

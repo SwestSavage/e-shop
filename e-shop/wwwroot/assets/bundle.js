@@ -4735,7 +4735,8 @@ Object.defineProperty(exports, "__esModule", {
 var GET_ORDERS_SUCCESS = exports.GET_ORDERS_SUCCESS = 'GET_PRODUCTS_SUCCESS';
 var GET_ORDERS_ERROR = exports.GET_ORDERS_ERROR = 'GET_PRODUCTS_ERROR';
 var constants = exports.constants = {
-    getOrders: 'https://localhost:7078/api/order/get'
+    getOrders: 'https://localhost:7078/api/order/get',
+    deleteOrder: 'https://localhost:7078/api/order/delete'
 };
 
 /***/ }),
@@ -40335,6 +40336,8 @@ var Cart = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (Cart.__proto__ || Object.getPrototypeOf(Cart)).call(this, props));
 
         _this.state = { data: [], isLoading: true };
+
+        _this.deleteOrder = _this.deleteOrder.bind(_this);
         return _this;
     }
 
@@ -40352,16 +40355,37 @@ var Cart = function (_React$Component) {
             //this.props.getOrders();
         }
     }, {
+        key: 'deleteOrder',
+        value: function deleteOrder() {
+            var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+            var url = _cartConstants.constants.deleteOrder;
+            fetch(url, {
+                method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                mode: 'cors', // no-cors, *cors, same-origin
+                cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+                credentials: 'same-origin', // include, *same-origin, omit
+                headers: {
+                    'Content-Type': 'application/json'
+                    // 'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                redirect: 'follow', // manual, *follow, error
+                referrerPolicy: 'no-referrer', // no-referrer, *client
+                body: JSON.stringify(data) // body data type must match "Content-Type" header
+            }).then(function (response) {
+                return response.json();
+            }); // 
+        }
+    }, {
         key: 'render',
         value: function render() {
+            var _this3 = this;
+
             console.log('Cart Props: ' + this.state.data);
             for (var i in this.state.data) {
                 console.log(i);
             }
             console.log(this.state.data.products);
-
-            var order = this.state.data;
-            console.log(order);
 
             //let orders = this.props.orders.map(item => {
             //    console.log('test: ' + item.products[0].title);
@@ -40374,7 +40398,6 @@ var Cart = function (_React$Component) {
             //        )
             //});
 
-
             if (this.state.isLoading) {
                 return _react2.default.createElement(
                     'div',
@@ -40383,19 +40406,37 @@ var Cart = function (_React$Component) {
                 );
             }
 
-            var products = order.products.map(function (item) {
+            var order = this.state.data;
+
+            var products = order.productsWithOrderId.map(function (item) {
                 return _react2.default.createElement(
                     'tr',
-                    { key: item.id },
+                    { key: item.orderId },
                     _react2.default.createElement(
                         'td',
                         null,
-                        item.title
+                        item.product.title
                     ),
                     _react2.default.createElement(
                         'td',
                         null,
-                        item.price
+                        item.product.price
+                    ),
+                    _react2.default.createElement(
+                        'td',
+                        null,
+                        item.orderId
+                    ),
+                    _react2.default.createElement(
+                        'td',
+                        null,
+                        _react2.default.createElement(
+                            'button',
+                            { onClick: function onClick(e) {
+                                    return _this3.deleteOrder(item.orderId);
+                                } },
+                            'Delete'
+                        )
                     )
                 );
             });
