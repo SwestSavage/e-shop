@@ -3,6 +3,8 @@ using DBRepository;
 using Models;
 using DBRepository.Interfaces;
 using Microsoft.AspNetCore.Authorization;
+using e_shop.ViewModels;
+using System.Text;
 
 namespace e_shop.Controllers
 {
@@ -20,7 +22,19 @@ namespace e_shop.Controllers
         [HttpGet]
         public async Task<List<Product>> GetProducts()
         {
-            return await _productRepository.GetProducts();
+            return await _productRepository.GetProductsAsync();
+        }
+
+        [Route("update")]
+        [HttpPost]
+        public async Task<IActionResult> UpdateProduct([FromBody]ProductViewModel product)
+        {
+            var title = product.Title;
+            var t = product;
+            await _productRepository.UpdateProductAsync(product.ProductId,
+                product.Title, Encoding.UTF8.GetBytes(product.Image), product.Description, Convert.ToDecimal(product.Price));
+
+            return Ok(product);
         }
 
         [Authorize]

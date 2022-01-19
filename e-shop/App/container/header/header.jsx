@@ -17,11 +17,16 @@ export default class Header extends React.Component {
                     </ul>
                     {localStorage.getItem('token') ?
                         <ul>
+                            {localStorage.getItem('isAdmin') ? 
+                                <li>Admin</li>
+                                :
+                                <li>
+                                    <Link to="/cart">Корзина</Link>
+                                </li>
+                                }
+                            
                             <li>
-                                <Link to="/cart">Корзина</Link>
-                            </li>
-                            <li>
-                                <Link to="/" onClick={() => localStorage.removeItem('token')}>Выйти</Link>
+                                <Link to="/" onClick={() => { localStorage.removeItem('token'); localStorage.removeItem('isAdmin') }}>Выйти</Link>
                             </li>
                         </ul>
                         :

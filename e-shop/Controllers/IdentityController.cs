@@ -27,6 +27,20 @@ namespace e_shop.Controllers
             _service = service;
         }
 
+        [Route("isAdmin")]
+        [HttpGet]
+        public async Task<bool> GetAdminStatus(string userName)
+        {
+            var user = _service.GetUser(userName);
+
+            if (user.IsAdmin)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
         [Route("token")]
         [HttpPost]
         public async Task<IActionResult> Token(string userName, string password)

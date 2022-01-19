@@ -2465,7 +2465,8 @@ var ADD_TO_CART_SUCCESS = exports.ADD_TO_CART_SUCCESS = 'ADD_TO_CART_SUCCESS';
 
 var constants = exports.constants = {
     getProducts: 'https://localhost:7078/api/product/products',
-    addToCart: 'https://localhost:7078/api/order/add'
+    addToCart: 'https://localhost:7078/api/order/add',
+    updateProduct: 'https://localhost:7078/api/product/update'
 };
 
 /***/ }),
@@ -7612,7 +7613,7 @@ var _app = __webpack_require__(121);
 
 var _app2 = _interopRequireDefault(_app);
 
-var _productsReducer = __webpack_require__(228);
+var _productsReducer = __webpack_require__(229);
 
 var _productsReducer2 = _interopRequireDefault(_productsReducer);
 
@@ -39425,7 +39426,11 @@ var Header = function (_React$Component) {
                     localStorage.getItem('token') ? _react2.default.createElement(
                         'ul',
                         null,
-                        _react2.default.createElement(
+                        localStorage.getItem('isAdmin') ? _react2.default.createElement(
+                            'li',
+                            null,
+                            'Admin'
+                        ) : _react2.default.createElement(
                             'li',
                             null,
                             _react2.default.createElement(
@@ -39440,7 +39445,7 @@ var Header = function (_React$Component) {
                             _react2.default.createElement(
                                 _reactRouterDom.Link,
                                 { to: '/', onClick: function onClick() {
-                                        return localStorage.removeItem('token');
+                                        localStorage.removeItem('token');localStorage.removeItem('isAdmin');
                                     } },
                                 '\u0412\u044B\u0439\u0442\u0438'
                             )
@@ -39563,10 +39568,14 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Products = function (_React$Component) {
     _inherits(Products, _React$Component);
 
-    function Products() {
+    function Products(props) {
         _classCallCheck(this, Products);
 
-        return _possibleConstructorReturn(this, (Products.__proto__ || Object.getPrototypeOf(Products)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (Products.__proto__ || Object.getPrototypeOf(Products)).call(this, props));
+
+        _this.addToCart = _this.addToCart.bind(_this);
+        _this.updateProduct = _this.updateProduct.bind(_this);
+        return _this;
     }
 
     _createClass(Products, [{
@@ -39592,6 +39601,27 @@ var Products = function (_React$Component) {
             });
         }
     }, {
+        key: 'updateProduct',
+        value: function updateProduct(id, title, image, description, price) {
+            alert(JSON.stringify({ id: id, title: title, image: image, description: description, price: price }));
+
+            fetch(_productsConstants.constants.updateProduct, {
+                method: 'POST',
+                mode: 'cors',
+                cache: 'no-cache',
+                credentials: 'same-origin',
+                headers: {
+                    'Content-type': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                },
+                redirect: 'follow',
+                referrerPolicy: 'no-referrer', // no-referrer, *client
+                body: JSON.stringify({ productId: id, title: title, image: image, description: description, price: price })
+            }).then(function (response) {
+                //alert(response.text());
+            });
+        }
+    }, {
         key: 'componentDidMount',
         value: function componentDidMount() {
             this.props.getProducts();
@@ -39609,32 +39639,67 @@ var Products = function (_React$Component) {
                 return _react2.default.createElement(
                     'div',
                     { key: item.productId, className: 'product' },
-                    _react2.default.createElement(
+                    localStorage.getItem('isAdmin') ? _react2.default.createElement(
                         'div',
-                        { className: 'title' },
-                        item.title
-                    ),
-                    _react2.default.createElement(
+                        null,
+                        _react2.default.createElement(
+                            'form',
+                            null,
+                            _react2.default.createElement('input', { type: 'hidden', id: item.productId, defaultValue: item.productId }),
+                            _react2.default.createElement('input', { type: 'text', id: item.title, name: 'title', className: 'title', defaultValue: item.title }),
+                            _react2.default.createElement('input', { type: 'text', id: item.image, name: 'image', className: 'image', defaultValue: item.image }),
+                            _react2.default.createElement('input', { type: 'text', id: item.description, name: 'desc', className: 'description', defaultValue: item.description }),
+                            _react2.default.createElement('input', { type: 'number', id: item.price, name: 'price', className: 'price', defaultValue: item.price }),
+                            _react2.default.createElement(
+                                'button',
+                                { onClick: function onClick(e) {
+                                        var id = document.getElementById(item.productId);
+                                        var title = document.getElementById(item.title);
+                                        var image = document.getElementById(item.image);
+                                        var desc = document.getElementById(item.description);
+                                        var price = document.getElementById(item.price);
+
+                                        _this2.updateProduct(id.value, title.value, image.value, desc.value, price.value);
+                                        //alert(title.value + image.value + desc.value + price.value);
+                                    } },
+                                'Change'
+                            ),
+                            _react2.default.createElement(
+                                'button',
+                                null,
+                                'Delete'
+                            )
+                        )
+                    ) : _react2.default.createElement(
                         'div',
-                        { className: 'image' },
-                        item.image
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'description' },
-                        item.description
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'price' },
-                        item.price
-                    ),
-                    _react2.default.createElement(
-                        'button',
-                        { onClick: function onClick(e) {
-                                return _this2.addToCart(item.productId);
-                            } },
-                        'Buy'
+                        null,
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'title' },
+                            item.title
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'image' },
+                            item.image
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'description' },
+                            item.description
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'price' },
+                            item.price
+                        ),
+                        _react2.default.createElement(
+                            'button',
+                            { onClick: function onClick(e) {
+                                    return _this2.addToCart(item.productId);
+                                } },
+                            'Buy'
+                        )
                     )
                 );
             });
@@ -43287,6 +43352,8 @@ var _formik = __webpack_require__(68);
 
 var _reactRouterDom = __webpack_require__(29);
 
+var _signinConstants = __webpack_require__(228);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var validate = function validate(values) {
@@ -43318,10 +43385,10 @@ var SignInForm = exports.SignInForm = function SignInForm() {
         },
         validate: validate,
         onSubmit: function onSubmit(values) {
-            var queryTrailer = 'token?username=' + values.userName;
+            var queryTrailer = '?username=' + values.userName;
             queryTrailer += '&password=' + values.password;
 
-            fetch(url + queryTrailer, {
+            fetch(_signinConstants.constants.tokenUrl + queryTrailer, {
                 method: 'POST',
                 mode: 'cors',
                 cache: 'no-cache',
@@ -43339,6 +43406,15 @@ var SignInForm = exports.SignInForm = function SignInForm() {
                         localStorage.setItem('token', token);
                         localStorage.setItem('userName', values.userName);
                         alert('You have been successfully logged in! User: ' + values.userName);
+                    });
+
+                    fetch(_signinConstants.constants.isAdmin + '?username=' + values.userName).then(function (response) {
+                        response.json().then(function (result) {
+                            if (result) {
+                                alert('Is Admin: ' + result);
+                                localStorage.setItem('isAdmin', result);
+                            } else alert('Is not admin.');
+                        });
                     });
                 }
             });
@@ -43395,6 +43471,21 @@ exports.default = SignInForm;
 
 /***/ }),
 /* 228 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var constants = exports.constants = {
+    tokenUrl: 'https://localhost:7078/token',
+    isAdmin: 'https://localhost:7078/isAdmin'
+};
+
+/***/ }),
+/* 229 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

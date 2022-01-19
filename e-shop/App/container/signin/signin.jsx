@@ -2,6 +2,7 @@
 import { useFormik } from 'formik';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { constants } from './signinConstants.jsx';
 
 const validate = values => {
     const errors = {};
@@ -32,10 +33,10 @@ export const SignInForm = () => {
         },
         validate,
         onSubmit: values => {
-            let queryTrailer = 'token?username=' + values.userName;
+            let queryTrailer = '?username=' + values.userName;
             queryTrailer += '&password=' + values.password;
 
-            fetch(url + queryTrailer, {
+            fetch(constants.tokenUrl + queryTrailer, {
                 method: 'POST',
                 mode: 'cors',
                 cache: 'no-cache',
@@ -54,7 +55,18 @@ export const SignInForm = () => {
                         localStorage.setItem('userName', values.userName);
                         alert('You have been successfully logged in! User: ' + values.userName);
                     })
-                    
+
+                    fetch(constants.isAdmin + '?username=' + values.userName)
+                        .then(response => {
+                            response.json().then(result => {
+                                if (result) {
+                                    alert('Is Admin: ' + result);
+                                    localStorage.setItem('isAdmin', result);
+                                }
+                                else alert('Is not admin.');
+
+                            });
+                        });
                 }
             });
         }
