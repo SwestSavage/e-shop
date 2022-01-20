@@ -37,6 +37,32 @@ namespace e_shop.Controllers
             return Ok(product);
         }
 
+        [Route("add")]
+        [HttpPost]
+        public async Task<IActionResult> AddProduct([FromBody]ProductViewModel product)
+        {
+            var newProduct = new Product()
+            {
+                Title = product.Title,
+                Image = Encoding.UTF8.GetBytes(product.Image),
+                Description = product.Description,
+                Price = Convert.ToDecimal(product.Price)
+            };
+
+            await _productRepository.AddProductAsync(newProduct);
+
+            return Ok();
+        }
+
+        [Route("delete")]
+        [HttpPost]
+        public async Task<IActionResult> DeleteProduct(int productId)
+        {
+            await _productRepository.DeleteProductAsync(productId);
+
+            return Ok();
+        }
+
         [Authorize]
         [Route("tocart")]
         [HttpPost]

@@ -6,5 +6,7 @@ export const ADD_TO_CART_SUCCESS = 'ADD_TO_CART_SUCCESS';
 export const constants = {
     getProducts: 'https://localhost:7078/api/product/products',
     addToCart: 'https://localhost:7078/api/order/add',
-    updateProduct: 'https://localhost:7078/api/product/update'
+    updateProduct: 'https://localhost:7078/api/product/update',
+    addProduct: 'https://localhost:7078/api/product/add',
+    deleteProduct: 'https://localhost:7078/api/product/delete'
 }

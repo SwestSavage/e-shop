@@ -2466,7 +2466,9 @@ var ADD_TO_CART_SUCCESS = exports.ADD_TO_CART_SUCCESS = 'ADD_TO_CART_SUCCESS';
 var constants = exports.constants = {
     getProducts: 'https://localhost:7078/api/product/products',
     addToCart: 'https://localhost:7078/api/order/add',
-    updateProduct: 'https://localhost:7078/api/product/update'
+    updateProduct: 'https://localhost:7078/api/product/update',
+    addProduct: 'https://localhost:7078/api/product/add',
+    deleteProduct: 'https://localhost:7078/api/product/delete'
 };
 
 /***/ }),
@@ -39565,6 +39567,24 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var fetchHttpPost = function fetchHttpPost(url, data) {
+    fetch(url, {
+        method: 'POST',
+        mode: 'cors',
+        cache: 'no-cache',
+        credentials: 'same-origin',
+        headers: {
+            'Content-type': 'application/x-www-form-urlencoded',
+            'Authorization': 'Bearer ' + localStorage.getItem('token')
+        },
+        redirect: 'follow',
+        referrerPolicy: 'no-referrer', // no-referrer, *client
+        body: JSON.stringify(data)
+    }).then(function (response) {
+        alert(response);
+    });
+};
+
 var Products = function (_React$Component) {
     _inherits(Products, _React$Component);
 
@@ -39575,6 +39595,8 @@ var Products = function (_React$Component) {
 
         _this.addToCart = _this.addToCart.bind(_this);
         _this.updateProduct = _this.updateProduct.bind(_this);
+        _this.addProduct = _this.addProduct.bind(_this);
+        _this.deleteProduct = _this.deleteProduct.bind(_this);
         return _this;
     }
 
@@ -39584,27 +39606,29 @@ var Products = function (_React$Component) {
             var queryTrailer = '?userName=' + localStorage.getItem('userName');
             queryTrailer += '&productId=' + id;
 
-            fetch(_productsConstants.constants.addToCart + queryTrailer, {
-                method: 'POST',
-                mode: 'cors',
-                cache: 'no-cache',
-                credentials: 'same-origin',
-                headers: {
-                    'Content-type': 'application/x-www-form-urlencoded',
-                    'Authorization': 'Bearer ' + localStorage.getItem('token')
-                },
-                redirect: 'follow',
-                referrerPolicy: 'no-referrer', // no-referrer, *client
-                body: JSON.stringify({ userName: localStorage.getItem('userName'), id: id })
-            }).then(function (response) {
-                alert(response);
-            });
+            fetchHttpPost(_productsConstants.constants.addToCart + queryTrailer, { userName: localStorage.getItem('userName'), id: id });
+            //fetch(constants.addToCart + queryTrailer, {
+            //    method: 'POST',
+            //    mode: 'cors',
+            //    cache: 'no-cache',
+            //    credentials: 'same-origin',
+            //    headers: {
+            //        'Content-type': 'application/x-www-form-urlencoded',
+            //        'Authorization': 'Bearer ' + localStorage.getItem('token')
+            //    },
+            //    redirect: 'follow',
+            //    referrerPolicy: 'no-referrer', // no-referrer, *client
+            //    body: JSON.stringify({ userName: localStorage.getItem('userName'), id })
+            //}).then(response => {
+            //    alert(response);
+            //});
         }
     }, {
         key: 'updateProduct',
         value: function updateProduct(id, title, image, description, price) {
             alert(JSON.stringify({ id: id, title: title, image: image, description: description, price: price }));
 
+            //fetchHttpPost(constants.updateProduct, { productId: id, title, image, description, price });
             fetch(_productsConstants.constants.updateProduct, {
                 method: 'POST',
                 mode: 'cors',
@@ -39617,6 +39641,47 @@ var Products = function (_React$Component) {
                 redirect: 'follow',
                 referrerPolicy: 'no-referrer', // no-referrer, *client
                 body: JSON.stringify({ productId: id, title: title, image: image, description: description, price: price })
+            }).then(function (response) {
+                //alert(response.text());
+            });
+        }
+    }, {
+        key: 'addProduct',
+        value: function addProduct(title, image, description, price) {
+            var id = 0;
+
+            //fetchHttpPost(constants.addProduct, { productId: id, title, image, description, price });
+            fetch(_productsConstants.constants.addProduct, {
+                method: 'POST',
+                mode: 'cors',
+                cache: 'no-cache',
+                credentials: 'same-origin',
+                headers: {
+                    'Content-type': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                },
+                redirect: 'follow',
+                referrerPolicy: 'no-referrer', // no-referrer, *client
+                body: JSON.stringify({ productId: id, title: title, image: image, description: description, price: price })
+            }).then(function (response) {
+                //alert(response.text());
+            });
+        }
+    }, {
+        key: 'deleteProduct',
+        value: function deleteProduct(id) {
+            fetch(_productsConstants.constants.deleteProduct + '?productId=' + id, {
+                method: 'POST',
+                mode: 'cors',
+                cache: 'no-cache',
+                credentials: 'same-origin',
+                headers: {
+                    'Content-type': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                },
+                redirect: 'follow',
+                referrerPolicy: 'no-referrer', // no-referrer, *client
+                body: JSON.stringify({ productId: id })
             }).then(function (response) {
                 //alert(response.text());
             });
@@ -39650,6 +39715,7 @@ var Products = function (_React$Component) {
                             _react2.default.createElement('input', { type: 'text', id: item.image, name: 'image', className: 'image', defaultValue: item.image }),
                             _react2.default.createElement('input', { type: 'text', id: item.description, name: 'desc', className: 'description', defaultValue: item.description }),
                             _react2.default.createElement('input', { type: 'number', id: item.price, name: 'price', className: 'price', defaultValue: item.price }),
+                            _react2.default.createElement('br', null),
                             _react2.default.createElement(
                                 'button',
                                 { onClick: function onClick(e) {
@@ -39666,7 +39732,11 @@ var Products = function (_React$Component) {
                             ),
                             _react2.default.createElement(
                                 'button',
-                                null,
+                                { onClick: function onClick(e) {
+                                        var id = document.getElementById(item.productId).value;
+
+                                        _this2.deleteProduct(id);
+                                    } },
                                 'Delete'
                             )
                         )
@@ -39707,7 +39777,53 @@ var Products = function (_React$Component) {
             return _react2.default.createElement(
                 'div',
                 { id: 'products' },
-                products
+                _react2.default.createElement(
+                    'div',
+                    { id: 'products' },
+                    products
+                ),
+                localStorage.getItem('isAdmin') ? _react2.default.createElement(
+                    'form',
+                    { className: 'product' },
+                    _react2.default.createElement(
+                        'label',
+                        { htmlFor: 'title' },
+                        '\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435: '
+                    ),
+                    _react2.default.createElement('input', { type: 'text', id: 'titleNew', name: 'title', className: 'title' }),
+                    _react2.default.createElement(
+                        'label',
+                        { htmlFor: 'image' },
+                        '\u0418\u0437\u043E\u0431\u0440\u0430\u0436\u0435\u043D\u0438\u0435: '
+                    ),
+                    _react2.default.createElement('input', { type: 'text', id: 'imageNew', name: 'image', className: 'image' }),
+                    _react2.default.createElement(
+                        'label',
+                        { htmlFor: 'desc' },
+                        '\u041E\u043F\u0438\u0441\u0430\u043D\u0438\u0435: '
+                    ),
+                    _react2.default.createElement('input', { type: 'text', id: 'descNew', name: 'desc', className: 'description' }),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'label',
+                        { htmlFor: 'price' },
+                        '\u0426\u0435\u043D\u0430: '
+                    ),
+                    _react2.default.createElement('input', { type: 'number', id: 'priceNew', name: 'price', className: 'price' }),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'button',
+                        { onClick: function onClick(e) {
+                                var title = document.getElementById("titleNew").value;
+                                var image = document.getElementById("imageNew").value;
+                                var desc = document.getElementById("descNew").value;
+                                var price = document.getElementById("priceNew").value;
+
+                                _this2.addProduct(title, image, desc, price);
+                            } },
+                        'Add new'
+                    )
+                ) : null
             );
         }
     }]);

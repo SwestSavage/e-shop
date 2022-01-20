@@ -12,14 +12,31 @@ namespace DBRepository
 
         }
 
-        public Task AddProduct(Product product)
+        public async Task AddProductAsync(Product product)
         {
-            throw new NotImplementedException();
+            using (var context = RepositoryContextFactory.CreateDbContext(ConnectionString))
+            {
+                if (product != null)
+                {
+                    await context.Products.AddAsync(product);
+
+                    await context.SaveChangesAsync();
+                }
+            }
+
         }
 
-        public Task DeleteProduct(int id)
+        public async Task DeleteProductAsync(int id)
         {
-            throw new NotImplementedException();
+            using (var context = RepositoryContextFactory.CreateDbContext(ConnectionString))
+            {
+                if (context.Products.Find(id) != null)
+                {
+                    context.Products.Remove(context.Products.Find(id));
+                }
+
+                await context.SaveChangesAsync();
+            }
         }
 
         public Product GetProductById(int id)

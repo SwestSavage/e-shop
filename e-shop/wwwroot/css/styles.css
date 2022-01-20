@@ -27,9 +27,16 @@ header menu ul {
 }
 
 .product {
-    display: block;
+    display: flex;
     text-align: center;
+    justify-content: center;
+    flex-direction: row;
     border: 1px dashed blue;
-    width: 300px;
+    width: 350px;
     margin: 10px;
+}
+
+.product input {
+    display: block;
+    width: 100px;
 }
