@@ -32,7 +32,7 @@ namespace e_shop.Controllers
             var title = product.Title;
             var t = product;
             await _productRepository.UpdateProductAsync(product.ProductId,
-                product.Title, Encoding.UTF8.GetBytes(product.Image), product.Description, Convert.ToDecimal(product.Price));
+                product.Title, product.Image, product.Description, Convert.ToDecimal(product.Price));
 
             return Ok(product);
         }
@@ -44,7 +44,7 @@ namespace e_shop.Controllers
             var newProduct = new Product()
             {
                 Title = product.Title,
-                Image = Encoding.UTF8.GetBytes(product.Image),
+                ImageSrc = product.Image,
                 Description = product.Description,
                 Price = Convert.ToDecimal(product.Price)
             };
@@ -61,6 +61,20 @@ namespace e_shop.Controllers
             await _productRepository.DeleteProductAsync(productId);
 
             return Ok();
+        }
+
+        [Route("image")]
+        [HttpGet]
+        public IActionResult GetImage(string path)
+        {
+            if (!string.IsNullOrEmpty(path))
+            {
+                var image = System.IO.File.OpenRead(path);
+
+                return File(image, "image/jpeg");
+            }
+
+            return null;
         }
 
         [Authorize]

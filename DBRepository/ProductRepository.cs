@@ -67,7 +67,7 @@ namespace DBRepository
         }
 
         public async Task UpdateProductAsync(int id,
-            string title = "", byte[] img = null, string desc = "", decimal price = 0)
+            string title = "", string imgSrc = null, string desc = "", decimal price = 0)
         {
             using (var context = RepositoryContextFactory.CreateDbContext(ConnectionString))
             {
@@ -80,9 +80,9 @@ namespace DBRepository
                         result.Title = title;
                     }
 
-                    if (img != null)
+                    if (imgSrc != null)
                     {
-                        result.Image = img;
+                        result.ImageSrc = imgSrc;
                     }
 
                     if (!string.IsNullOrEmpty(desc))

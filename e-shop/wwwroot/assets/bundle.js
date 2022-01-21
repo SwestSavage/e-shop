@@ -2468,7 +2468,8 @@ var constants = exports.constants = {
     addToCart: 'https://localhost:7078/api/order/add',
     updateProduct: 'https://localhost:7078/api/product/update',
     addProduct: 'https://localhost:7078/api/product/add',
-    deleteProduct: 'https://localhost:7078/api/product/delete'
+    deleteProduct: 'https://localhost:7078/api/product/delete',
+    getImage: 'https://localhost:7078/api/product/image'
 };
 
 /***/ }),
@@ -39597,6 +39598,7 @@ var Products = function (_React$Component) {
         _this.updateProduct = _this.updateProduct.bind(_this);
         _this.addProduct = _this.addProduct.bind(_this);
         _this.deleteProduct = _this.deleteProduct.bind(_this);
+        _this.getImage = _this.getImage.bind(_this);
         return _this;
     }
 
@@ -39626,7 +39628,7 @@ var Products = function (_React$Component) {
     }, {
         key: 'updateProduct',
         value: function updateProduct(id, title, image, description, price) {
-            alert(JSON.stringify({ id: id, title: title, image: image, description: description, price: price }));
+            alert(id, title, image, description, price);
 
             //fetchHttpPost(constants.updateProduct, { productId: id, title, image, description, price });
             fetch(_productsConstants.constants.updateProduct, {
@@ -39641,8 +39643,6 @@ var Products = function (_React$Component) {
                 redirect: 'follow',
                 referrerPolicy: 'no-referrer', // no-referrer, *client
                 body: JSON.stringify({ productId: id, title: title, image: image, description: description, price: price })
-            }).then(function (response) {
-                //alert(response.text());
             });
         }
     }, {
@@ -39687,6 +39687,15 @@ var Products = function (_React$Component) {
             });
         }
     }, {
+        key: 'getImage',
+        value: function getImage(src) {
+            var queryTrailer = '?path=' + src;
+
+            fetch(_productsConstants.constants.getImage + queryTrailer).then(function (response) {
+                return response;
+            });
+        }
+    }, {
         key: 'componentDidMount',
         value: function componentDidMount() {
             this.props.getProducts();
@@ -39711,21 +39720,23 @@ var Products = function (_React$Component) {
                             'form',
                             null,
                             _react2.default.createElement('input', { type: 'hidden', id: item.productId, defaultValue: item.productId }),
-                            _react2.default.createElement('input', { type: 'text', id: item.title, name: 'title', className: 'title', defaultValue: item.title }),
-                            _react2.default.createElement('input', { type: 'text', id: item.image, name: 'image', className: 'image', defaultValue: item.image }),
-                            _react2.default.createElement('input', { type: 'text', id: item.description, name: 'desc', className: 'description', defaultValue: item.description }),
-                            _react2.default.createElement('input', { type: 'number', id: item.price, name: 'price', className: 'price', defaultValue: item.price }),
+                            _react2.default.createElement('input', { type: 'text', id: 'title' + item.productId, name: 'title', className: 'title', defaultValue: item.title }),
+                            _react2.default.createElement('input', { type: 'text', id: 'image' + item.productId, name: 'image', className: 'image', defaultValue: item.imageSrc }),
+                            _react2.default.createElement('img', { src: _productsConstants.constants.getImage + '?path=' + item.imageSrc, height: '200px', width: '160px' }),
+                            _react2.default.createElement('input', { type: 'text', id: 'desc' + item.productId, name: 'desc', className: 'description', defaultValue: item.description }),
+                            _react2.default.createElement('input', { type: 'number', id: 'price' + item.productId, name: 'price', className: 'price', defaultValue: item.price }),
                             _react2.default.createElement('br', null),
                             _react2.default.createElement(
                                 'button',
                                 { onClick: function onClick(e) {
-                                        var id = document.getElementById(item.productId);
-                                        var title = document.getElementById(item.title);
-                                        var image = document.getElementById(item.image);
-                                        var desc = document.getElementById(item.description);
-                                        var price = document.getElementById(item.price);
+                                        var id = document.getElementById(item.productId).value;
+                                        var title = document.getElementById('title' + item.productId).value;
+                                        var image = document.getElementById('image' + item.productId).value;
+                                        var desc = document.getElementById('desc' + item.productId).value;
+                                        var price = document.getElementById('price' + item.productId).value;
+                                        alert(id, title, image, desc, price);
 
-                                        _this2.updateProduct(id.value, title.value, image.value, desc.value, price.value);
+                                        _this2.updateProduct(id, title, image, desc, price);
                                         //alert(title.value + image.value + desc.value + price.value);
                                     } },
                                 'Change'
@@ -39751,8 +39762,9 @@ var Products = function (_React$Component) {
                         _react2.default.createElement(
                             'div',
                             { className: 'image' },
-                            item.image
+                            item.imageSrc
                         ),
+                        _react2.default.createElement('img', { src: _productsConstants.constants.getImage + '?path=' + item.imageSrc, height: '200px', width: '160px' }),
                         _react2.default.createElement(
                             'div',
                             { className: 'description' },

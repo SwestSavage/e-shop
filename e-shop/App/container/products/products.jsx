@@ -29,6 +29,7 @@ class Products extends React.Component {
         this.updateProduct = this.updateProduct.bind(this);
         this.addProduct = this.addProduct.bind(this);
         this.deleteProduct = this.deleteProduct.bind(this);
+        this.getImage = this.getImage.bind(this);
     }
 
     addToCart(id) {
@@ -54,7 +55,7 @@ class Products extends React.Component {
     }
 
     updateProduct(id, title, image, description, price) {
-        alert(JSON.stringify({ id, title, image, description, price }));
+        alert( id, title, image, description, price );
 
         //fetchHttpPost(constants.updateProduct, { productId: id, title, image, description, price });
         fetch(constants.updateProduct, {
@@ -69,9 +70,7 @@ class Products extends React.Component {
             redirect: 'follow',
             referrerPolicy: 'no-referrer', // no-referrer, *client
             body: JSON.stringify({ productId: id, title, image, description, price })
-        }).then(response => {
-            //alert(response.text());
-        })
+        });
     }
 
     addProduct(title, image, description, price) {
@@ -113,6 +112,12 @@ class Products extends React.Component {
         })
     }
 
+    getImage(src) {
+        let queryTrailer = '?path=' + src;
+
+        fetch(constants.getImage + queryTrailer).then(response => response);
+    }
+
     componentDidMount() {
         this.props.getProducts();
     }
@@ -130,19 +135,21 @@ class Products extends React.Component {
                         <div>
                             <form >
                                 <input type="hidden" id={item.productId} defaultValue={item.productId}></input>
-                                <input type="text" id={item.title} name="title" className='title' defaultValue={item.title}></input>
-                                <input type="text" id={item.image} name="image" className='image' defaultValue={item.image}></input>
-                                <input type="text" id={item.description} name="desc" className='description' defaultValue={item.description}></input>
-                                <input type="number" id={item.price} name="price" className='price' defaultValue={item.price}></input>
+                                <input type="text" id={'title' + item.productId} name="title" className='title' defaultValue={item.title}></input>
+                                <input type="text" id={'image' + item.productId} name="image" className='image' defaultValue={item.imageSrc}></input>
+                                <img src={constants.getImage + '?path=' + item.imageSrc} height="200px" width="160px" />
+                                <input type="text" id={'desc' + item.productId} name="desc" className='description' defaultValue={item.description}></input>
+                                <input type="number" id={'price' + item.productId} name="price" className='price' defaultValue={item.price}></input>
                                 <br/>
                                 <button onClick={e => {
-                                    let id = document.getElementById(item.productId);
-                                    let title = document.getElementById(item.title);
-                                    let image = document.getElementById(item.image);
-                                    let desc = document.getElementById(item.description);
-                                    let price = document.getElementById(item.price);
+                                    let id = document.getElementById(item.productId).value;
+                                    let title = document.getElementById('title' + item.productId).value;
+                                    let image = document.getElementById('image' + item.productId).value;
+                                    let desc = document.getElementById('desc' + item.productId).value;
+                                    let price = document.getElementById('price' + item.productId).value;
+                                    alert(id, title, image, desc, price);
 
-                                    this.updateProduct(id.value, title.value, image.value, desc.value, price.value);
+                                    this.updateProduct(id, title, image, desc, price);
                                     //alert(title.value + image.value + desc.value + price.value);
                                 }}>Change</button>
                                 <button onClick={e => {
@@ -155,7 +162,8 @@ class Products extends React.Component {
                         :
                         <div>
                             <div className='title'>{item.title}</div>
-                            <div className='image'>{item.image}</div>
+                            <div className='image'>{item.imageSrc}</div>
+                            <img src={constants.getImage + '?path=' + item.imageSrc} height="200px" width="160px" />
                             <div className='description'>{item.description}</div>
                             <div className='price'>{item.price}</div>
                             <button onClick={e => this.addToCart(item.productId)}>Buy</button>

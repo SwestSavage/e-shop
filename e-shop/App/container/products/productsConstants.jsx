@@ -8,5 +8,6 @@ export const constants = {
     addToCart: 'https://localhost:7078/api/order/add',
     updateProduct: 'https://localhost:7078/api/product/update',
     addProduct: 'https://localhost:7078/api/product/add',
-    deleteProduct: 'https://localhost:7078/api/product/delete'
+    deleteProduct: 'https://localhost:7078/api/product/delete',
+    getImage: 'https://localhost:7078/api/product/image'
 }
