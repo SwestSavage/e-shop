@@ -65,27 +65,39 @@ namespace e_shop.Controllers
         private async Task<OrdersViewModel> GetOrdersOfUser(string userName)
         {
             var user = _userRepository.GetUser(userName);
-            var orders = await _orderRepository.GetOrdersOfUserAsync(user);
-            var test = orders.Where(o => o.Date.Day == DateTime.Today.Day).ToList();
+            List<Order> orders;
+            OrdersViewModel newOrder;
 
-            List<ProductOrderId> products = new();
-
-            foreach (var o in test)
+            try
             {
+                orders = await _orderRepository.GetOrdersOfUserAsync(user);
+                orders = orders.Where(o => o.Date.Day == DateTime.Today.Day).ToList();
 
-                products.Add(new ProductOrderId()
+                List<ProductOrderId> products = new();
+
+                foreach (var o in orders)
                 {
-                    OrderId = o.OrderId,
-                    Product = _productRepository.GetProductById(o.ProductId)
-                });
+
+                    products.Add(new ProductOrderId()
+                    {
+                        OrderId = o.OrderId,
+                        Product = _productRepository.GetProductById(o.ProductId)
+                    });
+                }
+
+                newOrder = new()
+                {
+                    User = user,
+                    ProductsWithOrderId = products,
+                    Date = orders[0].Date
+                };
+            }
+            catch (Exception)
+            {
+                return null;
             }
 
-            OrdersViewModel newOrder = new()
-            {
-                User = user,
-                ProductsWithOrderId = products,
-                Date = test[0].Date
-            };
+            
 
             return newOrder;
         }

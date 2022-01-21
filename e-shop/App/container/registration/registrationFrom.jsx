@@ -1,5 +1,8 @@
 ﻿import React from 'react';
 import { useFormik } from 'formik';
+import { Link } from 'react-router-dom';
+
+localStorage.setItem('signedUp', false);
 
 const validate = values => {
     const errors = {};
@@ -77,39 +80,46 @@ export const SignupForm = () => {
                 referrerPolicy: 'no-referrer', // no-referrer, *client
                 body: JSON.stringify(values)
             }).then(response => {
-                alert(response.json());
+                localStorage.setItem('signedUp', true);
+                alert('Регистрация прошла успешно! Можете воспользоваться формой входа.');
             });
         }
         ,
     });
     return (
-<form onSubmit={formik.handleSubmit}>
-            {localStorage.getItem('token') ? <div>Allready logged in!</div> : <div>
-                <label htmlFor="firstName">Имя: </label>
-                <input type="text" id="firstName" name="firstName" onChange={formik.handleChange} value={formik.values.firstName} />
-                {formik.errors.firstName ? <div>{formik.errors.firstName}</div> : null}
+        <div>
+            {localStorage.getItem('signedUp') ?
+                <div>
+                    Регистрация прошла успешно! Можете воспользоваться формой входа.
+                    <Link to="/signin" onClick={e => localStorage.removeItem('signedUp')}>Вход</Link>
+                </div>
 
-                <label htmlFor="lastName">Фамилия: </label>
-                <input type="text" id="lastName" name="lastName" onChange={formik.handleChange} value={formik.values.lastName} />
-                {formik.errors.lastName ? <div>{formik.errors.lastName}</div> : null}
+                : <form onSubmit={formik.handleSubmit}>
+                {localStorage.getItem('token') ? <div>Allready logged in!</div> : <div>
+                    <label htmlFor="firstName">Имя: </label>
+                    <input type="text" id="firstName" name="firstName" onChange={formik.handleChange} value={formik.values.firstName} />
+                    {formik.errors.firstName ? <div>{formik.errors.firstName}</div> : null}
 
-                <label htmlFor="userName">Логин: </label>
-                <input type="text" id="userName" name="userName" onChange={formik.handleChange} value={formik.values.userName} />
-                {formik.errors.userName ? <div>{formik.errors.userName}</div> : null}
+                    <label htmlFor="lastName">Фамилия: </label>
+                    <input type="text" id="lastName" name="lastName" onChange={formik.handleChange} value={formik.values.lastName} />
+                    {formik.errors.lastName ? <div>{formik.errors.lastName}</div> : null}
 
-                <label htmlFor="password">Пароль: </label>
-                <input type="password" id="password" name="password" onChange={formik.handleChange} value={formik.values.password} />
-                {formik.errors.password ? <div>{formik.errors.password}</div> : null}
+                    <label htmlFor="userName">Логин: </label>
+                    <input type="text" id="userName" name="userName" onChange={formik.handleChange} value={formik.values.userName} />
+                    {formik.errors.userName ? <div>{formik.errors.userName}</div> : null}
 
-                <label htmlFor="email">Email-адрес: </label>
-                <input id="email" type="email" name="email" onChange={formik.handleChange} value={formik.values.email} />
-                {formik.errors.email ? <div>{formik.errors.email}</div> : null}
+                    <label htmlFor="password">Пароль: </label>
+                    <input type="password" id="password" name="password" onChange={formik.handleChange} value={formik.values.password} />
+                    {formik.errors.password ? <div>{formik.errors.password}</div> : null}
 
-                <button type="submit">Submit</button>
-            </div>}
+                    <label htmlFor="email">Email-адрес: </label>
+                    <input id="email" type="email" name="email" onChange={formik.handleChange} value={formik.values.email} />
+                    {formik.errors.email ? <div>{formik.errors.email}</div> : null}
 
-            
-        </form>
+                    <button type="submit">Submit</button>
+                </div>}
+            </form>}
+        </div>
         )
 }
 

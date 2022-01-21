@@ -53,17 +53,16 @@ export const SignInForm = () => {
                     response.text().then(token => {
                         localStorage.setItem('token', token);
                         localStorage.setItem('userName', values.userName);
-                        alert('You have been successfully logged in! User: ' + values.userName);
+                        localStorage.setItem('signedIn', true);
+                        alert('Пользователь ' + values.userName + ' успешно вошел!');
                     })
 
                     fetch(constants.isAdmin + '?username=' + values.userName)
                         .then(response => {
                             response.json().then(result => {
                                 if (result) {
-                                    alert('Is Admin: ' + result);
                                     localStorage.setItem('isAdmin', result);
                                 }
-                                else alert('Is not admin.');
 
                             });
                         });
@@ -71,15 +70,13 @@ export const SignInForm = () => {
             });
         }
         ,
-        onLogOut: (e) => {
-            alert(localStorage.getItem('token'));
-            
-        }
-        ,
     });
     return (
         <div>
-            <form onSubmit={formik.handleSubmit}>
+            {localStorage.getItem('signedIn') ?
+                <div>Вы успешно вошли! <Link to="/" >Продукты.</Link></div>
+                :
+                <form onSubmit={formik.handleSubmit}>
 
                 <label htmlFor="userName">Логин: </label>
                 <input type="text" id="userName" name="userName" onChange={formik.handleChange} value={formik.values.userName} />
@@ -90,9 +87,10 @@ export const SignInForm = () => {
                 {formik.errors.password ? <div>{formik.errors.password}</div> : null}
 
                 <button type="submit">Submit</button>
-                <Link to="/" onClick={formik.handleSubmit}>Войти</Link>
+                <Link to="/" >Войти</Link>
 
-            </form>
+            </form>}
+            
         </div>
         
     )

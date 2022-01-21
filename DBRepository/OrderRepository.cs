@@ -54,7 +54,7 @@ namespace DBRepository
             {
                 if (context.Orders.Any())
                 {
-                    var tmp = await context.Orders.AsQueryable().ToListAsync();
+                    var tmp = await context.Orders.Where(o => o.UserId == user.UserId).AsQueryable().ToListAsync();
 
                     result = tmp;
                 }

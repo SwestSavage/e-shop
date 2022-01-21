@@ -66,6 +66,7 @@ export default class Cart extends React.Component {
         //        </tr>
         //        )
         //});
+        
        
         if (this.state.isLoading) {
             return (
@@ -82,7 +83,9 @@ export default class Cart extends React.Component {
                     <td>{item.product.title}</td>
                     <td>{item.product.price}</td>
                     <td>{item.orderId}</td>
-                    <td><button onClick={e => this.deleteOrder(item.orderId)}>Delete</button></td>
+                    <td><button onClick={e => {
+                        this.deleteOrder(item.orderId);
+                    }}>Delete</button></td>
                 </tr>
             )
         });

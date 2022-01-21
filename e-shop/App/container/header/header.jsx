@@ -26,7 +26,11 @@ export default class Header extends React.Component {
                                 }
                             
                             <li>
-                                <Link to="/" onClick={() => { localStorage.removeItem('token'); localStorage.removeItem('isAdmin') }}>Выйти</Link>
+                                <Link to="/" onClick={() => {
+                                    localStorage.removeItem('token');
+                                    localStorage.removeItem('isAdmin');
+                                    localStorage.removeItem('signedIn');
+                                }}>Выйти</Link>
                             </li>
                         </ul>
                         :
@@ -35,7 +39,7 @@ export default class Header extends React.Component {
                                 <Link to="/signup">Регистрация</Link>
                             </li>
                             <li>
-                                <Link to="/signin">Вход</Link>
+                                <Link to="/signin" onClick={e => localStorage.removeItem('signedUp')}>Вход</Link>
                             </li>
                         </ul> }
                 </menu>
