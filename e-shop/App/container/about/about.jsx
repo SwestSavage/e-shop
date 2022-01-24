@@ -3,7 +3,7 @@
 export default class About extends React.Component {
     render() {
         return (
-            <div>Обо мне</div>
+            <div>Магазин одежды</div>
         );
     }
 };

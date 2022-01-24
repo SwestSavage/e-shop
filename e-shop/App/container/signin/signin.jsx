@@ -49,12 +49,11 @@ export const SignInForm = () => {
                 body: JSON.stringify(values)
             }).then(response => {
                 if (response.status == '200') {
-                   // alert('Status 200');
                     response.text().then(token => {
                         localStorage.setItem('token', token);
                         localStorage.setItem('userName', values.userName);
                         localStorage.setItem('signedIn', true);
-                        alert('Пользователь ' + values.userName + ' успешно вошел!');
+                        window.location.reload();
                     })
 
                     fetch(constants.isAdmin + '?username=' + values.userName)
@@ -86,8 +85,8 @@ export const SignInForm = () => {
                 <input type="password" id="password" name="password" onChange={formik.handleChange} value={formik.values.password} />
                 {formik.errors.password ? <div>{formik.errors.password}</div> : null}
 
-                <button type="submit">Submit</button>
-                <Link to="/" >Войти</Link>
+                    <button type="submit">Submit</button>
+                    <Link to="/" onClick={formik.handleSubmit}>Войти</Link>
 
             </form>}
             

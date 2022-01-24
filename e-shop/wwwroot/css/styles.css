@@ -1,22 +1,57 @@
 ﻿body {
+    background-color: #E6DDDA;
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
 }
 
 header {
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    background-color: #ACA8A6;
 }
 
-header menu ul {
-    list-style-type: none;
+main {
+    margin-top: 0px;
 }
 
-    header menu ul li {
-        display: inline-block;
-        margin-left: 10px;
+    menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80%;
+        margin-left: 5%;
     }
 
+        header menu ul {
+            list-style-type: none;
+        }
+
+            header menu ul li {
+                display: inline-block;
+                margin-left: 10px;
+            }
+
+a {
+    text-decoration: none;
+    text-shadow: none;
+    color: #955D47;
+    transition: 1s ease;
+}
+
+    a:hover {
+        
+        text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+        font-size: larger;
+        color: black;
+        transform: scale(3);
+    }
+
+button {
+    background-color: #F2ECE9;
+}
+
 #content {
-    border: 2px solid red;
+    
 }
 
 #products {
@@ -31,12 +66,56 @@ header menu ul {
     text-align: center;
     justify-content: center;
     flex-direction: row;
-    border: 1px dashed blue;
     width: 350px;
     margin: 10px;
+    background-color: #F2EDEC;
+}
+
+.title {
+    font-size: larger;
+    color: #955D47;
+    margin: 10px 0;
+}
+
+.description {
+    margin: 10px 0;
+}
+
+.price {
+    margin: 10px 0;
 }
 
 .product input {
     display: block;
     width: 100px;
+}
+
+.productForm {
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    background-color: #F2EDEC;
+}
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+    .cart .child {
+        flex: 1 0 100%;
+        margin-top: 10px;
+    }
+
+td {
+    text-align: center;
+}
+
+.signUp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

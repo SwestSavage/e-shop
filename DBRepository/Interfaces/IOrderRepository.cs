@@ -14,5 +14,6 @@ namespace DBRepository.Interfaces
         Task AddOrderAsync(int userId, int productId);
         Task DeleteOrderWithProductId(int productId);
         void DeleteOrderById(int orderId);
+        void ConfirmOrders(int[] orderIds);
     }
 }

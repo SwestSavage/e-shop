@@ -56,6 +56,8 @@ if (app.Environment.IsDevelopment())
     app.UseWebpackDevMiddleware();
 }
 
+app.UseHsts();
+
 app.UseStaticFiles();
 app.UseAuthentication();
 
@@ -64,6 +66,9 @@ app.UseMvc(routes =>
     routes.MapRoute(name: "DefaultApi", template: "api/{controller}/{action}");
     routes.MapSpaFallbackRoute("spa-fallback", new { controller = "Home", action = "Index" });
 });
+
+app.UseHttpsRedirection();
+app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
 using (var scope = app.Services.CreateScope())
 {

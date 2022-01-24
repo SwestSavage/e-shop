@@ -81,7 +81,8 @@ namespace e_shop.Controllers
                     products.Add(new ProductOrderId()
                     {
                         OrderId = o.OrderId,
-                        Product = _productRepository.GetProductById(o.ProductId)
+                        Product = _productRepository.GetProductById(o.ProductId),
+                        Order = o
                     });
                 }
 
@@ -96,10 +97,17 @@ namespace e_shop.Controllers
             {
                 return null;
             }
-
-            
-
+          
             return newOrder;
+        }
+
+        [Route("confirm")]
+        [HttpPost]
+        public async Task<IActionResult> ConfirmOrder([FromBody] int[] orderIds)
+        {
+            _orderRepository.ConfirmOrders(orderIds);
+
+            return Ok();
         }
     }
 }

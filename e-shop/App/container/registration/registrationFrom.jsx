@@ -53,20 +53,13 @@ export const SignupForm = () => {
             email: '',
         },
         validate,
-        //onSubmit: values => {
-        //    alert(JSON.stringify(values, null, 2));
-        //},
+
         onSubmit: values => {
             let queryTrailer = 'api/signup?firstName=' + values.firstName;
             queryTrailer += '&lastName=' + values.lastName;
             queryTrailer += '&userName=' + values.userName;
             queryTrailer += '&password=' + values.password;
             queryTrailer += '&email=' + values.email;
-
-            //axios.post(url, values)
-            //    .then(result => {
-            //        alert(result);
-            //    })
 
             fetch(url + queryTrailer, {
                 method: 'POST',
@@ -94,8 +87,8 @@ export const SignupForm = () => {
                     <Link to="/signin" onClick={e => localStorage.removeItem('signedUp')}>Вход</Link>
                 </div>
 
-                : <form onSubmit={formik.handleSubmit}>
-                {localStorage.getItem('token') ? <div>Allready logged in!</div> : <div>
+                : <form onSubmit={formik.handleSubmit} className="signUp">
+                    {localStorage.getItem('token') ? <div>Allready logged in!</div> : <div className="signUp">
                     <label htmlFor="firstName">Имя: </label>
                     <input type="text" id="firstName" name="firstName" onChange={formik.handleChange} value={formik.values.firstName} />
                     {formik.errors.firstName ? <div>{formik.errors.firstName}</div> : null}

@@ -6,7 +6,7 @@ namespace e_shop.Controllers
     {
         public IActionResult Index()
         {
-            ViewData["Title"] = "Test";
+            ViewData["Title"] = "E-Shop";
 
             return View();
         }

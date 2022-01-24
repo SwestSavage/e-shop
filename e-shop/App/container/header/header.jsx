@@ -30,6 +30,7 @@ export default class Header extends React.Component {
                                     localStorage.removeItem('token');
                                     localStorage.removeItem('isAdmin');
                                     localStorage.removeItem('signedIn');
+                                    localStorage.removeItem('signedUp');
                                 }}>Выйти</Link>
                             </li>
                         </ul>

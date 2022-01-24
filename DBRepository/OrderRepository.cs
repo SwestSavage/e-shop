@@ -26,7 +26,8 @@ namespace DBRepository
                 {
                     User = user,
                     Product = product,//product,
-                    Date = DateTime.Now
+                    Date = DateTime.Now,
+                    IsConfirmed = false
                 });
 
                 await context.SaveChangesAsync();
@@ -77,5 +78,24 @@ namespace DBRepository
                 await context.SaveChangesAsync();
             }
         }
+
+        public async void ConfirmOrders(int[] orderIds)
+        {
+            using (var context = RepositoryContextFactory.CreateDbContext(ConnectionString))
+            {
+                foreach (var orderId in orderIds)
+                {
+                    var order = context.Orders.Find(orderId);
+
+                    if (order != null)
+                    {
+                        order.IsConfirmed = true;
+                    }
+                }
+
+                await context.SaveChangesAsync();
+            }
+        }
+
     }
 }

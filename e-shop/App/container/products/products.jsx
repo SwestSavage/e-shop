@@ -17,13 +17,15 @@ let fetchHttpPost = (url, data) => {
         referrerPolicy: 'no-referrer', // no-referrer, *client
         body: JSON.stringify(data)
     }).then(response => {
-        alert(response);
+        alert("Продукт добавлен в корзину.");
     });
 }
 
 class Products extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state = { loggedIn: false };
 
         this.addToCart = this.addToCart.bind(this);
         this.updateProduct = this.updateProduct.bind(this);
@@ -37,27 +39,11 @@ class Products extends React.Component {
         queryTrailer += '&productId=' + id;
 
         fetchHttpPost(constants.addToCart + queryTrailer, { userName: localStorage.getItem('userName'), id });
-        //fetch(constants.addToCart + queryTrailer, {
-        //    method: 'POST',
-        //    mode: 'cors',
-        //    cache: 'no-cache',
-        //    credentials: 'same-origin',
-        //    headers: {
-        //        'Content-type': 'application/x-www-form-urlencoded',
-        //        'Authorization': 'Bearer ' + localStorage.getItem('token')
-        //    },
-        //    redirect: 'follow',
-        //    referrerPolicy: 'no-referrer', // no-referrer, *client
-        //    body: JSON.stringify({ userName: localStorage.getItem('userName'), id })
-        //}).then(response => {
-        //    alert(response);
-        //});
     }
 
     updateProduct(id, title, image, description, price) {
         alert( id, title, image, description, price );
 
-        //fetchHttpPost(constants.updateProduct, { productId: id, title, image, description, price });
         fetch(constants.updateProduct, {
             method: 'POST',
             mode: 'cors',
@@ -76,7 +62,6 @@ class Products extends React.Component {
     addProduct(title, image, description, price) {
         let id = 0;
 
-        //fetchHttpPost(constants.addProduct, { productId: id, title, image, description, price });
         fetch(constants.addProduct, {
             method: 'POST',
             mode: 'cors',
@@ -89,9 +74,7 @@ class Products extends React.Component {
             redirect: 'follow',
             referrerPolicy: 'no-referrer', // no-referrer, *client
             body: JSON.stringify({ productId: id, title, image, description, price })
-        }).then(response => {
-            //alert(response.text());
-        })
+        });
     }
 
     deleteProduct(id) {
@@ -106,10 +89,8 @@ class Products extends React.Component {
             },
             redirect: 'follow',
             referrerPolicy: 'no-referrer', // no-referrer, *client
-            body: JSON.stringify({ productId: id})
-        }).then(response => {
-            //alert(response.text());
-        })
+            body: JSON.stringify({ productId: id })
+        });
     }
 
     getImage(src) {
@@ -119,20 +100,19 @@ class Products extends React.Component {
     }
 
     componentDidMount() {
+        if (localStorage.getItem('token')) {
+            this.setState({ loggedIn: true });
+        }
         this.props.getProducts();
     }
 
     render() {
-        console.log('props:');
-        for (let key in this.props.products) {
-            console.log('key: ' + key + ', value: ' + this.props.products[key]);
-        }
         let products = this.props.products.map(item => {
             return (
                 <div key={item.productId} className='product'>
                     
                     {localStorage.getItem('isAdmin') ?
-                        <div>
+                        <div className='productForm'>
                             <form >
                                 <input type="hidden" id={item.productId} defaultValue={item.productId}></input>
                                 <input type="text" id={'title' + item.productId} name="title" className='title' defaultValue={item.title}></input>
@@ -162,11 +142,10 @@ class Products extends React.Component {
                         :
                         <div>
                             <div className='title'>{item.title}</div>
-                            <div className='image'>{item.imageSrc}</div>
                             <img src={constants.getImage + '?path=' + item.imageSrc} height="200px" width="160px" />
                             <div className='description'>{item.description}</div>
                             <div className='price'>{item.price}</div>
-                            <button onClick={e => this.addToCart(item.productId)}>Buy</button>
+                            {localStorage.getItem('token') ? <button onClick={e => this.addToCart(item.productId)}>Buy</button> : null}
                         </div>                       
                         }
                     
@@ -178,7 +157,7 @@ class Products extends React.Component {
             <div id="products">
                 <div id='products'>{products}</div>
                 {localStorage.getItem('isAdmin') ?
-                    <form className="product">
+                    <form className="productForm">
                         <label htmlFor="title">Название: </label>
                         <input type="text" id="titleNew" name="title" className='title'></input>
 
@@ -188,7 +167,6 @@ class Products extends React.Component {
                         <label htmlFor="desc">Описание: </label>
                         <input type="text" id="descNew" name="desc" className='description'></input>
 
-                        <br/>
                         <label htmlFor="price">Цена: </label>
                         <input type="number" id="priceNew" name="price" className='price'></input>
 
