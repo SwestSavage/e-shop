@@ -22,8 +22,6 @@ namespace e_shop.Controllers
             _productRepository = productRepository;
         }
 
-        public string UserName { get; private set; }
-
         //[Authorize]
         [Route("add")]
         [HttpPost]
@@ -47,7 +45,6 @@ namespace e_shop.Controllers
         [HttpGet]
         public async Task<OrdersViewModel> GetOrders(string userName)
         {
-            UserName = userName;
             return await GetOrdersOfUser(userName);
         }
 
@@ -55,8 +52,6 @@ namespace e_shop.Controllers
         [HttpPost]
         public async Task<IActionResult> DeleteOrder([FromBody] int orderId)
         {
-            int test = orderId;
-
             _orderRepository.DeleteOrderById(orderId);
 
             return Ok();

@@ -154,7 +154,7 @@ class Products extends React.Component {
         })
 
         return (
-            <div id="products">
+            <div id="products" className="container">
                 <div id='products'>{products}</div>
                 {localStorage.getItem('isAdmin') ?
                     <form className="productForm">

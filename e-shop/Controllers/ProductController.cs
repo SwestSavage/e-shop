@@ -29,29 +29,37 @@ namespace e_shop.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateProduct([FromBody]ProductViewModel product)
         {
-            var title = product.Title;
-            var t = product;
-            await _productRepository.UpdateProductAsync(product.ProductId,
+            if (product != null)
+            {
+                await _productRepository.UpdateProductAsync(product.ProductId,
                 product.Title, product.Image, product.Description, Convert.ToDecimal(product.Price));
 
-            return Ok(product);
+                return Ok(product);
+            }
+
+            return BadRequest();
         }
 
         [Route("add")]
         [HttpPost]
         public async Task<IActionResult> AddProduct([FromBody]ProductViewModel product)
         {
-            var newProduct = new Product()
+            if (product != null)
             {
-                Title = product.Title,
-                ImageSrc = product.Image,
-                Description = product.Description,
-                Price = Convert.ToDecimal(product.Price)
-            };
+                var newProduct = new Product()
+                {
+                    Title = product.Title,
+                    ImageSrc = product.Image,
+                    Description = product.Description,
+                    Price = Convert.ToDecimal(product.Price)
+                };
 
-            await _productRepository.AddProductAsync(newProduct);
+                await _productRepository.AddProductAsync(newProduct);
 
-            return Ok();
+                return Ok();
+            }
+
+            return BadRequest();
         }
 
         [Route("delete")]

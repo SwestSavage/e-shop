@@ -39751,7 +39751,7 @@ var Products = function (_React$Component) {
 
             return _react2.default.createElement(
                 'div',
-                { id: 'products' },
+                { id: 'products', className: 'container' },
                 _react2.default.createElement(
                     'div',
                     { id: 'products' },
@@ -40561,7 +40561,7 @@ var Cart = function (_React$Component) {
                 return _react2.default.createElement(
                     'div',
                     null,
-                    'Loading...'
+                    '\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430...'
                 );
             }
 
@@ -43516,7 +43516,7 @@ var SignInForm = exports.SignInForm = function SignInForm() {
     });
     return _react2.default.createElement(
         'div',
-        null,
+        { className: 'signUp' },
         localStorage.getItem('signedIn') ? _react2.default.createElement(
             'div',
             null,
@@ -43534,23 +43534,35 @@ var SignInForm = exports.SignInForm = function SignInForm() {
                 { htmlFor: 'userName' },
                 '\u041B\u043E\u0433\u0438\u043D: '
             ),
-            _react2.default.createElement('input', { type: 'text', id: 'userName', name: 'userName', onChange: formik.handleChange, value: formik.values.userName }),
-            formik.errors.userName ? _react2.default.createElement(
-                'div',
-                null,
-                formik.errors.userName
-            ) : null,
             _react2.default.createElement(
-                'label',
-                { htmlFor: 'password' },
-                '\u041F\u0430\u0440\u043E\u043B\u044C: '
-            ),
-            _react2.default.createElement('input', { type: 'password', id: 'password', name: 'password', onChange: formik.handleChange, value: formik.values.password }),
-            formik.errors.password ? _react2.default.createElement(
                 'div',
                 null,
-                formik.errors.password
-            ) : null,
+                _react2.default.createElement('input', { type: 'text', id: 'userName', name: 'userName', onChange: formik.handleChange, value: formik.values.userName }),
+                formik.errors.userName ? _react2.default.createElement(
+                    'div',
+                    null,
+                    formik.errors.userName
+                ) : null
+            ),
+            _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                    'label',
+                    { htmlFor: 'password' },
+                    '\u041F\u0430\u0440\u043E\u043B\u044C: '
+                ),
+                _react2.default.createElement(
+                    'div',
+                    null,
+                    _react2.default.createElement('input', { type: 'password', id: 'password', name: 'password', onChange: formik.handleChange, value: formik.values.password }),
+                    formik.errors.password ? _react2.default.createElement(
+                        'div',
+                        null,
+                        formik.errors.password
+                    ) : null
+                )
+            ),
             _react2.default.createElement(
                 'button',
                 { type: 'submit' },

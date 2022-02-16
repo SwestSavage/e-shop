@@ -72,7 +72,7 @@ export default class Cart extends React.Component {
        
         if (this.state.isLoading) {
             return (
-                <div>Loading...</div>
+                <div>Загрузка...</div>
                 )
         }
 

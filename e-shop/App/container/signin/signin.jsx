@@ -71,21 +71,28 @@ export const SignInForm = () => {
         ,
     });
     return (
-        <div>
+        <div className="signUp">
             {localStorage.getItem('signedIn') ?
                 <div>Вы успешно вошли! <Link to="/" >Продукты.</Link></div>
                 :
-                <form onSubmit={formik.handleSubmit}>
+                <form onSubmit={formik.handleSubmit} >
 
-                <label htmlFor="userName">Логин: </label>
-                <input type="text" id="userName" name="userName" onChange={formik.handleChange} value={formik.values.userName} />
-                {formik.errors.userName ? <div>{formik.errors.userName}</div> : null}
+                    <label htmlFor="userName" >Логин: </label>
+                    <div >
+                        <input type="text" id="userName" name="userName" onChange={formik.handleChange} value={formik.values.userName}  />
+                        {formik.errors.userName ? <div>{formik.errors.userName}</div> : null}
+                    </div>
+                   
 
-                <label htmlFor="password">Пароль: </label>
-                <input type="password" id="password" name="password" onChange={formik.handleChange} value={formik.values.password} />
-                {formik.errors.password ? <div>{formik.errors.password}</div> : null}
+                    <div >
+                        <label htmlFor="password" >Пароль: </label>
+                        <div >
+                            <input type="password" id="password" name="password" onChange={formik.handleChange} value={formik.values.password} />
+                            {formik.errors.password ? <div>{formik.errors.password}</div> : null}
+                        </div>
+                    </div>
 
-                    <button type="submit">Войти</button>
+                    <button type="submit" >Войти</button>
 
             </form>}
             
