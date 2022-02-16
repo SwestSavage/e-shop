@@ -85,8 +85,7 @@ export const SignInForm = () => {
                 <input type="password" id="password" name="password" onChange={formik.handleChange} value={formik.values.password} />
                 {formik.errors.password ? <div>{formik.errors.password}</div> : null}
 
-                    <button type="submit">Submit</button>
-                    <Link to="/" onClick={formik.handleSubmit}>Войти</Link>
+                    <button type="submit">Войти</button>
 
             </form>}
             

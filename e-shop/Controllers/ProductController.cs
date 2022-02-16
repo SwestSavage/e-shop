@@ -67,11 +67,18 @@ namespace e_shop.Controllers
         [HttpGet]
         public IActionResult GetImage(string path)
         {
-            if (!string.IsNullOrEmpty(path))
+            try
             {
-                var image = System.IO.File.OpenRead(path);
+                if (!string.IsNullOrEmpty(path))
+                {
+                    var image = System.IO.File.OpenRead(path);
 
-                return File(image, "image/jpeg");
+                    return File(image, "image/jpeg");
+                }
+            }
+            catch (Exception)
+            {
+                return null;    
             }
 
             return null;

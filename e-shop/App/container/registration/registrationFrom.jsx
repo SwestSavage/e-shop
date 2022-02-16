@@ -8,34 +8,34 @@ const validate = values => {
     const errors = {};
 
     if (!values.firstName) {
-        errors.firstName = 'Required';
+        errors.firstName = 'Необходимо заполнить';
     } else if (values.firstName.length > 15) {
-        errors.firstName = 'Must be 15 characters or less';
+        errors.firstName = 'Должно быть не более 15 символов';
     }
 
     if (!values.lastName) {
-        errors.lastName = 'Required';
+        errors.lastName = 'Необходимо заполнить';
     } else if (values.lastName.length > 20) {
-        errors.lastName = 'Must be 20 characters or less';
+        errors.lastName = 'Должно быть не более 20 символов';
     }
 
     if (!values.userName) {
-        errors.userName = 'Required';
+        errors.userName = 'Необходимо заполнить';
     } else if (values.userName.length < 4) {
         ;
-        errors.userName = 'Mast be 4 characters or more';
+        errors.userName = 'Должно быть не менее 4 символов';
     }
 
     if (!values.password) {
-        errors.password = 'Required';
+        errors.password = 'Необходимо заполнить';
     } else if (values.password.length < 6) {
-        errors.password = 'Must be 6 characters or more';
+        errors.password = 'Должно быть не менее 6 символов';
     }
 
     if (!values.email) {
-        errors.email = 'Required';
+        errors.email = 'Необходимо заполнить';
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-        errors.email = 'Invalid email address';
+        errors.email = 'Неверный e-mail адрес';
     }
 
     return errors;
@@ -109,7 +109,7 @@ export const SignupForm = () => {
                     <input id="email" type="email" name="email" onChange={formik.handleChange} value={formik.values.email} />
                     {formik.errors.email ? <div>{formik.errors.email}</div> : null}
 
-                    <button type="submit">Submit</button>
+                    <button type="submit">Зарегистрироваться</button>
                 </div>}
             </form>}
         </div>

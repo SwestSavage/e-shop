@@ -40729,34 +40729,34 @@ var validate = function validate(values) {
     var errors = {};
 
     if (!values.firstName) {
-        errors.firstName = 'Required';
+        errors.firstName = 'Необходимо заполнить';
     } else if (values.firstName.length > 15) {
-        errors.firstName = 'Must be 15 characters or less';
+        errors.firstName = 'Должно быть не более 15 символов';
     }
 
     if (!values.lastName) {
-        errors.lastName = 'Required';
+        errors.lastName = 'Необходимо заполнить';
     } else if (values.lastName.length > 20) {
-        errors.lastName = 'Must be 20 characters or less';
+        errors.lastName = 'Должно быть не более 20 символов';
     }
 
     if (!values.userName) {
-        errors.userName = 'Required';
+        errors.userName = 'Необходимо заполнить';
     } else if (values.userName.length < 4) {
         ;
-        errors.userName = 'Mast be 4 characters or more';
+        errors.userName = 'Должно быть не менее 4 символов';
     }
 
     if (!values.password) {
-        errors.password = 'Required';
+        errors.password = 'Необходимо заполнить';
     } else if (values.password.length < 6) {
-        errors.password = 'Must be 6 characters or more';
+        errors.password = 'Должно быть не менее 6 символов';
     }
 
     if (!values.email) {
-        errors.email = 'Required';
+        errors.email = 'Необходимо заполнить';
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-        errors.email = 'Invalid email address';
+        errors.email = 'Неверный e-mail адрес';
     }
 
     return errors;
@@ -40882,7 +40882,7 @@ var SignupForm = exports.SignupForm = function SignupForm() {
                 _react2.default.createElement(
                     'button',
                     { type: 'submit' },
-                    'Submit'
+                    '\u0417\u0430\u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u043E\u0432\u0430\u0442\u044C\u0441\u044F'
                 )
             )
         )
@@ -43554,11 +43554,6 @@ var SignInForm = exports.SignInForm = function SignInForm() {
             _react2.default.createElement(
                 'button',
                 { type: 'submit' },
-                'Submit'
-            ),
-            _react2.default.createElement(
-                _reactRouterDom.Link,
-                { to: '/', onClick: formik.handleSubmit },
                 '\u0412\u043E\u0439\u0442\u0438'
             )
         )
